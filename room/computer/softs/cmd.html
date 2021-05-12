@@ -1,0 +1,369 @@
+
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+<meta name="google" value="notranslate">
+  <meta charset="UTF-8">
+  
+  <title>Cmd</title>
+  <link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+  
+  
+<style>
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background:#000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+textarea, input, button {
+  outline: none;
+}
+
+.window-button, .window .buttons .maximize, .window .buttons .minimize, .window .buttons .close {
+  padding: 0;
+  margin: 0;
+  margin-right: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: gainsboro;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.window {
+  animation: bounceIn 1s ease-in-out;
+  width: 640px;
+}
+.window .handle {
+  height: 22px;
+  background: linear-gradient(0deg, #d8d8d8, #ececec);
+  border-top: 1px solid white;
+  border-bottom: 1px solid #b3b3b3;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 22px;
+  text-align: center;
+}
+.window .buttons {
+  position: absolute;
+  float: left;
+  margin: 0 8px;
+}
+.window .buttons .close {
+  background-color: #ff6159;
+}
+.window .buttons .minimize {
+  background-color: #ffbf2f;
+}
+.window .buttons .maximize {
+  background-color: #25cc3e;
+}
+.window .terminal {
+  padding: 4px;
+  background-color: black;
+  opacity: 0.7;
+  height: 218px;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-weight: 200;
+  font-size: 14px;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow-y: auto;
+}
+.window .terminal::after {
+  content: "|";
+  animation: blink 2s steps(1) infinite;
+}
+
+.prompt {
+  color: #bde371;
+}
+
+.path {
+  color: #5ed7ff;
+}
+
+@keyframes blink {
+  50% {
+    color: transparent;
+  }
+}
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-1000px);
+  }
+  60% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.actions{
+  position: absolute;
+  right:  0;
+  top:0;
+  width: 100%;
+  background:#1f1f1f;
+  font-size: 20px;
+  border-radius: 5px
+}
+a{
+  color: #fff;
+  padding: 10px;
+}
+a:hover{
+  color: #ababab; 
+}
+</style>
+
+
+</head>
+
+<body translate="no" >
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+  <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:200' rel='stylesheet' type='text/css'>
+    <div class="actions">
+      <a href="../index.html"><i class="fa fa-times"></i></a>
+      <a href="../index.html"><i class="fa fa-clone"></i></a>
+      <a href="../index.html"><i class="fa fa-minus"></i></a>
+    </div>
+
+
+    <div class="window">
+        <div class="terminal"></div>
+    </div>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+      <script id="rendered-js" >
+
+
+$(document).ready(function () {
+  "use strict";
+
+  // UTILITY
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;
+  }
+  // END UTILITY
+
+  // COMMANDS
+  function clear() {
+    terminal.text("");
+  }
+
+  function help() {
+    terminal.append(" Clear - Отчистка консоли <br> Help - Список Команд <br> Echo + (Любой текст) - Выводит любой вписаный текст в консоль <br> Fortune - Выводит любую цитаты <br> Wifi - узнать свой wifi <br> Anonimus - it's a surprise  \n");
+  }
+  function wifi() {
+    terminal.append(" Сеть wifi этого компьютера: <br> Wifi: YOUR-WIFI-1 <br> IP: 172.217.23.238 \n");
+  }
+
+function anonimus() {
+    terminal.append("░░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄▄<br>░░░░░█░░░░░░░░░░░░░░░░░░▀▀▄<br>░░░░█░░░░░░░░░░░░░░░░░░░░░░█<br>░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█<br>░▄▀░▄▄▄░░█▀▀▀▀▄▄█░░░██▄▄█░░░░█<br>█░░█░▄░▀▄▄▄▀░░░░░░░░█░░░░░░░░░█<br>█░░█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄░█<br>░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█<br>░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█<br>░░░█░░░░██░░▀█▄▄▄█▄▄█▄▄██▄░░█<br>░░░░█░░░░▀▀▄░█░░░█░█▀█▀█▀██░█<br>░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█<br>░░░░░░░▀▄▄░░░░░░░░░░░░░░░░░░░█<br>░░▐▌░█░░░░▀▀▄▄░░░░░░░░░░░░░░░█<br>░░░█▐▌░░░░░░█░▀▄▄▄▄▄░░░░░░░░█<br>░░███░░░░░▄▄█░▄▄░██▄▄▄▄▄▄▄▄▀<br>░▐████░░▄▀█▀█▄▄▄▄▄█▀▄▀▄<br>░░█░░▌░█░░░▀▄░█▀█░▄▀░░░█<br>░░█░░▌░█░░█░░█░░░█░░█░░█<br>░░█░░▀▀░░██░░█░░░█░░█░░█<br>░░░▀▀▄▄▀▀░█░░░▀▄▀▀▀▀█░░█<br>░░░░░░░░░░█░░░░▄░░▄██▄▄▀<br>░░░░░░░░░░█░░░░▄░░████<br>░░░░░░░░░░█▄░░▄▄▄░░▄█<br>░░░░░░░░░░░█▀▀░▄░▀▀█<br>░░░░░░░░░░░█░░░█░░░█<br>░░░░░░░░░░░█░░░▐░░░█<br>░░░░░░░░░░░█░░░▐░░░█<br>░░░░░░░░░░░█░░░▐░░░█<br>░░░░░░░░░░░█░░░▐░░░█<br>░░░░░░░░░░░█░░░▐░░░█<br>░░░░░░░░░░░█▄▄▄▐▄▄▄█<br>░░░░░░░▄▄▄▄▀▄▄▀█▀▄▄▀▄▄▄▄<br>░░░░░▄▀▄░▄░▄░░░█░░░▄░▄░▄▀▄<br>░░░░░█▄▄▄▄▄▄▄▄▄▀▄▄▄▄▄▄▄▄▄█ \n");
+  }
+
+  function echo(args) {
+    var str = args.join(" ");
+    terminal.append(str + "\n");
+  }
+
+  function fortune() {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://cdn.rawgit.com/bmc/fortunes/master/fortunes', false);
+    xhr.send(null);
+
+    if (xhr.status === 200) {
+      var fortunes = xhr.responseText.split("%");
+      var fortune = fortunes[getRandomInt(0, fortunes.length)].trim();
+      terminal.append(fortune + "\n");
+    }
+  }
+  // END COMMANDS
+
+  var title = $(".title");
+  var terminal = $(".terminal");
+  var prompt = "➜";
+  var path = "~";
+
+  var commandHistory = [];
+  var historyIndex = 0;
+
+  var command = "";
+  var commands = [{
+    "name": "clear",
+    "function": clear },
+  {
+    "name": "help",
+    "function": help },
+  {
+    "name": "wifi",
+    "function": wifi },
+  {
+    "name": "anonimus",
+    "function": anonimus },
+  {
+    "name": "fortune",
+    "function": fortune },
+  {
+    "name": "echo",
+    "function": echo }];
+
+
+  function processCommand() {
+    var isValid = false;
+
+
+
+    var args = command.split(" ");
+    var cmd = args[0];
+    args.shift();
+
+    for (var i = 0; i < commands.length; i++) {if (window.CP.shouldStopExecution(0)) break;
+      if (cmd === commands[i].name) {
+        commands[i].function(args);
+        isValid = true;
+        break;
+      }
+    }
+
+
+    window.CP.exitedLoop(0);if (!isValid) {
+      terminal.append("zsh: command not found: " + command + "\n");
+    }
+
+
+    commandHistory.push(command);
+    historyIndex = commandHistory.length;
+    command = "";
+  }
+
+  function displayPrompt() {
+    terminal.append("<span class=\"prompt\">" + prompt + "</span> ");
+    terminal.append("<span class=\"path\">" + path + "</span> ");
+  }
+
+  function erase(n) {
+    command = command.slice(0, -n);
+    terminal.html(terminal.html().slice(0, -n));
+  }
+
+  function clearCommand() {
+    if (command.length > 0) {
+      erase(command.length);
+    }
+  }
+
+  function appendCommand(str) {
+    terminal.append(str);
+    command += str;
+  }
+
+
+
+  $(document).keydown(function (e) {
+    e = e || window.event;
+    var keyCode = typeof e.which === "number" ? e.which : e.keyCode;
+
+
+    if (keyCode === 8 && e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA") {
+      e.preventDefault();
+      if (command !== "") {
+        erase(1);
+      }
+    }
+
+
+    if (keyCode === 38 || keyCode === 40) {
+
+      if (keyCode === 38) {
+      
+        historyIndex--;
+        if (historyIndex < 0) {
+          historyIndex++;
+        }
+      } else if (keyCode === 40) {
+      
+        historyIndex++;
+        if (historyIndex > commandHistory.length - 1) {
+          historyIndex--;
+        }
+      }
+
+
+      var cmd = commandHistory[historyIndex];
+      if (cmd !== undefined) {
+        clearCommand();
+        appendCommand(cmd);
+      }
+    }
+  });
+
+  $(document).keypress(function (e) {
+ 
+    e = e || window.event;
+    var keyCode = typeof e.which === "number" ? e.which : e.keyCode;
+
+  
+    switch (keyCode) {
+
+      case 13:
+        {
+          terminal.append("\n");
+
+          processCommand();
+          displayPrompt();
+          break;
+        }
+      default:
+        {
+          appendCommand(String.fromCharCode(keyCode));
+        }}
+
+  });
+
+
+  title.text("1. marc@mbp: ~ (zsh)");
+
+
+  var date = new Date().toString();date = date.substr(0, date.indexOf("GMT") - 1);
+
+ 
+  terminal.append("Last login: " + date + ", Hello\n");displayPrompt();
+});
+
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

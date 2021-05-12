@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+
+<link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+<meta name="google" value="notranslate">
+  <title>Рабочий стол</title>
+<style>
+* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			overflow: hidden;
+			outline: none;
+			cursor: default;
+		}
+
+		body {
+			font-family: Segoe UI, Frutiger, Frutiger Linotype, Dejavu Sans, Helvetica Neue, Arial, sans-serif;
+			font-size: 16px;
+		}
+
+		.container {
+			position: absolute;
+			z-index: -1;
+			width: 100vw;
+			height: 100vh;
+			background: url('images/body.jpg') no-repeat center;
+			background-size: cover;
+			background-position: center right;
+		}
+
+		/*Рабочий стол*/
+		.container .trash {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			color: #fff;
+			text-align: center;
+		}
+
+		.container .icon:nth-child(1) {
+			position: absolute;
+			left: 20px;
+			top: 20px;
+			color: #fff;
+			text-align: center;
+		}
+
+		.container .icon:nth-child(2) {
+			position: absolute;
+			left: 20px;
+			top: 150px;
+			color: #fff;
+			text-align: center;
+		}
+
+
+		/*--Меню windows--*/
+		.menu-down {
+			display: flex;
+			position: absolute;
+			z-index: 1;
+			bottom: -500%;
+			width: 100%;
+			max-width: 600px;
+			height: 100%;
+			max-height: 37.5em;/* 600/16 */
+			background: rgb(39, 39, 39);
+			background: #272727;
+			color: #fff;
+		}
+
+		.menu-up {
+			position: absolute;
+			bottom: 0;
+			transition: 0.4s;
+		}
+
+		/*--Действия--*/
+		.menu-down .action {
+			position: absolute;
+			z-index: 10;
+			background: #272727;
+		}
+
+		.menu-down .action .title {
+			display: grid;
+			grid-template-columns: 1em 0.3125em;/* 16/16 *//* 5/16 */
+			text-align: center;
+			padding: 1em;/* 16/16 */
+			border: 1px solid #272727;
+		}
+
+		.menu-down .action .title:nth-child(2) {
+			margin-top: 238px;/* 238/16 */
+		}
+
+		.menu-down .action .title:hover {
+			background: #343434;
+		}
+
+		.menu-down .action .title p {
+			margin-top: -0.125em;/* 2/16 */
+			text-indent: -666em;
+			overflow: hidden;
+		}
+
+		/*--Недавно добавленные--*/
+		.menu-down .add {
+			position: relative;
+			margin-left: 3.75em;/* 60/16 */
+			width: 15.625em;/* 250/16 */
+			margin-right: 1.25em;/* 20/16 */
+		}
+
+		.menu-down .add p {
+			font-size: 0.75rem;/* 12/16 */
+			padding: 0.8125em 0.1875em;/* 13/16 *//* 3/16 */
+		}
+
+		.menu-down .add figure {
+			display: flex;
+			align-items: center;
+			padding: 0.125em 0.1875em;/* 2/16 *//* 3/16 */
+		}
+
+		.menu-down .add figure img {
+			background: #0078D7;
+			padding: 0.1875em; /* 3/16 */
+			max-width: 100%;
+		}
+
+		.menu-down .add figure p {
+			padding-left: 0.625em;/* 10/16 */
+		}
+
+		.menu-down .add figure span {
+			font-size: 0.625rem;/* 10/16 */
+			position: absolute;
+			padding-right: 0.3125em;/* 5/16 */
+			right: 0;
+
+		}
+
+		.menu-down .add figure:hover,
+		.add p:hover {
+			background: #343434;
+
+		}
+
+		.menu-down .group {
+			position: relative;
+
+		}
+
+		.menu-down .group img {
+			width: 100%;
+			max-width: 250px;
+		}
+
+		.menu-down .group .txt {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.menu-down .group .txt p {
+			font-size: 0.75rem;/* 12/16 */
+			padding: 0.8125em 0;/* 13/16 */
+		}
+
+		.menu-down .group .box-group .txt {
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden;
+			width: 0;
+		}
+
+		.menu-down .group .box-group .txt .color {
+			color: #A5A4A2;
+		}
+
+		.menu-down .group .txt .content .bars {
+			width: 0.9375em;/* 15/16 */
+			border-bottom: 2px solid #fff;
+			margin-bottom: 2px;
+		}
+
+		.menu-down .group .box-explo .txt .content {
+			display: none;
+		}
+
+		/*--Панель инструментов--*/
+		.bar {
+			position: absolute;
+			bottom: 0;
+			z-index: 99;
+			width: 100%;
+			background: #1C1C1C;
+			opacity:0.95 ;
+			display: flex;
+			justify-content: space-between;
+
+		}
+
+		/*--ЛЕВАЯ ПАНЕЛЬ ЗНАЧКОВ--*/
+		.left {
+			display: flex;
+			align-items: center;
+		}
+
+		.left span {
+			font-size: 1.125rem;/* 18/16 */
+			color: #fff;
+			padding: 0.8125em 0.9375em;/* 13/16 *//* 15/16 */
+		}
+
+		.left span:hover {
+			background: #343434;
+			color: #429CE3;
+		}
+
+		.left form {
+			position: relative;
+		}
+
+		.left form img {
+			position: absolute;
+			width: 2.1875em;/* 35/16 */
+			margin-top: 0.3125em;/* 5/16 */
+			padding: 0.625em;/* 10/16 */
+			pointer-events: none;
+		}
+
+		.left img {
+			padding: 0.4375em 1.25em; /* 7/16 */
+		}
+
+		.left img:hover {
+			background: #343434;
+		}
+
+		.left form input {
+			height: 45px;
+			width: 21.875em;/* 350/16 */
+			padding-left: 2.1875em;/* 35/16 */
+		}
+
+		.left form input:hover {
+			border: 2px solid #ccc;
+
+		}
+
+		::-webkit-input-placeholder {
+			/*Chrome y Safari*/
+			font-size: 0.9375em;/* 15/16 */
+			opacity: 0.8;
+		}
+
+		::-moz-placeholder {
+			/* Firefox */
+			font-size: 0.9375em;/* 15/16 */
+			opacity: 0.8;
+		}
+
+		::-ms-input-placeholder {
+			/*Explore*/
+			font-size: 0.9375em;/* 15/16 */
+			opacity: 0.8;
+		}
+
+		/*--ПРАВАЯ ПАНЕЛЬ ЗНАЧКОВ--*/
+		.right {
+			display: flex;
+			align-items: center;
+			color: #fff;
+		}
+
+		.right .time {
+			height: 100%;
+			padding: 0 0.625em;/* 10/16 */
+		}
+
+		.right span {
+			padding: 15px 0.5em;/* 14/16 *//* 8/16 */
+		}
+
+		.right img:hover,
+		.right .time:hover,
+		.right span:hover {
+			background: #343434;
+		}
+
+		.right img:nth-child(5) {
+			margin-right: 0.625em;/* 10/16 */
+		}
+
+		.time {
+			text-align: center;
+		}
+
+		/*--MEDIA QUERIES--*/
+
+		@media (max-width: 1024px) {
+			body {
+				font-size: 15px;
+			}
+
+			.container .icon img, .container .trash img {
+				width: 55px;
+			}
+
+			.menu-down .action .title:nth-child(2) {
+				margin-top: 220px;
+			}
+
+			.right span {
+				padding: 16px 0.5em;
+			}
+			.menu-down {
+				max-width: 580px;
+			}
+		}
+		@media (max-width: 972px) {
+			body {
+				font-size: 13px;
+			}
+
+			.container .trash {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				color: #fff;
+				text-align: center;
+			}
+
+			.container .icon:nth-child(1) {
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				color: #fff;
+				text-align: center;
+			}
+
+			.container .icon:nth-child(2) {
+				position: absolute;
+				left: 20px;
+				top: 120px;
+				color: #fff;
+				text-align: center;
+			}
+			.container .icon img, .container .trash img {
+				width: 50px;
+			}
+
+			.menu-down .action .title:nth-child(2) {
+				margin-top: 180px;
+			}
+
+			.menu-down {
+				max-width: 540px;
+			}
+
+			.left span {
+				font-size: 18px;
+				color: #fff;
+				padding: 9px 10px;
+			}
+
+			.left img {
+				padding: 6.5px 10px;
+			}
+
+			.left form img {
+				padding-top: 11px;
+			}
+
+			.left > span {
+				padding: 13.5px 15px;
+			}
+		}
+
+		@media (max-height: 600px) {
+			.menu-down .action {
+				height: 100%;
+
+			}
+			.menu-down .action .title:nth-child(2) {
+				margin-top: 100px;
+			}
+			.menu-down .group img {
+				height: 135px;
+			}
+		}
+		.add:hover{
+			overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-overflow-scrolling: touch;
+	-moz-overflow-scrolling: touch;
+	-ms-overflow-scrolling: touch;
+	-o-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+		}
+		.add::-webkit-scrollbar{
+				-webkit-appearance: none;
+	width: 7px;
+		}
+		.add::-webkit-scrollbar-thumb{
+			border-radius: 2px;
+	background-color: #696969;
+	-webkit-box-shadow: 0 0 1px rgba(255,255,255,0.5);
+		}
+		a{
+  color: #fff;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body translate="no" >
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>WINDOWS 10</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.css">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Меню windows -->
+		<div class="menu-down">
+			<div class="action">
+				<div class="title">
+					<span class="fas fa-bars"></span>
+					<p>Пуск</p>
+				</div>
+				<div class="title">
+					<span class="fas fa-user-circle"></span>
+					<p>User</p>
+				</div>
+				<div class="title">
+					<span class="far fa-file"></span>
+					<p>Документы</p>
+				</div>
+				<div class="title">
+					<span class="far fa-image"></span>
+					<p>Изображения</p>
+				</div>
+				<div class="title">
+					<span class="fas fa-cog"></span>
+					<p>Параметры</p>
+				</div>
+				<a href="../room.html"><div class="title">
+					<span class="fas fa-power-off"></span></a>
+					<p><a href="../room.html">Выключение</a></p>
+				</div></a>
+			</div>
+
+			<!-- Меню приложений windows -->
+			<div class="add" style="overflow:auto; overflow-x:hidden;">
+				<p>Недавно добавленные</p>
+				<a href="softs/adobe audiction.html"><figure>
+					<img src="images/Adobe Audiction.ico" width="38px" style="pointer-events: none;">
+					<p> Audiction 2020</p>
+				</figure></a>
+				<a href="softs/premiere pro.html"><figure>
+					<img src="images/Adobe Premiere Pro.ico" width="38px" style="pointer-events: none;">
+					<p> Premiere Pro 2020</p>
+				</figure></a>
+				<!-- A - Z -->
+				<p>A</p>
+				<a href="softs/adobe audiction.html"><figure>
+					<img src="images/Adobe Audiction.ico" width="38px" style="pointer-events: none;">
+					<p> Audiction 2020</p>
+				</figure></a>
+
+				<p>C</p>
+				<a href="softs/cmd.html"><figure>
+					<img src="images/cmd.png" width="38px" style="pointer-events: none;">
+					<p>Cmd</p>
+				</figure></a>
+
+				<p>E</p>
+				<a href="softs/excel.html"><figure>
+					<img src="images/excel.png" width="38px" style="pointer-events: none;">
+					<p>Excel</p>
+				</figure></a>
+
+				<p>G</p>
+				<a href="softs/github.html"><figure>
+					<img src="images/github.png" width="38px" style="pointer-events: none;">
+					<p>Github</p>
+				</figure></a>
+				<a href="softs/google.html"><figure>
+					<img src="images/google.ico" width="38px" style="pointer-events: none;">
+					<p>Google Chrome</p>
+				</figure></a>
+
+				<p>M</p>
+				<a href="softs/ms.html"><figure>
+					<img src="images/ms.png" width="38px" style="pointer-events: none;">
+					<p>Microsoft Store</p>
+				</figure></a>
+
+				<p>O</p>
+				<a href="softs/obs.html"><figure>
+					<img src="images/OBS.png" width="38px" style="pointer-events: none;">
+					<p>OBS Studio</p>
+				</figure></a>
+
+				<p>P</p>
+				<a href="softs/paint.html"><figure>
+					<img src="images/paint.png" width="38px" style="pointer-events: none;">
+					<p>Paint</p>
+				</figure></a>
+				<a href="softs/premiere pro.html"><figure>
+					<img src="images/Adobe Premiere Pro.ico" width="38px" style="pointer-events: none;">
+					<p>Premiere Pro 2020</p>
+				</figure></a>
+
+				<p>S</p>
+				<a href="softs/sublimetext.html"><figure>
+					<img src="images/sublime.ico" width="38px" style="pointer-events: none;">
+					<p>Sublime Text</p>
+				</figure></a>
+
+				<p>Б</p>
+				<a href="softs/notepad.html"><figure>
+					<img src="images/блокнот.png" width="38px">
+					<p>Блокнот</p>
+				</figure></a>
+
+				<p>П</p>
+				<figure>
+					<img src="images/file.ico" width="38px">
+					<p>Проводник</p>
+				</figure>
+				<br><br><br>
+
+			</div>
+			<!-- Реклама -->
+			<div class="group">
+				<div class="box-group">
+					<div class="txt">
+						<p class="color">Производительность</p>
+						<div class="content">
+							<div class="bars"></div>
+							<div class="bars"></div>
+						</div>
+					</div>
+				</div>
+				<img src="images/Слой 2.png" style="pointer-events: none;">
+				<div class="box-explo">
+					<div class="txt">
+						<p>Просмотр</p>
+						<div class="content">
+							<div class="bars"></div>
+							<div class="bars"></div>
+						</div>
+					</div>
+				</div>
+				<img src="images/Слой 1.png" style="pointer-events: none;">
+			</div>
+		</div>
+		<!-- ПАНЕЛЬ ИНСТРУМЕНТОВ -->
+		<div class="bar">
+			<div class="left">
+				<span title="Пуск" class="fab fa-windows"></span>
+				<a href="softs/cmd.html"><img title="Cmd" src="images/cmd.png" width="70px"></a>
+				<a href="softs/sublimetext.html"><img title="Sublime Text" src="images/sublime.ico" width="70px"></a>
+				<a href="softs/google.html"><img title="Google Chrome" src="images/google.ico" width="70px"></a>
+				<img title="Проводник" src="images/file.ico" width="70px">
+				<a href="softs/paint.html"><img title="Paint" src="images/paint.png" width="70px"></a>
+				<a href="softs/adobe audiction.html"><img title="Adobe Audiction 2020" src="images/Adobe Audiction.ico" width="70px"></a>
+				<a href="softs/premiere pro.html"><img title="Adobe Premiere Pro 2020" src="images/Adobe Premiere Pro.ico" width="70px"></a>
+			</div>
+			<div class="right">
+				<span title="YOUR-WIFI-1&#013;Доступ к Интернету" class="fas fa-wifi"></span>
+				<span title="Динамики: 100%" class="fas fa-volume-up"></span>
+				<div title="Дата и Время" class="time" style="cursor: default;">
+					<div id="current_date_time_block"></div>
+<script type="text/javascript">
+    
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
+
+        return hours+"."+minutes+"."+seconds+"	<br> "+day+":"+month+":"+year;
+    }
+
+    document.getElementById('current_date_time_block').innerHTML = date_time();
+</script>
+				</div>
+				<span title="Уведомления" class="far fa-comment-alt"></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+  
+      <script id="rendered-js" >
+$(document).ready(function () {
+  $(".left > span").click(function () {
+    $(".menu-down").toggleClass("menu-up");
+  });
+  $(".menu-down .action").mouseenter(function () {
+    $(".menu-down .action .title").animate({
+      width: '16.25em' /* 260/16 */ },
+    100);
+    $('.menu-down .action .title > p').css({
+      overflow: 'visible',
+      textIndent: '1em' });
+
+    $('.menu-down .action').css({
+      boxShadow: '2px 0px 5px 0px rgba(0,0,0,0.75)' });
+
+  });
+  $(".menu-down .action").mouseleave(function () {
+    $(".menu-down .action .title").animate({
+      width: '3.4375em' /* 55/16 */ },
+    100);
+    $('.menu-down .action .title > p').css({
+      overflow: 'hidden',
+      textIndent: '-666em' });
+
+    $('.menu-down .action').css({
+      boxShadow: '4px 0px 5px -1px rgba(0,0,0,0.0)' });
+
+  });
+  $(".menu-down .group .box-group").mouseenter(function () {
+    $('.box-group .txt').css({
+      overflow: 'visible',
+      textIndent: '0',
+      width: '100%' });
+
+  });
+  $(".menu-down .group .box-group").mouseleave(function () {
+    $('.box-group .txt').css({
+      overflow: 'hidden',
+      textIndent: '100%',
+      whiteSpace: 'nowrap',
+      width: '0' });
+
+  });
+
+  $(".menu-down .group .box-explo").mouseenter(function () {
+    $('.box-explo .txt .content').css({
+      display: 'block' });
+
+  });
+  $(".box-explo").mouseleave(function () {
+    $('.box-explo .txt .content').css({
+      display: 'none' });
+
+  });
+});
+
+$(function () {
+  $(".icon").draggable();
+  $("#trash").droppable({
+    accept: ".icon",
+    drop: function (event, ui) {
+      ui.draggable.fadeOut(function () {
+        ui.draggable.remove();
+      });
+    } });
+
+});
+
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

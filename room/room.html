@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta name="google" value="notranslate">
+  <meta charset="utf-8">
+  <title>Room</title>
+    <link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+  <style>
+  	body{
+  		background: #3087b3;
+  		font-family: 'Roboto', sans-serif;
+  	}
+  	.computer{
+  		border-radius: 20px 20px 0px 0px;
+  		border: 10px solid #000;
+  		background:#000;
+  	}
+  	.down-comp{
+  		background: #d6d6d6;
+  		width: 480px;
+  		height: 20px;
+  		margin-top:-4px;
+  		border-radius: 0px 0px 20px 20px;
+  	}
+  	.calendar{
+  		background: #fff;
+  		width: 200px;
+  		height: 200px;
+  		position: absolute;
+  		right: 0px;
+  		top:0px;
+      color: #000;
+  	}
+  	.calendar:hover{
+  		width: 210px;
+  		height: 210px;
+  		transition: 1s;
+  		cursor: pointer;
+  	}
+  	table{
+  		margin-top:30px;
+  	}
+  	td{
+  		border: 1px solid#000;
+  	}
+  	.sleep{
+  		position: absolute;
+  		left: -20px;
+  		top:50%;
+  		font-size: 30px;
+  		color: red ;
+  		opacity: 0.5;
+      transform: rotate(-90deg);
+      font-weight: bold;
+  	}
+  	.sleep:hover{
+  		cursor:pointer;
+  		opacity: 0.8;
+  		transition: 1s;
+  	}
+  	.comp:hover{
+  		cursor: pointer;
+  	}
+  	a{
+  		text-decoration: none;
+  	}
+  </style>
+</head>
+<body>
+	<center style="margin-top:250px;">
+		<div class="comp" title="За работу">
+  <a href="computer/index.html"><img class="computer" src="computer/images/body.jpg" width="400px" height="250px"></a>
+  <div class="down-comp"></div>
+</div>
+  </center>
+  <a href="#"><div class="calendar" title="Смотреть календарь">
+  	<div style="background: red; text-align: center; color: #fff; height: 30px;">Календарь</div>
+  	<center>
+  	<table>
+  		<tr>
+  			<td>1</td>
+  			<td>2</td>
+  			<td>3</td>
+  			<td>4</td>
+  			<td>5</td>
+  			<td>6</td>
+  			<td>7</td>
+  		</tr>
+  		<tr>
+  			<td>8</td>
+  			<td>9</td>
+  			<td>10</td>
+  			<td>11</td>
+  			<td>12</td>
+  			<td>13</td>
+  			<td>14</td>
+  		</tr>
+  		<tr>
+  			<td>15</td>
+  			<td>16</td>
+  			<td>17</td>
+  			<td>18</td>
+  			<td>19</td>
+  			<td>20</td>
+  			<td>21</td>
+  		</tr>
+  		<tr>
+  			<td>22</td>
+  			<td>23</td>
+  			<td>24</td>
+  			<td>25</td>
+  			<td>26</td>
+  			<td>27</td>
+  			<td>28</td>
+  		<tr>
+  			<td>29</td>
+  			<td>30</td>
+  			<td>31</td>
+  		</tr>
+  	</table>
+  	</center>
+  </div></a>
+  <a href="#"> <div class="sleep" title="Следующий день">⭰ Sleep</div></a>
+</body> 
+</html>

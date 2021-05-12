@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+  <html lang="en" >
+    <head>
+      <link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+      <meta charset="UTF-8">
+      <meta name="google" value="notranslate">
+      <title>OBS Studio</title>
+<style>
+  *{
+    outline: none;
+  }
+  body{
+      background: #4c4c4c;
+      margin: 0px;
+      font-family: 'Roboto', sans-serif;
+    }
+    .up-menu{
+      position: absolute;
+      width: 100%;
+      height: 70%;
+    }
+    .bottom-menu{
+      position: absolute;
+      width: 100%;
+      background: #3a393a;
+      height: 30%;
+      bottom: 0px;
+    }
+    video {
+        margin: 10px auto;
+        width: 1000px;
+        height: 630px;
+    }
+    .button{
+  font-size: 20px;
+}
+
+a{
+  color: #fff;
+  padding: 10px;
+}
+a:hover{
+  color: #a3a3a3;
+}
+.two{
+      position: absolute;
+      top:0px;
+    }
+    .three{
+      position: absolute;
+      top:0px;
+    }
+    .four{
+      position: absolute;
+      top:0px;
+    }
+    .five{
+      position: absolute;
+      top:0px;
+    }
+@media screen and (max-width: 2013px) { 
+video {
+        margin: 10px auto;
+        width: 900px;
+        height: 600px;
+    }
+}
+@media screen and (max-width: 1713px) { 
+video {
+        margin: 10px auto;
+        width: 900px;
+        height: 530px;
+    }
+}
+@media screen and (max-width: 1613px) { 
+video {
+        margin: 10px auto;
+        width: 900px;
+        height: 470px;
+    }
+}
+@media screen and (max-width: 1413px) { 
+video {
+        margin: 10px auto;
+        width: 900px;
+        height: 430px;
+    }
+    .one{
+      position: absolute;
+      top:-10px;
+    }
+    .two{
+      position: absolute;
+      top:-10px;
+    }
+    .three{
+      position: absolute;
+      top:-10px;
+    }
+    .four{
+      position: absolute;
+      top:-10px;
+    }
+    .five{
+      position: absolute;
+      top:-10px;
+    }
+}
+.tradsadas{
+  width: 430px;
+  height:168px;
+  y:-20px;
+}
+@media screen and (max-width: 1313px) { 
+video {
+        margin: -5px;
+        width: 900px;
+        height: 380px;
+    }
+}
+button{
+   background: #ffffff00;
+   border: none;
+   color: #fff;
+   font-size: 16px;
+}
+button:hover{
+  opacity: 0.6; 
+}
+button:active{
+  opacity: 0.9;
+}
+.forms{
+}
+</style>
+</head>
+
+<body translate="no" >
+  <!DOCTYPE html>
+    <html>
+      <head>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta id="theme-color" name="theme-color" content="#fff">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+      </head>
+
+      <body>
+        <form action="../index.html" class="button">
+          <button><i class="fa fa-times"></i></button>
+          <button><i class="fa fa-clone"></i></button>
+          <button><i class="fa fa-minus"></i></button>
+        </form>
+
+<center>
+  <!-- Up menu -->
+  <div class="up-menu">
+    <video controls autoplay></video><br><br>
+  </div>
+  </center>
+
+
+  <!-- Bottom menu -->
+  <div class="bottom-menu">
+<table style="position: absolute;">
+  <th>
+    <td> <p style="position: absolute; color: #fff; margin-top:-20px;">Источник не выбран</p></td>
+    <td><svg style="margin-top:-5px; margin-left: 150px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2.986in" height="0.472in"><image  x="0px" y="0px" width="215px" height="34px"  xlink:href="data:img/png;base64,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" /></svg>
+ </th>
+</table>
+
+    <div style="width: 17.5%; height: 70%; margin-top:40px; background: #1f1e1f;color: #fff; border: 1px solid #1f1e1f;" class="one">
+      <table style=" width: 100%; height: 20px; background: #464546;text-align:center;">
+        <th>
+          <td>Сцены </td>
+          <td><svg style="position: absolute; margin-left: -10px; margin-top:-3px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.139in" height="0.139in"><image  x="0px" y="0px" width="10px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEVGRUbS0tLo6OjY2NjR0NGioqJGRUbz8/OWlZbr6+vk5OT///9SCtWXAAAAAXRSTlMAQObYZgAAAAFiS0dECx/XxMAAAAAHdElNRQflBQkRMSIxbG96AAAAMElEQVQI12MQUlISYGAwcXExYGAIS0sLgJOJSkWKDK2RSkucGRhY09JSUUmO0NAIAFmcDDZ4VOdeAAAAAElFTkSuQmCC" /></svg></td>
+        </th>
+      </table>
+      <p style=" margin-top:0; background: #19334b; cursor: pointer;">Сцена</p>
+    </div>
+
+    <div style="width: 17.5%; height: 70%;left: 18%;position: absolute; margin-top:40px; background: #1f1e1f;color: #fff; border: 1px solid #1f1e1f;" class="two">
+      <table style=" width: 100%; height: 20px; background: #464546;text-align:center;">
+        <th>
+          <td>Источники </td>
+          <td><svg style="position: absolute; margin-left: -10px; margin-top:-3px; cursor: pointer; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.139in" height="0.139in"><image  x="0px" y="0px" width="10px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEVGRUbS0tLo6OjY2NjR0NGioqJGRUbz8/OWlZbr6+vk5OT///9SCtWXAAAAAXRSTlMAQObYZgAAAAFiS0dECx/XxMAAAAAHdElNRQflBQkRMSIxbG96AAAAMElEQVQI12MQUlISYGAwcXExYGAIS0sLgJOJSkWKDK2RSkucGRhY09JSUUmO0NAIAFmcDDZ4VOdeAAAAAElFTkSuQmCC" /></svg></td>
+        </th>
+      </table>
+      <table>
+        <th>
+          <td><p style=" margin-top:0;">🖥️Desktop</p></td>
+          <td><svg style="margin-left: 10px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.653in" height="0.25in"><image  x="0px" y="0px" width="47px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC8AAAASCAMAAAD8HXftAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABL1BMVEX///8fHh8fHh8fHh8fHh8fHh8fHh8iISIfHh8fHh8pKCkfHh8hICEhICEhICEfHh8iISIjIiMfHh8fHh8lJCVKSUpeXV5KSkomJSY5ODl3d3d/f392dnYrKitAP0BDQkMtLC15eXlubm56enopKSkzMjO5ubnS0tK/v7+AgIA2NTZXV1d+fn48OzxbWlt4d3jLy8vDw8PNzc17e3sjIiNramtVVFVcXFxxcHEvLi+oqKjJycl0dHQtLS0fHh9zcnOrq6sxMDFPT08oJyixsbHIyMg9PD0nJic7Oju0tLSenp5nZmckIySTk5PQ0NCgn6A3NjdcW1yGhoY0MzRnZ2c1NDU6OTopKCmnp6dzc3NycXLMzMzEw8R8e3y6uroqKSo/Pz9CQUJDQ0NoZ2j///8q+NvFAAAAFHRSTlMAAH8q1L8/v4BU6Ra/q4BAgMAr1cVgAswAAAABYktHRACIBR1IAAAAB3RJTUUH5QUJEx82IzVmRQAAATJJREFUKM+V0mlTwjAQBuBuwBpPFLSKaxVBjQeIeCMatFpBOayAN3jg//8PJq3MQGXa4f3QJDNPMrtpFMU7IEJmZjVtbp7IueLvSXQBRRajcoN9AARIUF9ajgVJAFyHiJW+ghiPIyZWO56sJdaZyMbm1pD6z29jMgWQSuKO49Xh9K7AmYz47O0fELfXDo8oAD3GE9uT7CljubNzzmP5HGMXlyMu/xcDUXr16pox84bzQoHzosnY7eiYlx+/E2WUeLlSrVbKvCQW9xNdXrc6eUC0LF2pyUbrvCGHBn+UQ63LG9gTY2Dfp55JLx+y+y06/T7Jfp/BywPNvogNr/I+30x5n9TbA0yl30UZzab8X63pEPh5oPXWh/MeotT1fvp6CNPI59d3LELD4Od9Mqhv//Sk/Qv6O08XfHGh4QAAAABJRU5ErkJggg==" /></svg></td>
+        </th>
+      </table>
+    </div>
+    <div style="width: 25%; height: 70%;left: 36%;position: absolute; margin-top:40px; background: #1f1e1f;color: #fff; border: 1px solid #1f1e1f;" class="three">
+      <table style=" width: 100%; height: 20px; background: #464546;text-align:center;">
+        <th>
+          <td>Микшер аудио </td>
+          <td><svg style="position: absolute; margin-left: -10px; margin-top:-3px; cursor: pointer; " xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.139in" height="0.139in"><image  x="0px" y="0px" width="10px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEVGRUbS0tLo6OjY2NjR0NGioqJGRUbz8/OWlZbr6+vk5OT///9SCtWXAAAAAXRSTlMAQObYZgAAAAFiS0dECx/XxMAAAAAHdElNRQflBQkRMSIxbG96AAAAMElEQVQI12MQUlISYGAwcXExYGAIS0sLgJOJSkWKDK2RSkucGRhY09JSUUmO0NAIAFmcDDZ4VOdeAAAAAElFTkSuQmCC" /></svg></td>
+        </th>
+      </table>
+
+    </div>
+
+    <div style="width: 17.5%; height: 70%;left: 61.5%;position: absolute; margin-top:40px;color: #fff;" class="four">
+      <table style=" width: 100%; height: 20px; background: #464546;text-align:center; border: 1px solid #1f1e1f;">
+        <th>
+          <td>Переход</td>
+          <td><svg style="position: absolute; margin-left: -10px; margin-top:-3px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.139in" height="0.139in"><image  x="0px" y="0px" width="10px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEVGRUbS0tLo6OjY2NjR0NGioqJGRUbz8/OWlZbr6+vk5OT///9SCtWXAAAAAXRSTlMAQObYZgAAAAFiS0dECx/XxMAAAAAHdElNRQflBQkRMSIxbG96AAAAMElEQVQI12MQUlISYGAwcXExYGAIS0sLgJOJSkWKDK2RSkucGRhY09JSUUmO0NAIAFmcDDZ4VOdeAAAAAElFTkSuQmCC" /></svg></td>
+        </th>
+      </table>
+      <center>
+        <select style="padding: 3px 80px 3px 3px; border-radius: 5px; margin-top:5px; background: #4c4c4c; border: none; color: #fff; cursor: pointer;">
+          <option>Затухание</option>
+        </select>
+        <table>
+          <th>
+            <td>Длительность</td>
+            <td><input style="width: 70px; background: #1f1e1f; border: none; border-radius: 5px; color: #fff;" type="number" placeholder="300 ms"></td>
+          </th>
+        </table>
+      </center>
+    </div>
+
+    <div style="width: 20.5%; height: 70%;right: 0%;position: absolute; margin-top:40px;color: #fff;" class="five">
+      <table style=" width: 100%; height: 20px; background: #464546;text-align:center; border: 1px solid #1f1e1f;">
+        <th>
+          <td>Управление</td>
+          <td><svg style="position: absolute; margin-left: -10px; margin-top:-3px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"width="0.139in" height="0.139in"><image  x="0px" y="0px" width="10px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKBAMAAAB/HNKOAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJFBMVEVGRUbS0tLo6OjY2NjR0NGioqJGRUbz8/OWlZbr6+vk5OT///9SCtWXAAAAAXRSTlMAQObYZgAAAAFiS0dECx/XxMAAAAAHdElNRQflBQkRMSIxbG96AAAAMElEQVQI12MQUlISYGAwcXExYGAIS0sLgJOJSkWKDK2RSkucGRhY09JSUUmO0NAIAFmcDDZ4VOdeAAAAAElFTkSuQmCC" /></svg></td>
+        </th>
+      </table>
+      <center style="margin-top:5px;">
+        <button style="cursor: pointer; width: 90%; border:none; background: #4c4c4c; color: #fff; padding: 3px; border-radius: 5px;" id="shareScreen" onclick="onShareScreen()">Выбрать окно</button>
+        <button style="cursor: pointer;margin-top:3px;width: 90%; border:none; background: #4c4c4c; color: #fff; padding: 3px; border-radius: 5px;" id="rec" onclick="onBtnRecordClicked()" disabled>Начать запись</button>
+        <button style="cursor: pointer;margin-top:3px;width: 90%; border:none; background: #4c4c4c; color: #fff; padding: 3px; border-radius: 5px;" id="stop" onclick="onBtnStopClicked()" disabled>Остановить запись</button>
+        <button id="downloadLink" style="cursor: pointer;margin-top:3px;width: 90%; border:none; background: #4c4c4c; color: #fff; padding: 3px; border-radius: 5px;"><a id="downloadLink" download="mediarecorder.webm" name="mediarecorder.webm" href style="text-decoration: none;"></a></button>
+        <script src="https://webrtchacks.github.io/adapter/adapter-latest.js"></script>
+      </center>
+    </div>
+
+    
+      <table>
+        <th>
+          <td><svg style="position: absolute; bottom: -3;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.347in" height="0.236in"><image  x="0px" y="0px" width="20px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAMAAAAfZPc8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA51BMVEU6OTr///88Ozw7OjtBQEFAP0A/Pz9HRkc6OTo7Ojs6OTo6OTpBQEFAP0A6OTpEQ0Q7Ojs6OTpEQ0Q6OTpAP0A7OjtaWFpSUFJRUVFaWVplY2V/fX9xbnFwb3BkY2RYVlh4dXhDQkNdW11+fH5NS01MTEx3dXdXVld8enx9e31GRUZVVFV7eXtFREVFRUVUVFR9en1fXl9cW1xAP0BJR0lsa2xIR0hcWlxgXmB4dng+PT5eXF5dXF15d3lta206OTp0cXRtam10cnRQT1BhYGE8Ozx2dHZ1c3VgX2BTU1Nxb3FUUlT////ptxCrAAAAFnRSTlMAAAAAAAAAAH9/P0C/v4B/v7+AwMCAMsai3gAAAAFiS0dEAf8CLd4AAAAHdElNRQflBQoMEh/R5svHAAAA40lEQVQY032RW1PCMBSEF1QIVlOtgJdVhBS0lRbUihdEsQJy8f//H1Ib+8KUfTgzmW92smcPAIj6qZ4FI+DsvII/iQteopiRHVyxIRKwf81mS7ltAzpUrRveWpoceP5dl0FoSC9gP/TvD7XlgY+R5z9Je0ByYMtn14te+Grh6M0fKr5LO2CiwJYjqqH7cYyQn+Mv7iJmqhh7/B7H7GHC6Yw/KPFfJcw5W3CCJUcRVyhnpKxTR4q/Wzz5/5hswjHZHJFmO4Fl9hFO4oodke2T00FVt2Pl9gbZ2OxapmeQG/ep6fcaiLQqfBtli3IAAAAASUVORK5CYII=" /></svg></td>
+          <td><p style="position: absolute; color: #fff; bottom: -15px;left: 40px; ">Live: 00:00:00</p></td>
+          <td><p style="position: absolute; color: #fff; bottom: -15px;left: 160px;">CPU: 1.2%, 60.00 fps</p></td>
+        </th>
+      </table>
+
+  </div>
+
+
+
+
+
+
+  <!-- Script -->
+      <script id="rendered-js" >
+"use strict";
+
+var screenConstraints = { video: true, audio: true };
+var micConstraints = { audio: true };
+
+var shareBtn = document.querySelector("button#shareScreen");
+var recBtn = document.querySelector("button#rec");
+var stopBtn = document.querySelector("button#stop");
+
+var videoElement = document.querySelector("video");
+var dataElement = document.querySelector("#data");
+var downloadLink = document.querySelector("a#downloadLink");
+
+videoElement.controls = false;
+
+var mediaRecorder;
+var chunks = [];
+var count = 0;
+var localStream = null;
+var micNumber = 0;
+
+function onShareScreen() {
+  if (!navigator.mediaDevices.getDisplayMedia) {
+    alert("navigator.mediaDevices.getDisplayMedia not supported on your browser, use the latest version of Chrome");
+  } else {
+    if (window.MediaRecorder == undefined) {
+      alert("MediaRecorder not supported on your browser, use the latest version of Firefox or Chrome");
+    } else {
+      navigator.mediaDevices.getDisplayMedia(screenConstraints).then(function (screenStream) {
+
+        navigator.mediaDevices.enumerateDevices().then(function (devices) {
+          devices.forEach(function (device) {
+            if (device.kind == "audioinput") {
+              micNumber++;
+            }
+          });
+
+          if (micNumber == 0) {
+           
+            onCombinedStreamAvailable(screenStream);
+          } else {
+            
+            navigator.mediaDevices.getUserMedia(micConstraints).then(function (micStream) {
+
+
+              var composedStream = new MediaStream();
+
+     
+              screenStream.getVideoTracks().forEach(function (videoTrack) {
+                composedStream.addTrack(videoTrack);
+              });
+
+    
+              if (screenStream.getAudioTracks().length > 0) {
+         
+                var context = new AudioContext();
+                var audioDestination = context.createMediaStreamDestination();
+
+                const systemSource = context.createMediaStreamSource(screenStream);
+                const systemGain = context.createGain();
+                systemGain.gain.value = 1.0;
+                systemSource.connect(systemGain).connect(audioDestination);
+                console.log("added system audio");
+
+                if (micStream && micStream.getAudioTracks().length > 0) {
+                  const micSource = context.createMediaStreamSource(micStream);
+                  const micGain = context.createGain();
+                  micGain.gain.value = 1.0;
+                  micSource.connect(micGain).connect(audioDestination);
+                  console.log(" added mic audio");
+                }
+
+                audioDestination.stream.getAudioTracks().forEach(function (audioTrack) {
+                  composedStream.addTrack(audioTrack);
+                });
+              } else {
+            
+                micStream.getAudioTracks().forEach(function (micTrack) {
+                  composedStream.addTrack(micTrack);
+                });
+              }
+
+              onCombinedStreamAvailable(composedStream);
+
+            }).
+            catch(function (err) {
+              
+            });
+          }
+        }).
+        catch(function (err) {
+          log(err.name + ": " + err.message);
+        });
+      }).
+      catch(function (err) {
+       
+      });
+    }
+  }
+}
+
+function onCombinedStreamAvailable(stream) {
+  localStream = stream;
+  localStream.getTracks().forEach(function (track) {
+    if (track.kind == "audio") {
+      track.onended = function (event) {
+      };
+    }
+    if (track.kind == "video") {
+      track.onended = function (event) {
+      };
+    }
+  });
+
+  videoElement.srcObject = localStream;
+  videoElement.play();
+  videoElement.muted = true;
+  recBtn.disabled = false;
+  shareBtn.disabled = true;
+
+  try {
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+    window.audioContext = new AudioContext();
+  } catch (e) {
+    
+  }
+}
+
+function onBtnRecordClicked() {
+  if (localStream == null) {
+    alert("Could not get local stream from mic/camera");
+  } else {
+    recBtn.disabled = true;
+    stopBtn.disabled = false;
+
+
+    if (typeof MediaRecorder.isTypeSupported == "function") {
+      if (MediaRecorder.isTypeSupported("video/webm;codecs=vp9")) {
+        var options = { mimeType: "video/webm;codecs=vp9" };
+      } else if (MediaRecorder.isTypeSupported("video/webm;codecs=h264")) {
+        var options = { mimeType: "video/webm;codecs=h264" };
+      } else if (MediaRecorder.isTypeSupported("video/webm;codecs=vp8")) {
+        var options = { mimeType: "video/webm;codecs=vp8" };
+      }
+      mediaRecorder = new MediaRecorder(localStream, options);
+    } else {
+      
+      mediaRecorder = new MediaRecorder(localStream);
+    }
+
+    mediaRecorder.ondataavailable = function (e) {
+      chunks.push(e.data);
+    };
+
+    mediaRecorder.onstop = function () {
+
+      var blob = new Blob(chunks, { type: "video/webm" });
+      chunks = [];
+
+      var videoURL = window.URL.createObjectURL(blob);
+
+      downloadLink.href = videoURL;
+      videoElement.src = videoURL;
+      downloadLink.innerHTML = "Download video file";
+
+      var rand = Math.floor(Math.random() * 10000000);
+      var name = "video_" + rand + ".webm";
+
+      downloadLink.setAttribute("download", name);
+      downloadLink.setAttribute("name", name);
+    };
+
+
+    mediaRecorder.start(10);
+
+    localStream.getTracks().forEach(function (track) {
+      
+      console.log(track.getSettings());
+    });
+  }
+}
+
+function onBtnStopClicked() {
+  mediaRecorder.stop();
+  videoElement.controls = true;
+  recBtn.disabled = false;
+  stopBtn.disabled = true;
+}
+
+function onStateClicked() {
+  if (mediaRecorder != null && localStream != null) {
+    
+
+    localStream.getTracks().forEach(function (track) {
+      if (track.kind == "audio") {
+       
+      }
+      if (track.kind == "video") {
+       
+      }
+    });
+  }
+}
+
+function log(message) {
+  dataElement.innerHTML = dataElement.innerHTML + "<br>" + message;
+  console.log(message);
+}
+    </script>
+
+  
+
+</body>
+
+</html>
+ 

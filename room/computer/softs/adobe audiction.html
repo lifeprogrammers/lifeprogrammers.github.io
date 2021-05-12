@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<meta charset="utf-8">
+	<link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+	<meta name="google" value="notranslate">
+	<title>Adobe Audiction</title>
+	<style>
+		::-webkit-scrollbar { width: 0;}
+		*{
+			outline: none;
+		}
+		html{
+			overflow-x:hidden;
+		}
+		body{
+			background: #161616;
+			font-family: 'Roboto', sans-serif;
+			color: #b9b9b9;
+		}
+		#msg {
+  visibility: hidden;
+  color: red;
+  font-weight: bold;
+  font-size: 22px;
+  font-family: Verdana;
+}
+		.one{
+			position: absolute;
+			background: #232323;
+			width: 20%;
+			height: 39.6%;
+		}
+		.two{
+			position: absolute;
+			background: #232323;
+			width: 20%;
+			height: 48%;
+			top:41.5%;
+		}
+		.three{
+			position: absolute;
+			background: #232323;
+			width: 20%;
+			height: 10%;
+			bottom:0;
+		}
+		.four{
+			position: absolute;
+			background: #232323;
+			width: 50%;
+			height: 83%;
+			top:9px;
+			left: 20.8%;
+		}
+		.five{
+			position: absolute;
+			background: #232323;
+			width: 60%;
+			height: 15%;
+			bottom:0;
+			left: 20.8%;
+		}
+		.six{
+			position: absolute;
+			background: #232323;
+			width: 28.3%;
+			height: 83%;
+			top:9px;
+			right: 9px;
+		}
+		.seven{
+			position: absolute;
+			background: #232323;
+			width: 18.3%;
+			height: 15%;
+			bottom:0;
+			right: 9px;
+		}
+		.search{
+			background: #161616;
+			border-radius: 3px;
+			color: #8a8a8a;
+			border: 1.5px solid #313131;
+			margin-left: 0px;
+		}
+		@media screen and (max-width: 1413px) { /* 110% */	
+			.search{
+				transform: scale(0.8);
+				margin-left: -10px;
+			}
+			.ulm-div{
+				transform: scale(0.8);
+				margin-top: -20px;
+				margin-bottom: -10px;
+			}
+			.clm-div{
+			transform: scale(0.9);
+			}
+			.three{
+				height: 12%;
+				bottom: -13px;
+			}
+			.ucm-div{
+				position: absolute; 
+				top:0px;
+				left: 25%;
+			}
+			.five{
+				height: 17%;
+				bottom: -13px;
+			}
+			.bcm-svg{
+				width: 75%;
+			}
+			.seven{
+				height: 17%;
+				bottom: -13px;
+			}
+			.urm-select{
+				transform: scale(0.8);
+			}
+
+		}
+		@media screen and (max-width: 1313px) { /* 125% */
+			.search{
+				transform: scale(0.7);
+				margin-left: -40px;
+			}
+			.ulm-status{
+				position: absolute;
+				right:  70px;
+				top:77px;
+			}
+			.ulm-status2{
+				position: absolute;
+				right:  10px;
+				top:77px;
+			}
+			.adas{
+				position: absolute;
+				right: 27px;
+			}
+
+			.ulm-div{
+				transform: scale(0.7);
+				margin-top: -30px;
+				margin-bottom: -25px;
+			}
+			.clm-div{
+			transform: scale(0.8);
+			position: absolute;
+			top:80px;
+			}
+			.three{
+				height: 14%;
+				bottom: -24px;
+			}
+			.ucm-div{
+				position: absolute; 
+				top:-50px;
+				left: 20%;
+			}
+			.five{
+				height: 19%;
+				bottom: -24px;
+			}
+			.bcm-svg{
+				width: 67%;
+			}
+			.seven{
+				height: 19%;
+				bottom: -24px;
+			}
+			.urm-select{
+				transform: scale(0.7);
+				margin-left: -20px;
+			}
+			.last{
+				font-size: 10px;
+			}
+			.last1{
+				font-size: 10px;
+				margin-right: -10px;
+			}
+			canvas{
+				transform: scale(0.9);
+			}
+		}
+					.actions{
+  position: absolute;
+  right:    0;
+  top:0;
+  font-size: 20px;
+  padding: 
+}
+
+a{
+	
+  color: #a3a3a3;
+  padding: 10px;
+}
+a:hover{
+  color: #cccccc;
+}
+.bar{
+	background: #313131; border: none; color:#a2a2a2; padding: 3px;border-radius: 3px;
+}
+
+	</style>
+</head>
+<body>
+	
+	<!-- up-left-menu 20%-->
+	<div class="one">
+		<table>
+			<th>
+				<td><p style="color: #b9b9b9; text-decoration: underline; cursor: pointer;font-size: 13px;">Files ≡</p></td>
+				<td><p style="margin-left: 10px; cursor: pointer;font-size: 13px;">Favorites</p></td>
+			</th>
+		</table>
+		<table style="margin-top:-20px;">
+			<th>
+				<td><svg style="margin-top:10px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.264in" height="0.292in"><image  x="0px" y="0px" width="91px" height="21px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAAAVCAAAAAAMD81ZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoHMBDqvn+XAAABuUlEQVQ4y7WVvUvDQBiHn0YNVsFUKYhfoJyK4OrXpiKuVv8Bx4JUHMRZHNyEbiIKDuLiWsTBQcTFoQ6CUwU/kEKxUBUDRWm1OETreUmaOPS35N5733vux5vkLiComrTqoavKroXGER14T75VcDAcAkpXWcds06jk8P28KLFne14AY2zLdGUPz2QAfWrnzik7OpH5DUT6TmKHLo4BPbrgDg9lNgEiUUe4ZmUtxQNyTywVdqJr1ugg6bZFgsXv0fO6v36X4V0AzDU7lLXHrGfpu7Mt9pJwZNeJrY9LL6O+l4eUujDo/RsYg46+p6blqRaRSnmSbK6NTgSPeRtb3fHevjZ/2xesxI4MQozDU5UdalcK7baLG581C60V2LuI2LIypwEDypyZti1Nm6vdW1n+Jw0wPG3fJKmb94A/HjqxVV0rcavgSaB5wPPlXrcJIURY/r7LKqm+l+ssG/N7+yt+ejE0CRydUAtFJXXvdmhpDbmf4Z/T4UPE5Yijjn4uTyAgMMJ/ERmV3dYAxCBxVi7NvUp5vUsKCmkILuW3ixDwe+/ESZz5LIVwwcSx3y76Bxqrd759N5k+C3/1BUbAb8AoV0NkAAAAAElFTkSuQmCC" /></svg></td>
+				<td><input class="search" placeholder="🔎"></td>
+			</th>
+		</table>
+		<table>
+			<th>
+				<td><p style="font-size: 13px; margin-top: -5px;">Name⇧</p></td>
+				<td><p class="ulm-status" style="font-size: 13px; margin-top: -5px; margin-left: 120px;">Status</p></td>
+				<td><p class="ulm-status2"style="font-size: 13px; margin-top: -5px; margin-left: 10px">Duration</p></td>
+			</th>
+		</table>
+		<center>
+			<div class="ulm-div" style="background: #1d1d1d; width: 95%; border: 2px solid #313131; border-radius: 3px; height: 130px"></div>
+			<p><svg class="adas" style="margin-left: 30px;cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.514in" height="0.319in"><image  x="0px" y="0px" width="109px" height="23px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAG0AAAAXCAAAAAAkKp4tAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIBgqVnFClAAAB/0lEQVRIx2NUZqAjYKKnZYPcNj423EYRNotZiDTbWm1Yn/3BLuUS8vw9Elfe4CEO26RF2X7+I8o2D1YVKxz2qeqbCdyDy2gnSx7CUMLCwMDAwMDOKsD77gNe++QtYSxOd7tDh75jVWSu0/EVygplYmBgcFe8dPUjhm0MDAzMogJvPuGxTcMMweZ0t9t4Cpui7zuhrnD1ZGBgYGA4+8vQb9Y9LLYxMLBKCrzG7mQM8GbPGWzCl9Z/ZGDQ4GNgUDSHqtu/3z5r0SVstjEwcMp9fvMLtx0t7xgY+iB2YQv0Gw9vMDAw8Kchh6zYwYN84bfhfmBB1cHL/eEtgeQCs0v5/z1UCUgSZEYW+mhr1LXZzGI/DtsY/nzDb9nmT+f/MTAwMLCmKe+8x0AI3LhbbrX3gQz2kGT4+/bDf/z6Yc7kJa58/f1EkOGFLJyLnP//f7j3/j9RhhANZDUfMwgg8jyS3768/kWGeXiBve+t05xaazBt+/HmKyG9fj8QbA5cilCKmcfzrzOEv7mCZttH1u+fCIehHjHe+dTAwsCgFQCJoXsM/IHy/b/RbHtL2JQP7zBEcFjHwMBw5H0sGwMDA4Ohm/ibGUglFCON6m75RL53LQyGcvevIOcoUmscYsHHK2rMhxhe3HyJEkG08hsDA5/ELQwxFjLMIQ58wlKj0LddAgAUI5tbjcUtUgAAAABJRU5ErkJggg==" /></svg></p>
+		</center>
+	</div>
+
+	<!-- center-left-menu 20%-->
+	<div class="two">
+		<table>
+			<th>
+				<td><p style="color: #b9b9b9; text-decoration: underline; cursor: pointer;font-size: 13px;">Media Browser ≡</p></td>
+				<td><p style="margin-left: 10px; cursor: pointer;font-size: 13px;">Effects Rack</p></td>
+			</th>
+		</table>
+		<p><svg style="margin-top:-30px;cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.5in" height="0.375in"><image  x="0px" y="0px" width="36px" height="27px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAbCAAAAAAxR3I8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoICimbTm7bAAABBklEQVQoz2NU/s/IQAgwEVRBrCJmIQZk65Ktfr4kaJK2siRN3UQ9RSxIbA15BgYGFYZ/B3/hUWRszMDAoKz878ZjPOF0U0mQgYHh36Lb+Nz0a9YzBgaGzZcw3MSo/J+RgcFRi4GBgeHlOp5M8Y0HlTwZGBgYfq/4hOYmLf6zgmYMyjyLpmucUkpjY2BgYGAQ/YRu3dmdKxgYGPSCPp0ST2bDFQQCDEoMDAwMVr9PZHLiDCdzcwhtb8VKRIgj1PxHN2n3HQzdn++JGzAwMPw78Bum6NYtLJZ8NxZhYLj8mwFvBH+a+4vh2VL0aEEHXx+pTv2GCHFcgPU31Hf4st1v7EGAFRClCADAjz9SVBoOrQAAAABJRU5ErkJggg==" /></svg></p>
+		<center>
+			<div class="clm-div" style="background: #1d1d1d; width: 95%; border: 2px solid #313131; border-radius: 3px; height: 230px; margin-top: -27px;">
+				<table style="position: absolute; left: 10px;">
+					<th>
+						<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.167in" height="0.222in"><image  x="0px" y="0px" width="12px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAAAAAAHCsHbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIDyJx60MWAAAAUklEQVQI12OUZUAAJgbiOX3iSJx7aWwIziyGNAYGBgYGZn4GBoa/t3xELsM4DF9eh/25DTfN6cY2uNEpgrPhBgQbzf4I53jOfsDAwMDAwEicQwFD9hEzJCbWFgAAAABJRU5ErkJggg==" /></svg></td>
+						<td><svg style="" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.375in" height="0.181in"><image  x="0px" y="0px" width="27px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAANCAAAAAB9MEoPAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIDiHx+SPtAAAAXUlEQVQY02OUZcAJmHBLMbAwMDAoamII374NlfNRv88jiiY3ESrHdHY+eyMPDvv+Mvz8g8M+Bt04HgFccpxmJPuBiYGB4Rum8G8GBgYGRlkGBh5JDLmXn6By5IQZANtnDyPP0C26AAAAAElFTkSuQmCC" /></svg></td>
+						<td><p style="font-size: 13px; position: absolute; margin-top:-12px;">Drives</p></td>
+					</th>
+				</table>
+				<table style="position: absolute; left: 10px; margin-top:20px;">
+					<th>
+						<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.167in" height="0.222in"><image  x="0px" y="0px" width="12px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAAAAAAHCsHbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIDyJx60MWAAAAUklEQVQI12OUZUAAJgbiOX3iSJx7aWwIziyGNAYGBgYGZn4GBoa/t3xELsM4DF9eh/25DTfN6cY2uNEpgrPhBgQbzf4I53jOfsDAwMDAwEicQwFD9hEzJCbWFgAAAABJRU5ErkJggg==" /></svg></td>
+						<td><svg  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.306in" height="0.25in"><image  x="0px" y="0px" width="22px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAAAAAB6TnHxAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIFCg4CGGSAAAAp0lEQVQY02OUZcAGWBgYGBg4OVHE3kGEOWv5UITnn4UI8624ph+MEGZlYGBiYGBgYLj27gmq2RBhK1UtLFYyeHhgccm7HAYGBoYpaMLKPgwMDE/Woqv++daQnYGB4QRc7D4DAwsDw5PVwqoMDAxL0F0SqvroJ5qVTAwM6hYXevdjukSPYc3fS08whD98+sDw6BGGIUcYeDAClpmf4c95lefowozYowEAfh0kFd3dG/4AAAAASUVORK5CYII=" /></svg></td>
+						<td><p style="font-size: 13px; position: absolute; margin-top:-12px;">Shortcut</p></td>
+					</th>
+				</table>
+			</div>
+		</center>
+	</div>
+
+	<!-- buttom-left-menu 20%-->
+	<div class="three">
+		<table class="blm-table">
+			<th>
+				<td><p style="color: #b9b9b9; text-decoration: underline; cursor: pointer;font-size: 13px;">History ≡</p></td>
+				<td><p style="margin-left: 10px; cursor: pointer;font-size: 13px;">Video</p></td>
+			</th>
+		</table>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:-5px;" />
+		<table>
+			<th>
+				<td><p style="margin-top:-3px; font-size: 13px;">0 Undo <saasdas style="cursor: pointer;">🗑</saasdas></p></td>
+			</th>
+		</table>
+	</div>
+
+	<!-- up-center menu 50%-->
+	<div class="four">
+		<table>
+			<th>
+				<td><p style="color: #b9b9b9; text-decoration: underline; cursor: pointer;font-size: 13px;">Editor ≡</p></td>
+				<td><p style="margin-left: 10px; cursor: pointer;font-size: 13px;">Mixer</p></td>
+			</th>
+		</table>
+		<center>
+			<canvas width="600" height="400" style=" margin-bottom:-400px ;"></canvas>
+		<table class="ucm-div" style="margin-top:500px;">
+			<th>
+				<td><a title="Остановить запись" id="stop"><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.236in" height="0.236in"><image  x="0px" y="0px" width="17px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAAAAAAeBhgmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIHiW8VvWlAAAANklEQVQY02NUZkADTAyERVgYGBgkOeHcdx8YWBgYGDhZ4SIcxJkzsCIsDAwM79kRvoCKENAFAKPgBTZj3+eAAAAAAElFTkSuQmCC" /></svg></td></a>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.236in" height="0.222in"><image  x="0px" y="0px" width="17px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAAAAADVWsuDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIHjTW5tVXAAAAcUlEQVQY04WPSwqAMBBDo7V+EBWELlQQwfufTAsq/qmtG9G2G7MMk5eJ08KSaxvwAFTBwsXrkBxgNMxwKDNFWJPaHFrUkU2O6tJ/yK+SeODSbBerNG4uPig9pcZOQufM3fn9DGDvF33FSLdJQXf4z/YbcFsec8eBvLQAAAAASUVORK5CYII=" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.278in" height="0.236in"><image  x="0px" y="0px" width="20px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAAAAAD4L9NiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIHxz6SEzsAAAATUlEQVQY02NUZsAETFjEGFgYGBgYGPiFGf49/c0iw8Tw7gNckJOVgYH1Nxs7AwMHTu1DRRDio3cMDP9+MPx4z8TwjoGBgYGR6FDCKggAJQgMS6S6hB8AAAAASUVORK5CYII=" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.292in" height="0.222in"><image  x="0px" y="0px" width="21px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAQCAAAAADcsWv5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIHzW4+tSAAAAAgklEQVQY03WQuw6CQBBFzzIUrIUhKLaG+P8/RaXEkGCICMKuBSwKLreaOZm581AXPArYoME52825JAAhSEQ4MbVPTTnSr3SqMSypHGMXzlTFB2FN9SnybNY21kNNkTe+K175dfibBlS122Jx8XCbbCTB0tWut3+079HB3n/K7XP7Zx9V4CBhH2bDuAAAAABJRU5ErkJggg==" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.333in" height="0.181in"><image  x="0px" y="0px" width="24px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAANCAAAAACWB/EMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIIA3IJkYiAAAAlUlEQVQY04WQyw6CMBBFT+1DQdEG+QP//6tck1gSW5DQurAUFybO6s49mbmZETd+146/wOjiHQCVm33b9D0AytrpvoLaNuucvXyWKODUVutcdxRZKs5Xk3XV1d/ho49ZT37egGyX54DZAd4Ht2gJzAPIFqJ/RCPxgTS6SasCIAU3mzEAvFzQaQBRXiJIJThuB7LZEIE3NpIvhKBPccQAAAAASUVORK5CYII=" /></svg></td>
+				<td><a title="Начать запись" id="record"><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.25in" height="0.236in"><image  x="0px" y="0px" width="18px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAMAAADnhAzLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABTVBMVEUjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM6JiYjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM+JycjIyMjIyN8LS0jIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM+JyeWMTEjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyM6JiaJLy+zNDTRODiwNDSCLi5oKyvoOjr1PDxyLS18LS3rOzs+JycjIyOWMTG9NTXUODjaODj///9akiNzAAAAXHRSTlMABhIaHig4JhlCtvnp4NjP0sNYWjEjJzKB9v7hj1AzPHnt9ZRTifPqbzb8kE682yBg70Ds3/61mv6RcKPjsYBDcbPu+P3Ng14MRWp1gqTCu6+SWzs0CCU/Oj41LCnrGeQAAAABYktHRG4iD1EXAAAAB3RJTUUH5QUKCCQI3CB3qQAAAOJJREFUGNNjYAACRiZmFlY2NlYWZiZGEJ+BnYOTi5uHl49fQFBIWEQUJCQmLiEZExsXn5AoJS0jKwdSJ6+gmJScAgLJqUrKKkxAc1TVklJgIE1dg5mBSVMrJhkulJ6hzcLArJMZm4IAWbqsDCzCmXFIQtl6bAz6Bpk5SEK5hkYgIRRVxkYgjShmmbABjZdEttHUjBXoCHPeVLiQhZ4lC9CpVtaSaekQNWk2tnbMQA/ZOzg6Obtk52ZnZbi6WbkzAYU8PL28fZR9/fwDAoM4g0PAwRMaJh8eIRcpHyUSHRYWxgAAj5lM0Z86KXQAAAAASUVORK5CYII=" /></svg></td></a>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.361in" height="0.194in"><image  x="0px" y="0px" width="26px" height="14px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAOCAAAAAAUZlOfAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIIB87nzdqAAAAlklEQVQY032Qyw6CMBBFD1jQNJCKCxe65P8/zSJKyqtSFzS0LmRWMzkz995MUvOvUnbRceMij9DhArerGBcAqvtpttseQFqdX3oCoCjMw0QIEqU63QMg5aA75wVVBpAraTMJIMqS4Sfhx0y+c70JgjA37RqFpdU28hr1262dfTZLiOF63XmlcAtJDWmYcMFbABuJwe4Pv2umNg3/ftVjAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.319in" height="0.208in"><image  x="0px" y="0px" width="23px" height="15px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAPCAAAAAAqxAuKAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIIDSXI84qAAAAdElEQVQY032QzQpAQBRGP2OISFKUkp+8/3uJJrJBDBZqmFzu7juL0+kaNchj+OERV9utSgYAHADCSAzHxS0b5q48ZpJ7tN/JUv7k9wh80R9UD4sLl+5cVsKDuZ0Iv1SpGh+7Tevkb8XNm0kp5kFuAGB8/PMED2Edq86cN6IAAAAASUVORK5CYII=" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.347in" height="0.236in"><image  x="0px" y="0px" width="25px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAAAAAAN0VjSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIITcXMa7RAAAAiklEQVQY05WOOw6DMBBEB+MmK0V85FTpSMH9L8QBQgBBigiwbAp/YkMoMtVq3s7uJA84caUQiH/HSg1DwNLSj4JRnsw6zFwyvycKn+MAKAtuiOI57f8YLd07atCsQG18DRwzzif9iUgrjc/u9IpJ70oQAIDhTOfEXrupw7Il198Zue5dack4/tdgA6kUKS+7zkReAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.361in" height="0.25in"><image  x="0px" y="0px" width="26px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAASCAAAAABgcpF/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIIhZwde1MAAAAtElEQVQY04WRXQuCMBSGn83IpAwFFYw+Lvz/Pyqqi7qw0spYsbpYyyylF7YD52F7d96JjC5JW6VZLSiOYRI0UO9VBSBE66lajvxC8r0N5/0GCkcnOAQ+gLsYG4+MJAS9rgA/fbkddg+Q4FpCudIGBTPHXigHpuVZ66uGHpyBiD2Q+BdwXPS2MHPlOXhTfSQarRSMU7VRHy+sSg+8owIol6qRRq2i6EzjJ8ObgPu9gcT//2rREwJTK9uN7QMWAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.361in" height="0.319in"><image  x="0px" y="0px" width="26px" height="23px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAXCAAAAAAwvwDMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQoIIipfGpHLAAAA+ElEQVQoz43SXU+DMBQG4LdQusLYRxadi3Pe+P9/klfOzDEm40MGpbZeIHAyt8TetM2TvuekLXvBreHcFHC68QOY1FwjvmFA8H4t0FQAmn7rLgAAYiVL2NSOX/OLWuLJQ6IdOcK0Li0lZ8OR6dnSUbiHinMSyOauknJxjI53gDsx1XDKbJl6DnddmWVdDh2q2hv1kiQrRpufV50cotgNKPlFO9uPT5gqpLfBdSu7HEDDKNn2+NsZANg3DawlAODcpleUsslwm1O3pFSodbcUD6mmZPfy18SjigEArP8AYs3TuvHGYRHpCwKbhb5jiuzr7yvb0+m/3+YH4dpZCVRB4bIAAAAASUVORK5CYII=" /></svg></td>
+			</th>
+		</table>
+		</center>
+	</div>
+
+	<!-- bottom-center-menu 60%-->
+	<div class="five">
+		<p style="color: #b9b9b9;  cursor: pointer;font-size: 13px; margin-left: 10px;">Levels ≡</p>
+		<center>
+			<svg style="margin-top: 0px; margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10.931in" height="0.847in"><image class="bcm-svg" x="0px" y="0px" width="897px" height="61px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAABHsAAAA9BAMAAADPMXi/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAAHBwcQEBBVVQ1/fwgWFhYLCwuOjg7GxgcdHR0ODg4GBgZychKqqgsKCgr////lc7FNAAAAAWJLR0QPGLoA2QAAAAd0SU1FB+UFCgg7LVp+rXAAAADrSURBVHja7dyxiQJRFEDRz8IEZlPMViJouHXYyAS7VdiIPYkKazxzg0E4J3jxCy78H70xYKt5fH2fYKXj9JjneUyXX1hpOTzmn3zYQj4E8iGQD4F8CORDIB8C+RDIh0A+BPIhkA+BfAjkQyAfAvkQyIdAPgTyIZAPgXwI5EMgHwL5EMiHQD4E8iF457P3Jnyg5XVh4zqm296r8HmW54WNH48XW/j7EMiHQD4E8iGQD4F8CORDIB8C+RDIh0A+BPIhkA+BfAjkQyAfAvkQyIdAPgTyIZAPgXwI5EMgHwL5EMiHQD4E//nMAzaa7xxbDt9+hRTgAAAAAElFTkSuQmCC" /></svg>
+		</center>
+	</div>
+
+	<!-- up-right-menu 30%-->
+	<div class="six">
+		<div class="actions">
+      <a href="../index.html"><i class="fa fa-minus"></i></a>
+      <a href="../index.html"><i class="fa fa-clone"></i></a>
+      <a href="../index.html"><i class="fa fa-times"></i></a>
+    </div>
+		<p style="color: #b9b9b9; cursor: pointer;font-size: 13px; margin-left: 20px;">Essential Sound ≡</p>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:-5px;" />
+		<em><p style="font-size: 13px; margin-left: 20px;">No selection</p></em>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:-5px;" />
+		<table style="margin-top:-10px;">
+			<th>
+				<td><p style="margin-left: 20px; color: #414141;">Preset:</p></td>
+				<td><select class="urm-select" style="padding: 3px 300px 3px 3px; background: #2a2a2a; border: none; color: #414141; border-radius: 3px; cursor: pointer;"><option></option></select></td>
+
+			</th>
+		</table>
+		<center>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:-5px;" />
+			<button class="sdas" style="background: #2a2a2a; border:none; padding: 5px 50px 5px 50px; border-radius: 3px; color: #313131;"><a id="download">Download</a></button>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:7px;" />
+		<div id="msg">Идет запись...</div>
+		<hr align="center" width="99%" size="2" color="#313131" style="margin-top:7px;" />
+		
+			<audio  id="audio" controls></audio><br>
+			<select class="bar" id="visSelect">
+    <option value="frequencybars">Bar</option>
+    <option value="sinewave">Wave</option>
+    <option value="circle">Circle</option>
+  </select>
+  <select style="background: #313131; border: none; color:#a2a2a2; padding: 3px;border-radius: 3px; " name="" id="micSelect"></select>
+		</center>
+	</div>
+
+	<!-- bottom-right-menu 20%-->
+	<div class="seven">
+		<p style="color: #b9b9b9; cursor: pointer;font-size: 13px; margin-left: 20px;">Selection/View ≡</p>
+		<table class="last" style="font-size: 13px; margin-left: 80px; margin-top:-20px;">
+			<th>
+				<td><p class="last1"style="margin-left: 0px;">Start</p></td>
+				<td><p class="last1"style="margin-left: 30px;">End</p></td>
+				<td><p class="last1" style="margin-left: 20px;">Duration</p></td>
+			</th>
+		</table>
+		<table class="last" style="font-size: 13px; margin-top:-10px; ">
+			<th>
+				<td>Selection</td>
+				<td>
+					<table class="last" style=" color: #3f4545;">
+						<th>
+							<td>00.00.000</td>
+							<td>00.00.000</td>
+							<td>00.00.000</td>
+						</th>
+					</table>
+				</td>
+			</th>
+		</table>
+		<table class="last" style="font-size: 13px">
+			<th>
+				<td>View</td>
+				<td>
+					<table class="last" style="margin-left: 26px ;color: #3f4545;">
+						<th>
+							<td>00.00.000</td>
+							<td>00.00.000</td>
+							<td>00.00.000</td>
+						</th>
+					</table>
+				</td>
+			</th>
+		</table>
+	</div>
+	<script id="rendered-js" >
+(async () => {
+  let leftchannel = [];
+  let rightchannel = [];
+  let recorder = null;
+  let recording = false;
+  let recordingLength = 0;
+  let volume = null;
+  let audioInput = null;
+  let sampleRate = null;
+  let AudioContext = window.AudioContext || window.webkitAudioContext;
+  let context = null;
+  let analyser = null;
+  let canvas = document.querySelector('canvas');
+  let canvasCtx = canvas.getContext("2d");
+  let visualSelect = document.querySelector('#visSelect');
+  let micSelect = document.querySelector('#micSelect');
+  let stream = null;
+  let tested = false;
+
+  try {
+    window.stream = stream = await getStream();
+    console.log('Got stream');
+  } catch (err) {
+    alert('Разрешите доступ к микрофону "Обновите страницу"', err);
+  }
+
+  const deviceInfos = await navigator.mediaDevices.enumerateDevices();
+
+  var mics = [];
+  for (let i = 0; i !== deviceInfos.length; ++i) {
+    let deviceInfo = deviceInfos[i];
+    if (deviceInfo.kind === 'audioinput') {
+      mics.push(deviceInfo);
+      let label = deviceInfo.label ||
+      'Microphone ' + mics.length;
+      console.log('Mic ', label + ' ' + deviceInfo.deviceId);
+      const option = document.createElement('option');
+      option.value = deviceInfo.deviceId;
+      option.text = label;
+      micSelect.appendChild(option);
+    }
+  }
+
+  function getStream(constraints) {
+    if (!constraints) {
+      constraints = { audio: true, video: false };
+    }
+    return navigator.mediaDevices.getUserMedia(constraints);
+  }
+
+
+  setUpRecording();
+
+  function setUpRecording() {
+    context = new AudioContext();
+    sampleRate = context.sampleRate;
+
+
+    volume = context.createGain();
+
+
+    audioInput = context.createMediaStreamSource(stream);
+
+
+    analyser = context.createAnalyser();
+
+
+    audioInput.connect(analyser);
+
+
+
+    let bufferSize = 2048;
+    let recorder = context.createScriptProcessor(bufferSize, 2, 2);
+
+
+    analyser.connect(recorder);
+
+
+    recorder.connect(context.destination);
+
+    recorder.onaudioprocess = function (e) {
+  
+      if (!recording) return;
+
+      console.log('recording');
+      let left = e.inputBuffer.getChannelData(0);
+      let right = e.inputBuffer.getChannelData(1);
+      if (!tested) {
+        tested = true;
+
+        if (!left.reduce((a, b) => a + b)) {
+          alert("There seems to be an issue with your Mic");
+
+          stop();
+          stream.getTracks().forEach(function (track) {
+            track.stop();
+          });
+          context.close();
+        }
+      }
+
+      leftchannel.push(new Float32Array(left));
+      rightchannel.push(new Float32Array(right));
+      recordingLength += bufferSize;
+    };
+    visualize();
+  };
+
+
+
+  function mergeBuffers(channelBuffer, recordingLength) {
+    let result = new Float32Array(recordingLength);
+    let offset = 0;
+    let lng = channelBuffer.length;
+    for (let i = 0; i < lng; i++) {
+      let buffer = channelBuffer[i];
+      result.set(buffer, offset);
+      offset += buffer.length;
+    }
+    return result;
+  }
+
+  function interleave(leftChannel, rightChannel) {
+    let length = leftChannel.length + rightChannel.length;
+    let result = new Float32Array(length);
+
+    let inputIndex = 0;
+
+    for (let index = 0; index < length;) {
+      result[index++] = leftChannel[inputIndex];
+      result[index++] = rightChannel[inputIndex];
+      inputIndex++;
+    }
+    return result;
+  }
+
+  function writeUTFBytes(view, offset, string) {
+    let lng = string.length;
+    for (let i = 0; i < lng; i++) {
+      view.setUint8(offset + i, string.charCodeAt(i));
+    }
+  }
+
+  function start() {
+    recording = true;
+    document.querySelector('#msg').style.visibility = 'visible';
+
+    leftchannel.length = rightchannel.length = 0;
+    recordingLength = 0;
+    console.log('context: ', !!context);
+    if (!context) setUpRecording();
+  }
+
+  function stop() {
+    console.log('Stop');
+    recording = false;
+    document.querySelector('#msg').style.visibility = 'hidden';
+
+
+
+    let leftBuffer = mergeBuffers(leftchannel, recordingLength);
+    let rightBuffer = mergeBuffers(rightchannel, recordingLength);
+
+    let interleaved = interleave(leftBuffer, rightBuffer);
+
+
+    let buffer = new ArrayBuffer(44 + interleaved.length * 2);
+    let view = new DataView(buffer);
+
+
+    writeUTFBytes(view, 0, 'RIFF');
+    view.setUint32(4, 44 + interleaved.length * 2, true);
+    writeUTFBytes(view, 8, 'WAVE');
+
+    writeUTFBytes(view, 12, 'fmt ');
+    view.setUint32(16, 16, true);
+    view.setUint16(20, 1, true);
+    view.setUint16(22, 2, true);
+    view.setUint32(24, sampleRate, true);
+    view.setUint32(28, sampleRate * 4, true);
+    view.setUint16(32, 4, true);
+    view.setUint16(34, 16, true);
+
+    writeUTFBytes(view, 36, 'data');
+    view.setUint32(40, interleaved.length * 2, true);
+
+
+    let lng = interleaved.length;
+    let index = 44;
+    let volume = 1;
+    for (let i = 0; i < lng; i++) {
+      view.setInt16(index, interleaved[i] * (0x7FFF * volume), true);
+      index += 2;
+    }
+
+
+    const blob = new Blob([view], { type: 'audio/wav' });
+
+    const audioUrl = URL.createObjectURL(blob);
+    console.log('BLOB ', blob);
+    console.log('URL ', audioUrl);
+    document.querySelector('#audio').setAttribute('src', audioUrl);
+    const link = document.querySelector('#download');
+    link.setAttribute('href', audioUrl);
+    link.download = 'output.wav';
+  }
+
+  function visualize() {
+    WIDTH = canvas.width;
+    HEIGHT = canvas.height;
+    CENTERX = canvas.width / 2;
+    CENTERY = canvas.height / 2;
+
+    let visualSetting = visualSelect.value;
+    console.log(visualSetting);
+    if (!analyser) return;
+
+    if (visualSetting === "sinewave") {
+      analyser.fftSize = 2048;
+      var bufferLength = analyser.fftSize;
+      console.log(bufferLength);
+      var dataArray = new Uint8Array(bufferLength);
+
+      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+
+      var draw = function () {
+
+        drawVisual = requestAnimationFrame(draw);
+
+        analyser.getByteTimeDomainData(dataArray);
+
+        canvasCtx.fillStyle = 'rgb(200, 200, 200)';
+        canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+        canvasCtx.lineWidth = 2;
+        canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+
+        canvasCtx.beginPath();
+
+        var sliceWidth = WIDTH * 1.0 / bufferLength;
+        var x = 0;
+
+        for (var i = 0; i < bufferLength; i++) {
+
+          var v = dataArray[i] / 128.0;
+          var y = v * HEIGHT / 2;
+
+          if (i === 0) {
+            canvasCtx.moveTo(x, y);
+          } else {
+            canvasCtx.lineTo(x, y);
+          }
+
+          x += sliceWidth;
+        }
+
+        canvasCtx.lineTo(canvas.width, canvas.height / 2);
+        canvasCtx.stroke();
+      };
+
+      draw();
+
+    } else if (visualSetting == "frequencybars") {
+      analyser.fftSize = 64;
+      var bufferLengthAlt = analyser.frequencyBinCount;
+      console.log(bufferLengthAlt);
+      var dataArrayAlt = new Uint8Array(bufferLengthAlt);
+
+      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+
+      var drawAlt = function () {
+        drawVisual = requestAnimationFrame(drawAlt);
+
+        analyser.getByteFrequencyData(dataArrayAlt);
+
+        canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+        canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+
+        var barWidth = WIDTH / bufferLengthAlt;
+        var barHeight;
+        var x = 0;
+
+        for (var i = 0; i < bufferLengthAlt; i++) {
+          barHeight = dataArrayAlt[i];
+
+          canvasCtx.fillStyle = 'rgb(' + (barHeight + 100) + ',50,50)';
+          canvasCtx.fillRect(x, HEIGHT - barHeight / 2, barWidth, barHeight / 2);
+
+          x += barWidth + 1;
+        }
+      };
+
+      drawAlt();
+
+    } else if (visualSetting == "circle") {
+      analyser.fftSize = 32;
+      let bufferLength = analyser.frequencyBinCount;
+      console.log(bufferLength);
+      let dataArray = new Uint8Array(bufferLength);
+
+      canvasCtx.clearRect(0, 0, WIDTH, HEIGHT);
+
+      let draw = () => {
+        drawVisual = requestAnimationFrame(draw);
+
+        analyser.getByteFrequencyData(dataArray);
+        canvasCtx.fillStyle = 'rgb(0, 0, 0)';
+        canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+        let radius = dataArray[2] / 2;
+        if (radius < 20) radius = 20;
+        if (radius > 100) radius = 100;
+        canvasCtx.beginPath();
+        canvasCtx.arc(CENTERX, CENTERY, radius, 0, 2 * Math.PI, false);
+        canvasCtx.lineWidth = 6;
+        canvasCtx.strokeStyle = 'rgb(50,50,' + (radius + 100) + ')';
+        canvasCtx.stroke();
+      };
+      draw();
+    }
+
+  }
+
+  visualSelect.onchange = function () {
+    window.cancelAnimationFrame(drawVisual);
+    visualize();
+  };
+
+  micSelect.onchange = async e => {
+    console.log('now use device ', micSelect.value);
+    stream.getTracks().forEach(function (track) {
+      track.stop();
+    });
+    context.close();
+
+    stream = await getStream({ audio: {
+        deviceId: { exact: micSelect.value } }, video: false });
+    setUpRecording();
+  };
+
+  function pause() {
+    recording = false;
+    context.suspend();
+  }
+
+  function resume() {
+    recording = true;
+    context.resume();
+  }
+
+  document.querySelector('#record').onclick = e => {
+    console.log('Start recording');
+    start();
+  };
+
+  document.querySelector('#stop').onclick = e => {
+    stop();
+  };
+})();
+    </script>
+</body>
+</html>

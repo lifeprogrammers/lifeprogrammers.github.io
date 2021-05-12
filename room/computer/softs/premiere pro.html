@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+	<meta charset="utf-8">
+	<meta name="google" value="notranslate">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<title>Premere Pro</title>
+	<style>
+		::-webkit-scrollbar { width: 0;}
+		*{
+			outline: none;
+		}
+		body{
+			background: #161616;
+			font-family: 'Roboto', sans-serif;
+			color: #8a8a8a;
+		}
+		.left-menu{
+			position: absolute;
+			background: #232323;
+			width: 30%;
+			height: 60%;
+			left:5px;
+			top:5px;		}
+		.center-menu{
+			position: absolute;
+			background: #232323;
+			width: 50%;
+			height: 60%;
+			left: 30.5%;
+			top:5px;
+		}
+		.right-menu{
+			position: absolute;
+			background: #232323;
+			width: 18.95%;
+			height: 99%;
+			right: 5px;
+			top:5px;
+		}
+		.bottom-left-menu{
+			position: absolute;
+			background: #232323;
+			width: 5%;
+			height: 38.4%;
+			left: 5px;
+			top:61.2%;
+		}
+		.bottom-menu{
+			position: absolute;
+			background: #232323;
+			width: 69.8%;
+			height: 38.4%;
+			left: 5.5%;
+			top:61.2%;
+		}
+		.bottom-right-menu{
+			position: absolute;
+			background: #232323;
+			width: 5%;
+			height: 38.4%;
+			right: 19.5%;
+			top:61.2%;
+		}
+		.panel-left-menu{
+			position: absolute;
+			left: 20px;
+		}
+		td{
+			padding-left: 20px;
+		}
+		.search{
+			position: absolute;
+			border: 1.5px solid #313131;
+			left: 15px;
+			top:50px;
+			background: #161616;
+			border-radius: 2px;
+			color: #8a8a8a;
+		}
+		.file-search{
+			position: absolute;
+			left: 200px;
+			top:52px;
+		}
+		.item-box{
+			position: absolute;
+			top:82px;
+			left: 15px;
+			width: 90%;
+			height: 65%;
+			background: #212121;
+			border: 2px solid #313131;
+		}
+		.bottom-panel-left-menu{
+			position: absolute;
+			bottom: -10px;
+		}
+		.canvas{
+			width: 70%;
+			height: 270px;
+			background: #1d1d1d;
+		}
+		canvas {
+			position: absolute;
+ 			width: 536px;
+ 			height: 270px
+		}
+		.invisible {
+  			display: none;
+		}
+		.text-center {
+  		 	text-align: center;
+		}	
+		.center-block {
+  			display: block;
+ 			margin: auto;
+		}
+		.row {
+  			margin: 10px;
+		}
+		.actions{
+  position: absolute;
+  right:  0;
+  top:0;
+  font-size: 13px;
+  padding: 
+}
+
+a{
+  color: #fff;
+  padding: 10px;
+}
+a:hover{
+  color: #a3a3a3;
+}
+@media screen and (max-width: 1413px) { /* 110% */	
+   .fit{
+   	margin-left: 50px;
+   }
+   .canvas{
+			width: 60%;
+			height: 230px;
+			background: #1d1d1d;
+		}
+   canvas{
+   	width: 420px;
+   	height: 230px;
+   }
+   video{
+   	width: 400px;
+   	height: 208px;
+   }
+   .dla-adaptacii{
+   	margin-top:-10px;
+   }
+   .sdsada{
+   	font-size: 13px;
+   }
+   .sadasdas{
+   	width: 70%;
+   	margin-left: -30px;
+   	margin-top:-18px;
+   }
+   .oness{
+   	margin-top:-19px;
+   }
+   .sdahsdu{
+   	width: 80%;
+   }
+   .mixer{
+   	height: 90%;
+   }
+   #guiContainer{
+   	transform: scale(0.9);
+   	left: 11px;
+   	margin-top:20px;
+   }
+   .sdasd{
+   	width: 78%;
+   }
+}
+@media screen and (max-width: 1313px) { /* 125% */
+	.fit{
+   	margin-left: 130px;
+   }
+   .full{
+   	top:233px;
+   	position: absolute;
+   }
+   .canvas{
+			width: 50%;
+			height: 180px;
+			background: #1d1d1d;
+		}
+   canvas{
+   	width: 420px;
+   	height: 230px;
+   }
+   video{
+   	width: 400px;
+   	height: 208px;
+   }
+   .dla-adaptacii{
+   	margin-top:-10px;
+   }
+   .sdsada{
+   	font-size: 13px;
+   }
+   .sadasdas{
+   	width: 70%;
+   	margin-left: -60px;
+   	margin-top:-18px;
+   }
+   .oness{
+   	margin-top:-20px;
+   }
+   .sdahsdu{
+   	width: 70%;
+   }
+   .mixer{
+   	height: 90%;
+   }
+   #guiContainer{
+   	transform: scale(0.75);
+   	left: -3px;
+   	margin-top:20px;
+   }
+   .sdasd{
+   	width: 68%;
+   }
+   .bottom-left-menu{
+   	height: 45%;
+   }
+   .bottom-menu{
+   	height: 45%;
+   }
+   .bottom-right-menu{
+   	height: 45%;
+   }
+   .right-menu{
+   	height: 105.3%;
+   }
+   .none{
+   transform: scale(0.8);
+   margin-left: -25px;
+   }
+}
+	</style>
+</head>
+<body>
+	<!-- left menu -->
+	<div class="left-menu">
+		<table class="panel-left-menu">
+			<th>
+				<td><p style="color: #b9b9b9; text-decoration: underline; cursor: pointer;">Project: 1 ≡</p></td>
+				<td><p style="cursor: pointer;">Effect Controls</p></td>
+				<td><p style="cursor: pointer;">Effects</p></td>
+			</th>
+		</table>
+		<input class="search" placeholder="🔎">
+		<svg style="cursor: pointer;" class="file-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.25in" height="0.208in"><image  x="0px" y="0px" width="18px" height="15px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAPCAQAAABDj1eZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkADDcrvQpoAAAAwUlEQVQoz32QoQ6CQBiAv3MECQYIsmFxoxgMBnHTaOEZDDzBvY+FzVfQYqBaCbqZiVjcKAYCAYPshPPml+6+fXf/7cSmWfDhRUYtMGAtmapNxdXUIIJGN4abJEHf6Ie4YOnqwZ0RM1xlJnqUkuJRckbif8d1k5yUHSEVB45I5QfdqMAmBGxW5B3fi8ZUlG3udnxvnAMkrCm4sTVHJQk+Hid8YuamqGTPEIlN/POZ6k1Zm5iw6nYREWGmRoSNw3+evAFAFSfu2G5PkAAAAABJRU5ErkJggg==" /></svg>
+		<p style="position: absolute; top:35px; right: 10px;">0 items</p>
+		<div class="item-box"><center><p style="margin-top:32%;">No files</p></center></div>
+		<table class="bottom-panel-left-menu">
+			<th>
+				<td><p style="color: green; cursor: pointer;">✎</p></td>
+				<td><svg style="cursor: pointer; margin-top:12px;" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="0.292in" height="0.194in"><image  x="0px" y="0px" width="21px" height="14px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAOCAAAAADlbQgSAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkAKQqbJpaeAAAAe0lEQVQY022OsQ1AQBhG38kpJCKh0WlMoFAbQcsSFjCHGUygUNhDQXFKhQVOoTvn4qve//LnyyfqCtCzwo6scgDlWENpaHB/bRcYHKQG4IbeahBlDHDoT6/I+Yn0M+BWjm0KgGn5WC9yBjpnmxgcX3te1u8KwAZ28/+yBwFyFcG+qDZmAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg style="cursor: pointer; margin-top:12px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.319in" height="0.181in"><image  x="0px" y="0px" width="23px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAANCAAAAABnDKqBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkALiQIsQ2WAAAAgElEQVQY02PMUmGAgd87H8LZLO4MDAzvTkM5DAhxBgaGT52cohCeMgPDn4dw8de/q/kQKrfuRWjlY2BgWHOMgQHVHAYGBgaGh8fckV0AF//D4I6k/CHLeT6GpwyYgGUxA1bABDEPUz0DAwMDw0ROhu/YxJ/hUM/AwMDAcB7Jc68AXGob2SQuAA0AAAAASUVORK5CYII=" /></svg></td>
+				<td><p style="cursor: pointer;">🔎</p></td>
+				<td><p style="cursor: pointer;">✉</p></td>
+				<td><p style="cursor: pointer;">🗑</p></td>
+			</th>
+		</table>
+	</div>
+
+	<!-- center menu -->
+	<div class="center-menu">
+		<p style="color: #b9b9b9; cursor: pointer; margin-left: 30px;">Program: 13 ≡</p>
+			<center>
+				<div class="canvas"><div id="container">
+       				<canvas class="center-block" id="canvasOutput" width=535 height=268></canvas>
+
+  				<div class="invisible"width="535px" height="268px">
+    		<video id="video" class="hidden" width="535px" height="268px">Your browser does not support the video tag.</video>
+  		</div>
+	</div></div>
+			<select class="fit" style="padding-right: 20px; margin-right: 470px; margin-top:10px; background: #1d1d1d; color: #8a8a8a; border: 2px solid #292929; border-radius: 2px;"><option>Fit</option></select>
+			<select class="full"style="position: absolute; right: 130px; padding-right: 20px; margin-top:10px; background: #1d1d1d; color: #8a8a8a; border: 2px solid #292929; border-radius: 2px;"><option>Full</option></select>
+			<p style="position: absolute; margin-top:-20px; font-weight: bold; left: 15px;">00.00.00.00</p>
+			<p style="position: absolute; margin-top:-20px; font-weight: bold; right: 15px;">00.00.00.00</p>
+			<p style="position: absolute; right: 105px; margin-top:-22px; cursor: pointer;">🔧</p>
+			<svg style="margin-top:20px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8.819in" height="0.194in"><image class="sdasd" x="20px" y="0px" width="721px" height="14px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAA1MAAAAOCAQAAABgSY6jAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJDwcpmFKIAAACEUlEQVR42u3aO2sUURyG8efMZS+Z2ctsohAxl8UNkY3grRXBIh8hhZ2VYmNSCrZWVqlNY6/fIKK1oESCySpISIgkxGWzycbsuMnujoVhEax1inl/3Tn8i6c7nDljKqQ4zUezzr3gTt87RkREJE4Z0seNt90X1rLT6mEqpC44i9NzVTwg5DM1+nE3iohIAhmmqOIDIV+ovews9HZMJVtYvHG/gjkb6vONFdpxt4qISMK4XKOMPVhv8+754YI98vTS/FUM31lnF0Mejx71uGtFRCRhykyRosU6W4BHkdObe45dXr6Nyxbv2WOfLXxKOBzqPiUiIv9RjssE1HlNnQN2cQgYYfuWNYTHEZtnx1LEKj/w8ePuFRGRRPHw6LJCD4BTNmjiMoIVAG0OBoNd9kmTHbxViYiI/HsZ0hz88SWvRQgMY/09qv/8REQkfr9PI6sJZMgNtm3ydAiJ4u4TEZEE+UmHIu5gnSUNNLBCQgpMkgbAMEmJkDDuXhERSZSQEIfrZ09OFhOU6NPE9mej8TECSkCOK0zTZ5ONuHtFRCRROqQYpsgoER5VKrjU+PrMLtRP7g4R4DPGOAUi6nyiE3eviIgkzBE58nhcZIIiFg0+LLUfm7Jr5vJPZqrTZICINVY5ibtVREQSyGaGGdJAlw0+vmrP93ZMGYN9PnqQenhu1NCIu1FERBKuiE2D8I31yFnr8QuFIojATTRasAAAAABJRU5ErkJggg==" /></svg>
+			<table>
+				<th>
+					<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.181in" height="0.181in"><image  x="0px" y="0px" width="13px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAQAAADY4iz3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJJCmDPqIuAAAAgElEQVQY083JMQ6CQBBA0T8OFrR7AUxoiHcwmSt4o90zkNhZWXgGuo1HMBZ0xoRYEEJLYQENFkbs/eV/shv3LHUiSckXKWHFz/6EFEkt+9oVt6Au1jJY8QFnLgGvDuJDeitQAF4cuQY8qAOIT2lsy5qBknvAw5sgdlLbhgPtDDABa5Ec0piw/7UAAAAASUVORK5CYII=" /></svg></td>
+					<td><p style="margin-top:7px; font-weight: bold; cursor: pointer;">{</p></td>
+					<td><p style="margin-top:7px; font-weight: bold; cursor: pointer;">}</p></td>
+					<td><p style="margin-top:7px; font-weight: bold; cursor: pointer;">▶</p></td>
+					<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.347in" height="0.222in"><image  x="0px" y="0px" width="25px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAQCAQAAABJ7xwgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJLQFnSbGdAAAAtUlEQVQoz2NUZkAA1nq5BgYs4G4DQyOCx4isRf5/PjYdDC0M7xgRPBZkKRYGBoYiNOVCDDVoIkxYjWVgZbBjwAVYsAv7M1gxsDLsxSqH1RY7BisGBgZvBh1itYgzBEBZsQxC2Bzm/N8bTeglShAIMTAw1DAw/IfxlzMwiTGQBoQwve+OxuckHGLuDM8YvsN5PAzihLUwMKxnuAuPa9P/kcSEGCFAJy3v0AR+M3xB4r3D0PCdAQAMSBp/4LLIlwAAAABJRU5ErkJggg==" /></svg></td>
+					<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.264in" height="0.194in"><image  x="0px" y="0px" width="19px" height="14px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAOCAQAAABnEe8CAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJLhQhuQa1AAAA2klEQVQoz4XQIU/DUBSG4adLERNMXEOCAJKJVczOIJAgZrEIBPwBLAlDImcmsLMIzH7DxAQGgcDMNGlIECAQJRmC0rXZFl71nXvenNxzoraSm2Rwbgvkxp4Hbv9a0VILiyvNssoNpVGpdReHYtATVHk3K9JU3NVXZ27/d7qT8i2uK4+mcvScFr9coz14cuxAZuLT5XotN9N3hLbgXmq37DWWWirXKXKC18q0iraNtyJn1PauaMGOiQwfxlr2Nq1wYeQONJ1pbdKCay/mgk5NWrkbicQqjS//8+0HiGsqtIiB/igAAAAASUVORK5CYII=" /></svg></td>
+					<td><svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.347in" height="0.278in"><image  x="0px" y="0px" width="25px" height="20px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAUCAQAAADSfl42AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJMAToTykOAAAA+0lEQVQoz5WSoW7CUBSGv9tcQZNlAlkEok2mkJVjErtJxJ6gDr1nwPUJJpBo7MwEAjFTkl7bZKZLGpLhLoYQtnNuE478Tr7z50+OefQTQvNJZyS1Tzzww/gf/qUhpWWrHIpgz7vADWUw20JOLnDKMqhEUN2YEsG9aAIDsj7lTlHifuXW+ubN58HlCpgLZqFiy6tIWVMA+0vaiGdKXhhi++t3dFc0YwDYiiEjnJAyHK1gMWB3ZidLeL1bSQFYbTVjdq7698eWQE2k32vZKHRDCyHlSK3QmmNYSSgUWpCEFcdCoQscYFKtvp/SkPLN4cJiEhwJH7oS+ymh+eIEfW8+DTkSN/EAAAAASUVORK5CYII=" /></svg></td>
+				</th>
+			</table>
+			<p style="font-weight: bold; position: absolute;right: 10px; margin-top:-40px; font-size: 20px; cursor: pointer;">+</p>
+		</center>
+	</div>
+
+	<!-- right menu -->
+	<div class="right-menu">
+		<table>
+			<th>
+				<td><p style="color: #b9b9b9; cursor: pointer; margin-left: 0px; text-decoration: underline;">Lumetri Color ≡</p></td>
+				<td><p style="cursor: pointer;">Effects</p></td>
+				<div class="actions">
+      <a href="../index.html"><i class="fa fa-minus"></i></a>
+      <a href="../index.html"><i class="fa fa-clone"></i></a>
+      <a href="../index.html"><i class="fa fa-times"></i></a>
+    </div>
+			</th>
+		</table>
+		<hr align="center" width="100%" size="2" color="#313131" style="margin-top:-5px;" />
+
+		<table style="margin-top:-10px;">
+			<th>
+				<td><p style="color: #b9b9b9; cursor: pointer; margin-left: 0px;">Basic Correction</p></td>
+				<td><svg style="top:70px; position: absolute; right: 5px; cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.278in" height="0.264in"><image  x="0px" y="0px" width="20px" height="19px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAAAAAC153JpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkMGA8kC5zHAAAAmElEQVQY023QTQuCQBSF4XeuHxRiLdRs3///U0ExEYqFMGrotAh0HLur4YG593DUhe2EJIW4YKs3wmllqDxCUP7nAPmz0sNq2GL9unU+tg1RvOAE0D+RUmY0VwMfbdU5mneOetLGPkay3XI9yLH6PnA8uJHSAtuzz9Y50wLi0inkp1Sl+EiaOIll82BCaLw2zEBI3a5L7uELD0QrAiibAYMAAAAASUVORK5CYII=" /></svg></td>
+			</th>
+		</table>
+		<hr align="center" width="100%" size="2" color="#313131" style="margin-top:0px;" />
+
+		<table style="margin-top:-10px;">
+			<th>
+				<td><p style="color: #b9b9b9; cursor: pointer; margin-left: 0px;">Creative</p></td>
+				<td><svg style="top:125px; position: absolute; right: 5px;cursor: pointer;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.278in" height="0.264in"><image  x="0px" y="0px" width="20px" height="19px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAAAAAC153JpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkMGA8kC5zHAAAAmElEQVQY023QTQuCQBSF4XeuHxRiLdRs3///U0ExEYqFMGrotAh0HLur4YG593DUhe2EJIW4YKs3wmllqDxCUP7nAPmz0sNq2GL9unU+tg1RvOAE0D+RUmY0VwMfbdU5mneOetLGPkay3XI9yLH6PnA8uJHSAtuzz9Y50wLi0inkp1Sl+EiaOIll82BCaLw2zEBI3a5L7uELD0QrAiibAYMAAAAASUVORK5CYII=" /></svg></td>
+			</th>
+		</table>
+
+		<table>
+			<th>
+				<td><p>Look</p></td>
+				<td><select class="none" style="padding: 5px 130px 5px 0px; border-radius: 5px;background: #2a2a2a; border:none; color: #8a8a8a;"><option>None</option></select></td>
+			</th>
+		</table>
+		<center>
+		<div class="black-square" style="width: 150px; height: 150px; background: #000;"></div>
+		<div id="guiContainer" style="position: absolute;top:55%; right: 20px;"></div>
+	</center>
+	</div>
+	<!-- bottom-left-menu -->
+	<div class="bottom-left-menu">
+		<center>
+			<svg style="margin-top:20px; margin-left: 10px;" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="0.486in" height="0.458in"><image  x="0px" y="0px" width="35px" height="33px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAhCAMAAABkz+JgAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAWlBMVEUjIyMnJycqKiolJSUrKystLS0pKSkoKCguLi4aGhoWFhYgICAvLy8mJiYXFxcsLCwYISobM0stieUdN1ItjOspdsMob7YmZ6kkYJsaLD4bGxskJCQhISH///+/lqLFAAAAAWJLR0Qd6wNxkQAAAAd0SU1FB+UFCQk4NuhB8oYAAACXSURBVDjLtdNLEsIgFETRBiFBxGj8K+5/nVrlwMDrB0684zPragDGNlsBcH4weqMNBsavY7NNgtu2SZwSduiY+Bezn/tmPhz75kRRZSiqDUPCECSNRMQIxEyNqKkQNyVSTIE0s0SqWSDdfBEz58unq25u/S0EkUYSYQipDSOluVMSf/jp2wxuapNHQg7Ds1X2Fsg2tPIjXp+wMxgUDjxTAAAAAElFTkSuQmCC" /></svg>
+			<svg style=" margin-left: 10px;" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="0.486in" height="0.319in"><image  x="0px" y="0px" width="35px" height="23px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAXCAAAAACkWak+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkJOybe27EhAAAA+klEQVQoz2NUZiAIWCCUYSxDyzvlbIapd5WzGeZdQVXDLMTAwMDAICs/5/W/HzdOP/vz44bZjWdY1TB8vPCP4c/7938Y/rxnuPOZgfMPpprPDxFCdz8zCNX8v49pDirgdFTTffoRxmOE+MvUvYWBgYGBIcQKoXDvrt8QBhOqAeJIbOdqDaxqUADM3dDwgbn5AVRUHtkuRqzhLFTD8HDFS7RwRgffdx5CcKDmSKkgxNwvo4Uz1M3STsqsDJzKypwMnMru0gxY1Xzny+ZlkMrOlmKQymb4jqaGkYi0wURYCWE1zITV8NriDB+4Et8vhMzh9eUl5B6IEqL8DgAtMEGzgVi0JAAAAABJRU5ErkJggg==" /></svg>
+			<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.458in" height="0.347in"><image  x="0px" y="0px" width="33px" height="25px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAZCAAAAACaphhzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKASrwgp0qAAAA7ElEQVQoz2NUZiAAWND4rHYsh77jVSHnzfDuNIoIEyFLSFWhwQl1jA52d+h4SE29y8DAwMDAm/Ru52kMFToeUkgahSLdYWpYsMmjqGFUZmBgkIpCl4eAd2tuMDAwCzEwMHz+JM7LwMDAwLBh7zMNhr3bn2kwMDAwMHw6cOkfzJYrVyDWPL3LwMDw6u77AAYGhk/7jv9GdilMDQzA5JF9e+WKjgc0Rv68PA6TR42XK1dgBnTSMl6IUvGHgeEPqggjeipUZnj0G4nL+xnDlrt3kRXI2hJwh6w7C34Vsu7MmCkZGfDqvmJ4g+lSDAAAnZtC+YWc6JIAAAAASUVORK5CYII=" /></svg>
+			<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.431in" height="0.333in"><image  x="0px" y="0px" width="31px" height="24px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAYCAAAAAAnwHldAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKAwr52t9gAAABB0lEQVQoz2NUZsALmBiIl+d058OQZxZCSGcb6l35jlu+QIqBUwddAZL5UgwMDEJZQjj0izdDLEEzASrPGenPzDD1vQqGAiaY01gZdr5nYMCwAiIfIMXAwHBH8PRDDAUQ878bMjMwmJm926H3iQfVCoj8+yd6zAwMDBpMs45yyqMogPrvxvzfDAwMDDCDEVbA/PfmiR4zAwPLd4WzQmLI3oT7/80TPWYGTl2t7/vEPvIyM3BKn0YLX4gJDCrfV5224GRgOH4fPfyhCt4/a+VkYNi5GyN+oAp41QQY9m4+ixl/UAXsAgyHjr7Alj7g3jz0Dlv8w03YeYUBlzzDmydau3Yj8RkpTL8AwYpQ6CcINagAAAAASUVORK5CYII=" /></svg>
+			<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.458in" height="0.361in"><image  x="0px" y="0px" width="33px" height="26px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAaCAAAAAAcMmrdAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKAzehspNxAAAA5klEQVQoz2NUZiAAmAgpYGBhYGAQEvz+DIuUOM+XlwwMDMxCDAzewRqHsKiI9pI8DbWFFbvxrMS6gyQVnNlQn/PVCGFVIZQHCxoWoWJ5LCqk8sSRjMvSQQkPBgYGBo1EVgaGwO8wMdakDYfQVDD8YWVgePoOYgKSHQgVN6YmCTGcugtxkR3D78VXMNzxbBJSyH+aCFeA5JdPU2/8gVr4EFk1C4L5fRbcBLLDlIYqmIUYGJ59v4Itjb17f/CbwQsGRnwpmdmdZRNeW5jdZfG7A6IAny1cAgwMP98ihyk6+PaNgYGBgQEA8HU1E/n31qoAAAAASUVORK5CYII=" /></svg>
+			<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.403in" height="0.361in"><image  x="0px" y="0px" width="29px" height="26px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAaCAAAAABu/QhrAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKBCfzRBXSAAABHklEQVQoz33SsUrDQBzH8W9tMpx4gkUUBKc6RMwSNAqCPoF5AIcOnRVnXySrb9FBBLFK2+GQilDoIqVLHQoKQTgwFRySaHKa/re7D3f/H/e/Sp05tTAPsYz1xtl7qH9W1ZqBQm73ZyV6KSDHxb72OL3gn7PuyWtnc5Xc6V/1G0dr3iDl9X5BnfO9JbAzVqO8Ll8sJo0Tvr4p9D3YyXJ5g87n430xVSNLie0NnifFl3RzycWW+c77wMtbshP1DK25oMKrGIDb2NBj0G2EDRArY0a2jw6npz4APW2oL3Q4bToAqJY538MMI/UQmdMXKwmOuwqjKnUQs6YTP7UnplW/LEA7dqurTUPu3lkAwyF/SwYf5X9SBrL8x8pApqnK6xsNXFOL++VqDwAAAABJRU5ErkJggg==" /></svg>
+		</center>
+	</div>
+	<!-- bottom-menu -->
+	<div class="bottom-menu">
+		<div class="dla-adaptacii">
+		<p class="sdsada" style="color: #b9b9b9; cursor: pointer; margin-left: 30px;">× 13 ≡</p>
+		<p style="font-weight: bold; margin-left: 30px; margin-top: -7px;">00.00.00.00</p>
+		<table style="margin-top: -10px;">
+			<th>
+				<td><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.208in" height="0.222in"><image  x="0px" y="0px" width="15px" height="16px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAQAAABjX+2PAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKDA55Lwe2AAAA4UlEQVQY06WNMUtCYRSGn/N5XeQi8Y1e5A53cGmJaGnpgiT4E6Qfc7+gHxK4tjaHaw0ONQQR6GCki6LUBb16GzrI11JDZ3lfnufAKwkAZLE7IiJhzIQnnh2XABULVLOu6xFjgQOaHGPTV4rBt84u3Ck/L+IwvWc3qNizk+vzPZ4Sagsx6QuS3Lm0DsCQG3KqdGjryxXGqnyjL7kgG7mVB9UNTEPr0Ft+1Iwxkdalp3PNOoZf7w8dLHTpw4NrZTOCKTUA5p5eMQLg/Z/bptSy8WChuUVaZQjsWILsfRkSAJ98AXpQNX5GuyirAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.25in" height="0.236in"><image  x="0px" y="0px" width="18px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAARCAQAAAB6UzRyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKEAkBPM9IAAAAwElEQVQoz32RKxaDMBBFL5xBVrRbAIGsrq2orOkGMF1HWER1NtCVFImJAFNRGVuBoIJPIOT0qfcy98xMkujUHxlUYYGUjLVq5Eo+hoYdwpvzfDIoI04WMedOisZ4veJ1TCgCmAeFsQ0UwsTZ7wrTaG4cgJoo7V2PC5fZd2iMogQQV3hshmploATJqHgB8PGe0WEClpawJizmrxIKciXhYkuzSNLNd3KLG3TZqQX0ZD/aaXEfAbGRdakPIZtvCSHwA1+DPl5no6uSAAAAAElFTkSuQmCC" /></svg></td>
+				<td><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.139in" height="0.153in"><image  x="0px" y="0px" width="10px" height="11px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAALCAQAAADsZ9STAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKEQf/n9MOAAAAdElEQVQI12P0/p/IwMqAAJ8YpjMwyaMIMTDwMfAwMDFgAZQKPkQT+M3whYH5H+N3Bw0kwVUMtxqZhQ48ZOR0kIcKbWU40sjQwCzEwHDgBqO0gxgDA8Mxhq2NDA0MDMxCDAwMDAeuMKo5vGBY3MjQwMDAwAAAAFsYi3YR0QAAAAAASUVORK5CYII=" /></svg></td>
+				<td><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.25in" height="0.264in"><image  x="0px" y="0px" width="18px" height="19px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAQAAAA3m5V5AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKEjKCAUTuAAABC0lEQVQoz3XPMUvDQBjG8f/r2SFDiwSxUAeR7EqHzN7u0tGlIH4Rmw+gX8OvIE5nB9csDoFSNFBclBbJkKHCOfQql+Z8huPl+PHce5IA3A4mEQBzIRBJgMiOSAFY8sB8QhZAACf2ij5Qc8dyp29vO5RyLx9A5DqDCNasN51tNLKp3YwRAwB3+tkvGXNhH+lwSQeAHhF1syk3JQNuGBP/XSa22aTicnaduo5t+rzAs4/eayl0jyMPdYn1q8dUDKbKcpnqgk9OUQAcN5hym5ifbJW9yUyfu6d9pmJ/GfMthR62WBOBqQJsFwVZG7VYV4cQmEpKPXQ/PSSMwKxkoc9QwPRfBOZLFvqAnKfsF/btUyl8msisAAAAAElFTkSuQmCC" /></svg></td>
+			</th>
+		</table>
+		<div style="width: 25%;" class="num-vid-bottom-menu">
+					<div style="background: #262626; width: 100%; height: 45px; border: 2px solid #313131;" class="vid2">
+					<table>
+						<th>
+							<td><svg style=" margin-top:15px; margin-left: 15px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.181in" height="0.236in"><image  x="0px" y="0px" width="13px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAAAAAAjlHlAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKJyNKgKaqAAAAiUlEQVQI11WPoQ6DQAyGvyOQDBJE7QzJSMDO8jTM7ZX2CsizqAnkxMwEWJIzuCG2BIO4JddV9UvTv19NhapIAzFAXsroAEwFdftduX38TNp7H/bOS69SSqdSipyT7+ct5ppQe7JDRAIMnQMyf/1lH11wEZBAR6FRnimH4MnlXfzIZgAT8MT8/bcDkGMZZISRxQIAAAAASUVORK5CYII=" /></svg></td>
+							<td><p style="position: absolute; font-size: 10px; top:123px;left: 70px;">V2</p></td>	
+							<td><p style="font-size: 13px; position: absolute; margin-top:3px;">Video 2</p></td>
+							<td><svg style="margin-left: -25px;" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="0.931in" height="0.403in"><image  x="0px" y="0px" width="47px" height="29px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAdCAAAAADUJY4oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKMjWJ4fXvAAABQElEQVQ4y+3UIW/CQBjG8T/LKs40oclYMsEEiAqWbKJmAoNAVMASDAIzOb7LHJ8AsYklYCYQM8ghahAIKrpkJNuSI8GcmJlooZBekzEmELymTy65Xy/vvblMgZ3raHfiYOypcRxHI79MM/VXo+wu02CwlZGJ57Ra7IShXQC+H72ULebJ1yLtHJtl5LTLwi2ZsBg/K72RrUZff0pVLxdaphwE9uV1qevrjM95MQzz11GKUXGZdRST4Z3V7g81hpfWgFU5LvQUOOP+LXU5ThpOc5niX2yU3QT1BtjvPtC6/0gY1qwXhpvyhdbIAQKgiwUY2aSBitqkziytMTRcKHkANvAw0dyLiGZFyDkwTSIvsiFqMgC7hnpatW9txiq/mFNRd/Bl/pRRPx6QzLbvqXV1LlTgybWlrQ1N7cv7cTD+3/gBMtlSbtgoetAAAAAASUVORK5CYII=" /></svg></td>
+						</th>
+					</table>
+					</div>
+					<div style="background: #262626; width: 100%; height: 45px; border: 2px solid #313131;" class="vid1">
+					<table>
+						<th>
+							<td><svg style=" margin-top:15px; margin-left: 15px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.181in" height="0.236in"><image  x="0px" y="0px" width="13px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAAAAAAjlHlAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKJyNKgKaqAAAAiUlEQVQI11WPoQ6DQAyGvyOQDBJE7QzJSMDO8jTM7ZX2CsizqAnkxMwEWJIzuCG2BIO4JddV9UvTv19NhapIAzFAXsroAEwFdftduX38TNp7H/bOS69SSqdSipyT7+ct5ppQe7JDRAIMnQMyf/1lH11wEZBAR6FRnimH4MnlXfzIZgAT8MT8/bcDkGMZZISRxQIAAAAASUVORK5CYII=" /></svg></td>
+							<td><p style="position: absolute; font-size: 10px; top:173px;left: 70px;">V1</p></td>	
+							<td><p style="font-size: 13px; position: absolute; margin-top:3px;">Video 1</p></td>
+							<td><svg style="margin-left: -25px;" xmlns="http://www.w3.org/2000/svg"xmlns:xlink="http://www.w3.org/1999/xlink" width="0.931in" height="0.403in"><image  x="0px" y="0px" width="47px" height="29px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAAAdCAAAAADUJY4oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKMjWJ4fXvAAABQElEQVQ4y+3UIW/CQBjG8T/LKs40oclYMsEEiAqWbKJmAoNAVMASDAIzOb7LHJ8AsYklYCYQM8ghahAIKrpkJNuSI8GcmJlooZBekzEmELymTy65Xy/vvblMgZ3raHfiYOypcRxHI79MM/VXo+wu02CwlZGJ57Ra7IShXQC+H72ULebJ1yLtHJtl5LTLwi2ZsBg/K72RrUZff0pVLxdaphwE9uV1qevrjM95MQzz11GKUXGZdRST4Z3V7g81hpfWgFU5LvQUOOP+LXU5ThpOc5niX2yU3QT1BtjvPtC6/0gY1qwXhpvyhdbIAQKgiwUY2aSBitqkziytMTRcKHkANvAw0dyLiGZFyDkwTSIvsiFqMgC7hnpatW9txiq/mFNRd/Bl/pRRPx6QzLbvqXV1LlTgybWlrQ1N7cv7cTD+3/gBMtlSbtgoetAAAAAASUVORK5CYII=" /></svg></td>
+						</th>
+					</table>
+					</div>
+					<div style="background: #262626; width: 100%; height: 45px; border: 2px solid #313131;" class="aud1">
+					<table>
+						<th>
+							<td><svg style=" margin-top:15px; margin-left: 15px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.181in" height="0.236in"><image  x="0px" y="0px" width="13px" height="17px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAARCAAAAAAjlHlAAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKJyNKgKaqAAAAiUlEQVQI11WPoQ6DQAyGvyOQDBJE7QzJSMDO8jTM7ZX2CsizqAnkxMwEWJIzuCG2BIO4JddV9UvTv19NhapIAzFAXsroAEwFdftduX38TNp7H/bOS69SSqdSipyT7+ct5ppQe7JDRAIMnQMyf/1lH11wEZBAR6FRnimH4MnlXfzIZgAT8MT8/bcDkGMZZISRxQIAAAAASUVORK5CYII=" /></svg></td>
+							<td><p style="position: absolute; font-size: 10px; top:123px;left: 70px;">V2</p></td>	
+							<td><p style="font-size: 13px; position: absolute; margin-top:3px;">Audio 1</p></td>
+							<td><svg style="margin-left: -25px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.861in" height="0.417in"><image  x="0px" y="0px" width="90px" height="30px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIYAAAAeCAAAAADMJzljAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKOTeEG00IAAACAUlEQVRIx+2WsWsTURzHP9UceOByEQO+wUAbUJBu6SCUYgYbqJMuUbpkcGiog4v/gIuDg4vSDg66mcFoHIS2FEG6aALF4UChF+jgDRfIDR0iXASHu9DXkN/F0MZUyG95X9778ft93nu/e/ebmmGQnR3ocXw78w9yTDAmGP8/RmIsWQtZtjYFDONyV7nt0VIsZuFmq94fY+FWV21sjBbjBkBOwEg4L0Kxms9D8GZ3VBTKAEiZ2pmLJWqkRnYY544MvaeBlY9GZ4+8EOJx2QZQD54ciGmuFQH32TBkGobnZ0Lhf62JGGZh3QWraMif2PyFNeCXtFyqtSK1aFb7YOz+VTH4K+uuVWpbssdsqxEXwEp2MbQYGsbcva56/1mOUp1bqSx5Hx7JHgO+9oDfoehokxpG0n0XitsLszFhyoXlH6/Pxzi8yj6Fj5+k5abpBgbgH2gXp19x24lGlYzbTvnnlyB2v/YaZO5UhFVPBd+yQB1V64thRp2Y2fKBPTHNDvHWbkDmqgiZS1cuprE3p9VhDWkYHbUaqZN4RcUK2beXXz5XHS9113b7YWxvHz85wP0rwJb8bFSLD+uNxPz1/fLh3NSQLbFqhnWhXNHfsoCm/Lph5qbTNL7vaBU2LMYJWck58p8fR7+RXoJL1gy89caJETjg9MyN6VJ67ZT0ohOMU4jxB1INgoyfYxkuAAAAAElFTkSuQmCC" /></svg></td>
+						</th>
+					</table>
+					</div>
+					</div>
+					<svg class="sadasdas" style="position: absolute; top:85px; left: 280px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7.701in" height="0.264in"><image  x="0px" y="0px" width="1106px" height="19px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAABFIAAAATCAAAAACWmnYMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkLHh2Ep1yMAAAAoUlEQVR42u3cOwqFMBAF0NHnTmzd//qsXxGI5EIgOadS/MxMhEsqj7sAUs7ZDQArESlA0Fn1zKo9rfCOleeNvOHMWy+2XQoQJFKAIJECBIkUIEikAEEiBQgSKUDQf6Q8rZOe49aF5j09xVovGut0oPBYp9Xx8MKLPTbC588TG8Fif5jZLgUIEilAkEgBgkQKECRSgKDDL5iAnKt+s1sA1vEC8vkQFO0LXj8AAAAASUVORK5CYII=" /></svg>
+					<div class="video-line">
+						<div class="oness" style="background: #1b1b1b; width: 70%; position: absolute;left: 25.5%;top:104px;  height: 45px; border: 2px solid #313131;" class="line1"></div>
+						<div class="oness"style="background: #1b1b1b; width: 70%; position: absolute;left: 25.5%;top:152px;  height: 45px; border: 2px solid #313131;" class="line2"></div>
+						<svg class="oness" style="position: absolute; top:100px;right: 20px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.208in" height="1.458in"><image  x="0px" y="0px" width="15px" height="105px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAABpCAQAAABPcrGGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkLDTc+89TIAAACg0lEQVRIx+3XPW+bVRjG8d9znieO6zhuHQdCMkRpnYLkDhUvlSoBUqp2Y4SuCAY+R9NvwcqclS4dINlAIkQokhFNFVhQmje1ea3t2OdhiBuSCPEJfG3n/h9d59z3Wa6T1PXViA8LD4POQlwIzTfF5BTHL9KFsi5SPcfzyeNTnI4hjpeepCN7Wtpei0bmTlg6w9l37hy+8RO1VebakqVT8w9Lv+xJFaSCnq6OVMnrexYz0m+6yobVVBW98tKhQ5n8UbKY1MvFjax8zV21M/umVV3H4r107KvS5+PuG/Wv3jJtXdSbSd/5tjD1wBU885Nl2ypKhhW90J0JQx81jOA3y/ax6aktzLoqE4IqjjTPmf8KxgUhUcWu83opoioVaKF4ARcEHIhCzy7GVc7habAnCtFfCD492zDpNvZt60pu5mW3NRBtOlDrj+cHfzuWRblVNASTJkHHihc6SOp5WS5VM6vqqh07/tByoqMngxy7l5rLQfC/GuABHuABHuABHuABvqDs/KImc+joMk4VvO9Gv9SxYl3qBEk9r6i4fylUbfnRkRPZEO4qYsNzJ0a9p+JtDau6siGzanhmGWxa90DNLc+1hNQEWlbOjKNlBONSIVHDjnju5NO0NyEIdJD+xzjaCNEuahduPgVe6QnRBgo+VujDog/QsqUnuZmP+MQ0WtZ0jJpRwM/WHEmrdwrv7rhmVGbClJoUTb9riZL69UIzFAtu9PuPNq3aFrXEJ0ldOp8+aisZQsW+XNuRMfut5FZSlxfLzb3rEUOIeijKdB6bT+pIPhv+/qCfDk9fsOLwz6ShlY7BWkzKc1FEUFRyKHyp2f86kC92kitzZSOGRa2l8LWn8A/lwtHMaZGQ0gAAAABJRU5ErkJggg==" /></svg>
+						<div class="oness"style="background: #1b1b1b; width: 70%; position: absolute;left: 25.5%;top:202px;  height: 45px; border: 2px solid #313131;" class="line3"></div>
+					</div>
+				<svg style="margin-left: 10px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12.222in" height="0.194in"><image class="sdahsdu" x="0px" y="0px" width="1024px" height="14px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAABWgAAAAOCAQAAAAY7z0vAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBQkKJCdmwDFwAAACyUlEQVR42u3dTU8TQQCH8Wdnty8U6AvlTSNGLRIDkhijMcYYetKTn4ntN/HGgQ/gxURI9MbBhAiJGsPBgCK1gClQCrseSqD0xtrNpPH/u+1O0jzNXCaz26lToiXAw8EQmyT98X14jLK4thMiSDBgOyGSQTzbCRF4DNpOiGSAhO2ECFyythMi6SdpOyECQ852QiQZUrYTInDI206IpI+07YRICrYDIkmRsZ0QSS6OBebpp3DxdNGsta6cEhDMuf5weYYCo1T5zTq7tr+6/INRpiiQY4ctVmnYzhERERHpMhcXQ90PKwBOiWAus3SXR23bBwGrrNnulEgMs0y3XR+xzGfbUSIiIiJdZxjgxD+uGNwhvNcTt8q4QJUNQvowjBPwy3alRDDDfSDgB1tABo9JfrJnO0tERESky0IapMshLDul+SH/FWkCPvAdgALP6SfgDfu2O+WKirwA6iydzd1NnmLYZ4Fj22kiIiIiXWfIcuC4I0sTTAIrbJwNHLFDCYcG27Yb5YqmKRLw7nxHdo+QcVJsU7OdJiIiItJ1IUlOMR4jQMC3tqEqNWDYdqFcWRHYubR4/QrANdthIiIiIrFokvCNQxI4Jrg0dAQ9eg7H/y1Ba+4utGa2z3aYiIiISCxCHEzILpDuOCS2ADq6qwft09qlvZDFAFXbYSIiIiKx8DjBNNkB4GHbwCRpOLsvvaQK9DPVdmcWgE3bYSIiIiKxcAlxc06znCdPlmH+cEiWezwAaqwQ2i6UK6pymyTXcTmkQZEn3AC+8NF2mIiIiEgMUhiOK06J0B+df9nxykHAWz2m7kljlDv+X67OAoe2s0RERES6LkGGesX4TgnAz88/5s754CYreoO2Z+V51vYe7TrvO34mJiIiItLrDB5JXOoV40NrQUtY9vzC3Bg5DqjpzNKeV6BIml1q1G2niIiIiHRdwAlNmhXjA/wF3QGWyeny3P4AAAAASUVORK5CYII=" /></svg>
+			</div>
+		</div>
+	<!-- bottom-right-menu -->
+	<div class="bottom-right-menu">
+		<svg style="position: absolute; left: 23px; top:15px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="0.472in" height="2.630in"><image class="mixer" x="0px" y="0px" width="34px" height="252px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAEuCAMAAADcLDA/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAqFBMVEUjIyMhISEHBwcAAAAODg4EBAQZGRkdHR0SEhILCwsGBgYBAQEFBQUTExMWFhZkZBCOjg5ychI2Ng6IiAvGxgecnA1HRwsMDAwbGxskJCQqKiouLi4rKyslJSUsLCwpKSkvLy8nJyctLS0oKCgiIiImJiZLS0uxsbGVlZVdXV1xcXFCQkI5OTmMjIx6enqDg4NUVFRiYmJnZ2d1dXWfn5+Hh4cfHx////8CTXZpAAAAAWJLR0Q3MLi4RwAAAAd0SU1FB+UFCQsVJtZYbGMAAAFSSURBVGje7drbUoMwFAXQFFuoFWvVeiGEcBOt1ypq///TTCUnJAoznVF5cPZ+25k1PSSEtzI2YEZ2nEbC2+vPuCETP2jjT6wSTPdBfkpmXpvZgVW8kMjhvC/jrkFupiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIP+OHC3aHAdWWZwQOV22OQussjzffVBo/7nFTXjREH/en0s2dCIeNxGJaonUjUetoBKlWcKSLG+WE14YkgpzEJwzmZtW5EREaRZzyeIr00RJRFZmsZIsG/0pub5RWRHRzSG3d/cqD5pQc8jjkz2ImkPWDll3keBZDX8xj6ubSyo1vH4lotv3Tddv9qZV6yArh3zZ9Pv2IGp6FmoOybYHIYhQ++135N6XrOu+5MXGLKZMpFQ2WWJupizSJrKI1E2WusXc+gRy3uTzh6NSt2rY73CXfADeEgdAfSlcmAAAAABJRU5ErkJggg==" /></svg>
+	</div>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+<script async src="https://huningxin.github.io/opencv.js/build/asm.js/opencv.js" onload="opencvIsReady()"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+    <script id="rendered-js" >
+// In this case, We set width 320, and the height will be computed based on the input stream.
+let width = 320;
+let height = 0;
+
+// whether streaming video from the camera.
+let streaming = false;
+
+let video = document.getElementById("video");
+let stream = null;
+let vc = null;
+
+function startCamera() {
+  if (streaming) return;
+  navigator.mediaDevices.getUserMedia({ video: true, audio: false }).
+  then(function (s) {
+    stream = s;
+    video.srcObject = s;
+    video.play();
+  }).
+  catch(function (err) {
+    console.log("An error occured! " + err);
+  });
+
+  video.addEventListener("canplay", function (ev) {
+    if (!streaming) {
+      height = video.videoHeight / (video.videoWidth / width);
+      video.setAttribute("width", width);
+      video.setAttribute("height", height);
+      streaming = true;
+      vc = new cv.VideoCapture(video);
+    }
+    startVideoProcessing();
+  }, false);
+}
+
+let lastFilter = '';
+let src = null;
+let dstC1 = null;
+let dstC3 = null;
+let dstC4 = null;
+
+function startVideoProcessing() {
+  if (!streaming) {console.warn("Please startup your webcam");return;}
+  stopVideoProcessing();
+  src = new cv.Mat(height, width, cv.CV_8UC4);
+  dstC1 = new cv.Mat(height, width, cv.CV_8UC1);
+  dstC3 = new cv.Mat(height, width, cv.CV_8UC3);
+  dstC4 = new cv.Mat(height, width, cv.CV_8UC4);
+  requestAnimationFrame(processVideo);
+}
+
+function passThrough(src) {
+  return src;
+}
+
+function gray(src) {
+  cv.cvtColor(src, dstC1, cv.COLOR_RGBA2GRAY);
+  return dstC1;
+}
+
+function hsv(src) {
+  cv.cvtColor(src, dstC3, cv.COLOR_RGBA2RGB);
+  cv.cvtColor(dstC3, dstC3, cv.COLOR_RGB2HSV);
+  return dstC3;
+}
+
+function canny(src) {
+  cv.cvtColor(src, dstC1, cv.COLOR_RGBA2GRAY);
+  cv.Canny(dstC1, dstC1, controls.cannyThreshold1, controls.cannyThreshold2, controls.cannyApertureSize, controls.cannyL2Gradient);
+  return dstC1;
+}
+
+function inRange(src) {
+  let lowValue = controls.inRangeLow;
+  let lowScalar = new cv.Scalar(lowValue, lowValue, lowValue, 255);
+  let highValue = controls.inRangeHigh;
+  let highScalar = new cv.Scalar(highValue, highValue, highValue, 255);
+  let low = new cv.Mat(height, width, src.type(), lowScalar);
+  let high = new cv.Mat(height, width, src.type(), highScalar);
+  cv.inRange(src, low, high, dstC1);
+  low.delete();high.delete();
+  return dstC1;
+}
+
+function threshold(src) {
+  cv.threshold(src, dstC4, controls.thresholdValue, 200, cv.THRESH_BINARY);
+  return dstC4;
+}
+
+function adaptiveThreshold(src) {
+  let mat = new cv.Mat(height, width, cv.CV_8U);
+  cv.cvtColor(src, mat, cv.COLOR_RGBA2GRAY);
+  cv.adaptiveThreshold(mat, dstC1, 200, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, Number(controls.adaptiveBlockSize), 2);
+  mat.delete();
+  return dstC1;
+}
+
+function gaussianBlur(src) {
+  cv.GaussianBlur(src, dstC4, { width: controls.gaussianBlurSize, height: controls.gaussianBlurSize }, 0, 0, cv.BORDER_DEFAULT);
+  return dstC4;
+}
+
+function bilateralFilter(src) {
+  let mat = new cv.Mat(height, width, cv.CV_8UC3);
+  cv.cvtColor(src, mat, cv.COLOR_RGBA2RGB);
+  cv.bilateralFilter(mat, dstC3, controls.bilateralFilterDiameter, controls.bilateralFilterSigma, controls.bilateralFilterSigma, cv.BORDER_DEFAULT);
+  mat.delete();
+  return dstC3;
+}
+
+function medianBlur(src) {
+  cv.medianBlur(src, dstC4, controls.medianBlurSize);
+  return dstC4;
+}
+
+function sobel(src) {
+  var mat = new cv.Mat(height, width, cv.CV_8UC1);
+  cv.cvtColor(src, mat, cv.COLOR_RGB2GRAY, 0);
+  cv.Sobel(mat, dstC1, cv.CV_8U, 1, 0, controls.sobelSize, 1, 0, cv.BORDER_DEFAULT);
+  mat.delete();
+  return dstC1;
+}
+
+function scharr(src) {
+  var mat = new cv.Mat(height, width, cv.CV_8UC1);
+  cv.cvtColor(src, mat, cv.COLOR_RGB2GRAY, 0);
+  cv.Scharr(mat, dstC1, cv.CV_8U, 1, 0, 1, 0, cv.BORDER_DEFAULT);
+  mat.delete();
+  return dstC1;
+}
+
+function laplacian(src) {
+  var mat = new cv.Mat(height, width, cv.CV_8UC1);
+  cv.cvtColor(src, mat, cv.COLOR_RGB2GRAY);
+  cv.Laplacian(mat, dstC1, cv.CV_8U, controls.laplacianSize, 1, 0, cv.BORDER_DEFAULT);
+  mat.delete();
+  return dstC1;
+}
+
+let contoursColor = [];
+for (let i = 0; i < 10000; i++) {
+  contoursColor.push([Math.round(Math.random() * 255), Math.round(Math.random() * 255), Math.round(Math.random() * 255), 0]);
+}
+
+function contours(src) {
+  cv.cvtColor(src, dstC1, cv.COLOR_RGBA2GRAY);
+  cv.threshold(dstC1, dstC4, 120, 200, cv.THRESH_BINARY);
+  let contours = new cv.MatVector();
+  let hierarchy = new cv.Mat();
+  cv.findContours(dstC4, contours, hierarchy, Number(controls.contoursMode), Number(controls.contoursMethod), { x: 0, y: 0 });
+  dstC3.delete();
+  dstC3 = cv.Mat.ones(height, width, cv.CV_8UC3);
+  for (let i = 0; i < contours.size(); ++i)
+  {
+    let color = contoursColor[i];
+    cv.drawContours(dstC3, contours, i, color, 1, cv.LINE_8, hierarchy);
+  }
+  contours.delete();hierarchy.delete();
+  return dstC3;
+}
+
+function calcHist(src) {
+  cv.cvtColor(src, dstC1, cv.COLOR_RGBA2GRAY);
+  let srcVec = new cv.MatVector();
+  srcVec.push_back(dstC1);
+  let scale = 2;
+  let channels = [0],histSize = [src.cols / scale],ranges = [0, 255];
+  let hist = new cv.Mat(),mask = new cv.Mat(),color = new cv.Scalar(0xfb, 0xca, 0x04, 0xff);
+  cv.calcHist(srcVec, channels, mask, hist, histSize, ranges);
+  let result = cv.minMaxLoc(hist, mask);
+  var max = result.maxVal;
+  cv.cvtColor(dstC1, dstC4, cv.COLOR_GRAY2RGBA);
+  for (var i = 0; i < histSize[0]; i++)
+  {
+    var binVal = hist.data32F[i] * src.rows / max;
+    cv.rectangle(dstC4, { x: i * scale, y: src.rows - 1 }, { x: (i + 1) * scale - 1, y: src.rows - binVal / 3 }, color, cv.FILLED);
+  }
+  srcVec.delete();
+  mask.delete();
+  hist.delete();
+  return dstC4;
+}
+
+function equalizeHist(src) {
+  cv.cvtColor(src, dstC1, cv.COLOR_RGBA2GRAY, 0);
+  cv.equalizeHist(dstC1, dstC1);
+  return dstC1;
+}
+
+let base;
+
+function backprojection(src) {
+  if (lastFilter !== 'backprojection') {
+    if (base instanceof cv.Mat)
+    base.delete();
+    base = src.clone();
+    cv.cvtColor(base, base, cv.COLOR_RGB2HSV, 0);
+  }
+  cv.cvtColor(src, dstC3, cv.COLOR_RGB2HSV, 0);
+  let baseVec = new cv.MatVector(),targetVec = new cv.MatVector();
+  baseVec.push_back(base);targetVec.push_back(dstC3);
+  let mask = new cv.Mat(),hist = new cv.Mat();
+  let channels = [0],histSize = [50];
+  let ranges;
+  if (controls.backprojectionRangeLow < controls.backprojectionRangeHigh)
+  ranges = [controls.backprojectionRangeLow, controls.backprojectionRangeHigh];else
+
+  return src;
+  cv.calcHist(baseVec, channels, mask, hist, histSize, ranges);
+  cv.normalize(hist, hist, 0, 255, cv.NORM_MINMAX);
+  cv.calcBackProject(targetVec, channels, hist, dstC1, ranges, 1);
+  baseVec.delete();
+  targetVec.delete();
+  mask.delete();
+  hist.delete();
+  return dstC1;
+}
+
+function erosion(src) {
+  let kernelSize = controls.erosionSize;
+  let kernel = cv.Mat.ones(kernelSize, kernelSize, cv.CV_8U);
+  let color = new cv.Scalar();
+  cv.erode(src, dstC4, kernel, { x: -1, y: -1 }, 1, Number(controls.erosionBorderType), color);
+  kernel.delete();
+  return dstC4;
+}
+
+function dilation(src) {
+  let kernelSize = controls.dilationSize;
+  let kernel = cv.Mat.ones(kernelSize, kernelSize, cv.CV_8U);
+  let color = new cv.Scalar();
+  cv.dilate(src, dstC4, kernel, { x: -1, y: -1 }, 1, Number(controls.dilationBorderType), color);
+  kernel.delete();
+  return dstC4;
+}
+
+function morphology(src) {
+  let kernelSize = controls.morphologySize;
+  let kernel = cv.getStructuringElement(Number(controls.morphologyShape), { width: kernelSize, height: kernelSize });
+  let color = new cv.Scalar();
+  let op = Number(controls.morphologyOp);
+  let image = src;
+  if (op === cv.MORPH_GRADIENT || op === cv.MORPH_TOPHAT || op === cv.MORPH_BLACKHAT) {
+    cv.cvtColor(src, dstC3, cv.COLOR_RGBA2RGB);
+    image = dstC3;
+  }
+  cv.morphologyEx(image, dstC4, op, kernel, { x: -1, y: -1 }, 1, Number(controls.morphologyBorderType), color);
+  kernel.delete();
+  return dstC4;
+}
+
+function processVideo() {
+  stats.begin();
+  vc.read(src);
+  let result;
+  switch (controls.filter) {
+    case 'passThrough':result = passThrough(src);break;
+    case 'gray':result = gray(src);break;
+    case 'hsv':result = hsv(src);break;
+    case 'canny':result = canny(src);break;
+    case 'inRange':result = inRange(src);break;
+    case 'threshold':result = threshold(src);break;
+    case 'adaptiveThreshold':result = adaptiveThreshold(src);break;
+    case 'gaussianBlur':result = gaussianBlur(src);break;
+    case 'bilateralFilter':result = bilateralFilter(src);break;
+    case 'medianBlur':result = medianBlur(src);break;
+    case 'sobel':result = sobel(src);break;
+    case 'scharr':result = scharr(src);break;
+    case 'laplacian':result = laplacian(src);break;
+    case 'contours':result = contours(src);break;
+    case 'calcHist':result = calcHist(src);break;
+    case 'equalizeHist':result = equalizeHist(src);break;
+    case 'backprojection':result = backprojection(src);break;
+    case 'erosion':result = erosion(src);break;
+    case 'dilation':result = dilation(src);break;
+    case 'morphology':result = morphology(src);break;
+    default:result = passThrough(src);}
+
+  cv.imshow("canvasOutput", result);
+  stats.end();
+  lastFilter = controls.filter;
+  requestAnimationFrame(processVideo);
+}
+
+function stopVideoProcessing() {
+  if (src != null && !src.isDeleted()) src.delete();
+  if (dstC1 != null && !dstC1.isDeleted()) dstC1.delete();
+  if (dstC3 != null && !dstC3.isDeleted()) dstC3.delete();
+  if (dstC4 != null && !dstC4.isDeleted()) dstC4.delete();
+}
+
+function stopCamera() {
+  if (!streaming) return;
+  stopVideoProcessing();
+  document.getElementById("canvasOutput").getContext("2d").clearRect(0, 0, width, height);
+  video.pause();
+  video.srcObject = null;
+  stream.getVideoTracks()[0].stop();
+  streaming = false;
+}
+
+var stats = null;
+
+var filters = {
+  'passThrough': 'Меню Эфектов',
+  'gray': 'Gray',
+  'hsv': 'HSV',
+  'canny': 'Canny Edge Detection',
+  'inRange': 'In Range',
+  'threshold': 'Threshold',
+  'adaptiveThreshold': 'Adaptive Threshold',
+  'gaussianBlur': 'Gaussian Blurring',
+  'medianBlur': 'Median Blurring',
+  'bilateralFilter': 'Bilateral Filtering',
+  'sobel': 'Sobel Derivatives',
+  'scharr': 'Scharr Derivatives',
+  'laplacian': 'Laplacian Derivatives',
+  'contours': 'Contours',
+  'calcHist': 'Calculation',
+  'equalizeHist': 'Equalization',
+  'backprojection': 'Backprojection',
+  'erosion': 'Erosion',
+  'dilation': 'Dilation',
+  'morphology': 'Morphology' };
+
+
+var filterName = document.getElementById('filterName');
+
+var controls;
+
+function initUI() {
+  stats = new Stats();
+  stats.showPanel(0);
+  document.getElementById('container').appendChild(stats.domElement);
+
+  controls = {
+    filter: 'passThrough',
+    setFilter: function (filter) {
+      this.filter = filter;
+      filterName.innerHTML = filters[filter];
+    },
+    passThrough: function () {this.setFilter('passThrough');},
+    gray: function () {this.setFilter('gray');},
+    hsv: function () {this.setFilter('hsv');},
+    inRange: function () {this.setFilter('inRange');},
+    inRangeLow: 75,
+    inRangeHigh: 150,
+    threshold: function () {this.setFilter('threshold');},
+    thresholdValue: 100,
+    adaptiveThreshold: function () {this.setFilter('adaptiveThreshold');},
+    adaptiveBlockSize: 3,
+    gaussianBlur: function () {this.setFilter('gaussianBlur');},
+    gaussianBlurSize: 7,
+    medianBlur: function () {this.setFilter('medianBlur');},
+    medianBlurSize: 5,
+    bilateralFilter: function () {this.setFilter('bilateralFilter');},
+    bilateralFilterDiameter: 5,
+    bilateralFilterSigma: 75,
+    sobel: function () {this.setFilter('sobel');},
+    sobelSize: 3,
+    scharr: function () {this.setFilter('scharr');},
+    laplacian: function () {this.setFilter('laplacian');},
+    laplacianSize: 3,
+    canny: function () {this.setFilter('canny');},
+    cannyThreshold1: 150,
+    cannyThreshold2: 300,
+    cannyApertureSize: 3,
+    cannyL2Gradient: false,
+    contours: function () {this.setFilter('contours');},
+    contoursMode: cv.RETR_CCOMP,
+    contoursMethod: cv.CHAIN_APPROX_SIMPLE,
+    calcHist: function () {this.setFilter('calcHist');},
+    equalizeHist: function () {this.setFilter('equalizeHist');},
+    backprojection: function () {this.setFilter('backprojection');},
+    backprojectionRangeLow: 0,
+    backprojectionRangeHigh: 150,
+    morphology: function () {this.setFilter('morphology');},
+    morphologyShape: cv.MORPH_RECT,
+    morphologyOp: cv.MORPH_ERODE,
+    morphologySize: 5,
+    morphologyBorderType: cv.BORDER_CONSTANT };
+
+
+  let gui = new dat.GUI({ autoPlace: false });
+  let guiContainer = document.getElementById('guiContainer');
+  guiContainer.appendChild(gui.domElement);
+
+  let lastFolder = null;
+  function closeLastFolder(folder) {
+    if (lastFolder != null && lastFolder != folder) {
+      lastFolder.close();
+    }
+    lastFolder = folder;
+  }
+
+  let passThrough = gui.add(controls, 'passThrough').name(filters['passThrough']).onChange(function () {
+    closeLastFolder(null);
+  });
+
+  let colorConversion = gui.addFolder('Color Conversion');
+  colorConversion.add(controls, 'gray').name(filters['gray']).onChange(function () {
+    closeLastFolder(null);
+  });
+
+  colorConversion.add(controls, 'hsv').name(filters['hsv']).onChange(function () {
+    closeLastFolder(null);
+  });
+
+  let inRange = colorConversion.addFolder(filters['inRange']);
+  inRange.domElement.onclick = function () {
+    closeLastFolder(inRange);
+    controls.inRange();
+  };
+  inRange.add(controls, 'inRangeLow', 0, 255, 1).name('lower boundary');
+  inRange.add(controls, 'inRangeHigh', 0, 255, 1).name('higher boundary');
+
+
+  let thresholding = gui.addFolder('Thresholding');
+
+  let threshold = thresholding.addFolder(filters['threshold']);
+  threshold.domElement.onclick = function () {
+    closeLastFolder(threshold);
+    controls.threshold();
+  };
+  threshold.add(controls, 'thresholdValue', 0, 200, 1).name('threshold value');
+
+  let adaptiveThreshold = thresholding.addFolder(filters['adaptiveThreshold']);
+  adaptiveThreshold.domElement.onclick = function () {
+    closeLastFolder(adaptiveThreshold);
+    controls.adaptiveThreshold();
+  };
+  adaptiveThreshold.add(controls, 'adaptiveBlockSize', 3, 99, 1).name('block size').onChange(function (value) {if (value % 2 === 0) controls.adaptiveBlockSize = value + 1;});
+
+  let smoothing = gui.addFolder('Smoothing');
+
+  let gaussianBlur = smoothing.addFolder(filters['gaussianBlur']);
+  gaussianBlur.domElement.onclick = function () {
+    closeLastFolder(gaussianBlur);
+    controls.gaussianBlur();
+  };
+  gaussianBlur.add(controls, 'gaussianBlurSize', 7, 99, 1).name('kernel size').onChange(function (value) {if (value % 2 === 0) controls.gaussianBlurSize = value + 1;});
+
+  let medianBlur = smoothing.addFolder(filters['medianBlur']);
+  medianBlur.domElement.onclick = function () {
+    closeLastFolder(medianBlur);
+    controls.medianBlur();
+  };
+  medianBlur.add(controls, 'medianBlurSize', 3, 99, 1).name('kernel size').onChange(function (value) {if (value % 2 === 0) controls.medianBlurSize = value + 1;});
+
+  let bilateralFilter = smoothing.addFolder(filters['bilateralFilter']);
+  bilateralFilter.domElement.onclick = function () {
+    closeLastFolder(bilateralFilter);
+    controls.bilateralFilter();
+  };
+  bilateralFilter.add(controls, 'bilateralFilterDiameter', 1, 15, 1).name('diameter');
+  bilateralFilter.add(controls, 'bilateralFilterSigma', 1, 255, 1).name('sigma');
+
+  let morphology = gui.addFolder('Morphology');
+  morphology.domElement.onclick = function () {
+    closeLastFolder(morphology);
+    controls.morphology();
+  };
+  morphology.add(controls, 'morphologyOp', { 'MORPH_ERODE': cv.MORPH_ERODE, 'MORPH_DILATE': cv.MORPH_DILATE, 'MORPH_OPEN ': cv.MORPH_OPEN, 'MORPH_CLOSE': cv.MORPH_CLOSE, 'MORPH_GRADIENT': cv.MORPH_GRADIENT, 'MORPH_TOPHAT': cv.MORPH_TOPHAT, 'MORPH_BLACKHAT': cv.MORPH_BLACKHAT }).name('operation');
+  morphology.add(controls, 'morphologyShape', { 'MORPH_RECT': cv.MORPH_RECT, 'MORPH_CROSS': cv.MORPH_CROSS, 'MORPH_ELLIPSE': cv.MORPH_ELLIPSE }).name('shape');
+  morphology.add(controls, 'morphologySize', 1, 15, 1).name('kernel size').onChange(function (value) {if (value % 2 === 0) controls.morphologySize = value + 1;});
+  morphology.add(controls, 'morphologyBorderType', { 'BORDER_CONSTANT': cv.BORDER_CONSTANT, 'BORDER_REPLICATE': cv.BORDER_REPLICATE, 'BORDER_REFLECT': cv.BORDER_REFLECT, 'BORDER_REFLECT_101': cv.BORDER_REFLECT_101 }).name('boarder type');
+
+  let gradients = gui.addFolder('Gradients');
+  let sobel = gradients.addFolder(filters['sobel']);
+  sobel.domElement.onclick = function () {
+    closeLastFolder(sobel);
+    controls.sobel();
+  };
+  sobel.add(controls, 'sobelSize', 3, 19, 1).name('kernel size').onChange(function (value) {if (value % 2 === 0) controls.sobelSize = value + 1;});
+
+  gradients.add(controls, 'scharr').name(filters['scharr']).onChange(function () {
+    closeLastFolder(null);
+  });
+
+  let laplacian = gradients.addFolder(filters['laplacian']);
+  laplacian.domElement.onclick = function () {
+    closeLastFolder(laplacian);
+    controls.laplacian();
+  };
+  laplacian.add(controls, 'laplacianSize', 1, 19, 1).name('kernel size').onChange(function (value) {if (value % 2 === 0) controls.laplacianSize = value + 1;});
+
+  let canny = gui.addFolder(filters['canny']);
+  canny.domElement.onclick = function () {
+    closeLastFolder(canny);
+    controls.canny();
+  };
+  canny.add(controls, 'cannyThreshold1', 1, 500, 1).name('threshold1');
+  canny.add(controls, 'cannyThreshold2', 1, 500, 1).name('threshold2');
+  canny.add(controls, 'cannyApertureSize', 3, 7, 1).name('aperture size').onChange(function (value) {if (value % 2 === 0) controls.cannyApertureSize = value + 1;});
+  canny.add(controls, 'cannyL2Gradient').name('l2 gradient');
+
+  let contours = gui.addFolder(filters['contours']);
+  contours.domElement.onclick = function () {
+    closeLastFolder(contours);
+    controls.contours();
+  };
+  contours.add(controls, 'contoursMode', { 'RETR_EXTERNAL': cv.RETR_EXTERNAL, 'RETR_LIST': cv.RETR_LIST, 'RETR_CCOMP': cv.RETR_CCOMP, 'RETR_TREE': cv.RETR_TREE }).name('mode');
+  contours.add(controls, 'contoursMethod', { 'CHAIN_APPROX_NONE': cv.CHAIN_APPROX_NONE, 'CHAIN_APPROX_SIMPLE': cv.CHAIN_APPROX_SIMPLE, 'CHAIN_APPROX_TC89_L1': cv.CHAIN_APPROX_TC89_L1, 'CHAIN_APPROX_TC89_KCOS': cv.CHAIN_APPROX_TC89_KCOS }).name('method');
+
+  let histograms = gui.addFolder('Histograms');
+  histograms.add(controls, 'calcHist').name(filters['calcHist']).onChange(function () {
+    closeLastFolder(null);
+  });
+  histograms.add(controls, 'equalizeHist').name(filters['equalizeHist']).onChange(function () {
+    closeLastFolder(null);
+  });
+
+  let backprojection = histograms.addFolder(filters['backprojection']);
+  backprojection.domElement.onclick = function () {
+    closeLastFolder(backprojection);
+    controls.backprojection();
+  };
+  backprojection.add(controls, 'backprojectionRangeLow', 0, 255, 1).name('range low');
+  backprojection.add(controls, 'backprojectionRangeHigh', 0, 255, 1).name('range high');
+}
+
+function opencvIsReady() {
+  console.log('OpenCV.js is ready');
+  initUI();
+  startCamera();
+}
+    </script>
+</body>
+</html>
