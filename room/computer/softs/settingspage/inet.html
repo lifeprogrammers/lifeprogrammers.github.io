@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Сеть и Интернет</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAMAAABYi/ZGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABFFBMVEUaGxwWFxgYGRoYGRsXGBoVFhcXGBkYGhv///8XGRsYGhwWGBoYGh0XGRwWGBsZGx0aHB4WFxgYGRoXGBoYGRsYGRoYGRsXGBoXGBoXGRoYGRsWGBoWFxkZGhwYGRsYGhwZGx0YGhwaHB58fH3MzM3u7u7////Mzc1NTk/d3t7l5ua4uLm4ubnm5ubd3d5QUVJmZ2j29vZPUFIXGBrMzMxOT1FoaWozNDY0NTeOj5AZGhwVFhiNjo8WFxk0NjcYGRuOjo9RUlSrq6x8fX59fX7V1tZ7fH17e3ysra3V1dYZGxwXGRoYGhwZGx3Dw8R8fX16e3zNzc63uLne3t64ubrCw8O5uboWGBpmZ2nCwsOdnp8yNDbD4bc8AAAAI3RSTlMAAAAAAAAAAAAAAAAAAAAAAD+/vz9/f38/QL+/Kn/VwECAgAkKTwAAAAABYktHRAiG3pV6AAAAB3RJTUUH5QUWFjkPsV/oSwAAARVJREFUGNNdz1dPwzAUBeBL00LcDHbZI8S+xY1jSMPoAAKYmD0Tyvr//4NESIhwHu7Dp6MrHYCxWm16xqcMkbX92TnDqENjvDG/zbGDgcAQ5U7LMApb2I1kl8o4lnv7PDpoTUB98TCicQ/7g+ER9o7b0ckS1JdpGCc+xsN4gKdxEtIVWO3iv5zB2jlT/oVMfX3pp1xpxa5g/ZomSSLFze3dveCmaT6koMO2Vo8h1epJP8vCBIfKq9JeMkBt/iYvLX2tWpRJiX1A9cdYPgrZRrXH396xv1mxIFMR9UjVIvzYajYBO7yMLA9j2rNsG0ZBngvBsjwIhPj0bMd1wLLIl9bFDk2IRVzbdW2YbBL1M4JM2Y7tFL1vvCM1/InF6owAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Состояние</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg  style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.262in" height="0.2in">
+<image  x="0px" y="0px" width="16px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAPCAMAAADarb8dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABHVBMVEUWGBoYGhwYGh0WGBsXGx0VGRsWGhwXGRsXGRwZGx0WGhwWGhwYHB4XGRwYGhwXGRsZGx0XGRsXGRszNTcZGx0ZGx01NzhOUVKrrK3V1tft7u7///+4ubp7fX7e3t7u7u7Cw8RNUFIyNjjV1tbMzc5laGkXGx0WGh0YHB9naGr29vbl5uYZHR8WGhwVGRs0ODlOUlRlZ2jMzM0XGRxOUlNnaWoXGRsWGBvm5uYZGx0WGBozNTednp8YHB64ubkyNDYYGhw0NjgYGh0ZGx5lZ2mdnp7W1taOj5GNjo/Mzc24uLlQUlTDw8QVFxlnaGlOUFJOT1GPkJHd3t65urp9fn/Cw8NPUVKcnZ7V1dYaHB6rrKysrK25uboZGxx7fH0YaDdWAAAAF3RSTlMAAAAAAAAAAAAAP7+/f39/P78/vyp/1bKo8FMAAAABYktHRBsCYNSkAAAAB3RJTUUH5QUWFjoYGaE+TwAAAOtJREFUCNcNzNlCgkAUANA7ahK279SFpjKxpqB0YppBpQttYmVF2V7//xnxeh4OAKtUa1O1emNmw9ncQhcsZlWn641Zbxv5juPtAtgWq8ztNXG/5fvt9gEwsKz5Q3HUOg788MQ7BRvYQkd0ZRicuRzLw2aLkeiqc+kid7wgKNMl3TRxT4t+OPDDAVjLibigntapzC6vXA9gRVwbc6NTk91y1H1YdTjRECMT5zi6kxLW9P2D0nmsEhERyQzWsUNjfFRPOKTn4oXgFZVytaJJYd4Q8R0STeoj/4z5lxqX8A0/xa8qRobwj2iCRfoP0vYorUGsPDgAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Wi-Fi</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAMAAAAhxq8pAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAXVBMVEX///8XFxcZGRkYGBgWFhYVFRW4uLi4uLm5ubm4ubn////m5ubd3d3d3d7d3t57e3wZGRoYGBl7fHx8fHx7e3urq6vMzMyenp4ZGRmsrKzu7u729vbe3t7Dw8OdnZ2mUHesAAAABnRSTlMAAAAAAABupgeRAAAAAWJLR0QAiAUdSAAAAAd0SU1FB+UFFhY7MtsBxtgAAACeSURBVBjTbZCLDsIgDEW5FDsodXOC8zX3/59pMTG66Um4kJPcJsVx10WOzCklTpEtODrJqvsWjb63yOJkOIyjDO7D0eSL8iWrydOUy4+s5XxZyWLyWmuRupH/ZgKsboVJ77fS6qB44xWTOPJ8tzXmWd9rqTpCVA8KgNRAgey9c0SsICCQVLs8eYLJOAMPK0meVQEQWb0uoKX9XjveLJ7UCAidYMkQOQAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Ethernet</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.236in" height="0.2in">
+<image  x="0px" y="0px" width="17px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAQCAMAAADH72RtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAzFBMVEUXGBgaGxsYGRkXGBkYGRoZGhsWFxgWFxcVFhcYGRkYGRkXGBgXGBgYGRkZGhoYGRkXGBgWFxcYGRkZGhpnZ2ednZ24ubm4uLiOjo5PUFA0NTW5ubnu7u7////29vbe3t7d3d3m5uadnp6enp5OT08WFxcZGhoYGRkXGBhmZ2c2NzfMzMwaGxvNzc2srKzd3d7d3t58fH0YGRozNDW4uLkaGxwXGBnMzM17fHx8fX0VFhe5ubpQUVIWFxhPUFGcnZ1nZ2jCw8MZGhudnZ50F5EeAAAAFHRSTlMAAAAAAAAAAAAqf9S/P3+/P39Avw6p7zEAAAABYktHRB3rA3GRAAAAB3RJTUUH5QUWFwEZU9aL1gAAAOlJREFUGNMVjutWg0AMhCObxfu9grbsLkuLUKstpBipSkvx/d/JcJL5kTPzzQkAnF9cTp6iOHp+ubo+CQCCm+ksMdalzhif3d4FcD+xyXyRvxZluYytf3uAhV0VRfFeFrns1PtH+HBlsU43G5dWaU1bm0EVlWRWTSzj3CdXM6i+2p1piZgp9rvWN7A2xiRbyomotcbYGhSiZrlzCTFqDAG1UuLzqG+lNcKpRv3z2+0b5vaAQoyUcj33FXF2RBUqQCVURwNxR50WG7SwAw3DWMz6TEsmDNEtqU+Z/45SgSDCaN/tI+Z6Pr7yD/YKIe42XmqoAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Набор номера</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAANCAMAAAB8UqUVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA5FBMVEUYHSEXHSEWGx8ZHiMVGh8YHSIVGx8WHCAXHCAXHCEWGyAYHiIVGh4ZHiIUGR0ZHyMXHCAVGx8zODsWHCAWGx8YHSEWGx8XHSEyNzoXHCC4urv29vb////Mzc4zODtPU1bm5ud7fYA0OD1nam3d3t/u7u6NkJKdn6GNj5Hl5uYyNzoxNjkXHCFlaWvV1tZ7foF7foCcnqAYHSEVGh5OUlW3uboYHSIWGx8ZHyPMzs/V1tczODxlaGsWGyAXHSHCxMVNUVSsra98f4Hd3t7u7u95fH4XHCBmaW1OU1YZHiN8foG4ubqtXvwNAAAAGnRSTlMAAAAAAAAAAAAAAAAAAAAAf3+AgIDAQICAgMzhlMkAAAABYktHRBycBEEHAAAAB3RJTUUH5QUWFwIUBkqkqAAAAN5JREFUGNMdytlagzAQQOEkip0g4oZbZtKGAlJoqiJto4JWxd33fx/Bc/l/hx0oJD2eGBOjniYpZZeHTGE+M0U5N6TtAq+uFd0wrG7rJZlpuVonqJ29u39gNKvdmNA0dYvausenTcp08TzWWZkmA+kX+4o5O+qI3lq3XgxXjkSbY8ai9v3k9OOzp3ltm/jrjDPx3xL196qwW9veDh8xAQBC6M66Eisp/RHfZQAMgiBV1rlUSc/n/bcXAASgssYl9CN9OVgoQgjhvMCOdCR9j3PemxCBgIvqN44CIeU+53/+fRzPc4ZZvgAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>VPN</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.268in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABF1BMVEUYGhsXGRoaHB0XGRsaHB4YGhwWGBoZGx0ZGxwWGBkZGhwXGBoWFxkYGRv///8YGRoXGBkZGhsWFxgVFhcWFxcWGBpOT1EYGhwYGhtPUVIZGxwYGhsYGRsWFxgYGRoYGRoXGBkYGRoYGRoYGRoXGBkYGRru7u7////Mzc3Cw8N7fHydnp5lZ2dRUlMXGRre3t7MzMyrq6wZGxx7fH3l5uYWGBnd3d7MzM1mZ2hQUVIWFxl8fH1OTlDV1dbd3t6rrKysrK24ubn29va4uLnm5uZ7e3yNjY41NjcZGhvV1dUYGRq4uLicnJ0XGBmdnZ6Njo4zNDXd3d25ubmsrKxmZ2dOTk9OT1DDw8MWFxgWFxd8fX1PUFFOTk5FO1vfAAAAJnRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAABL3gh/9yG0f4Aqf8DVQMBAgIG1eu8AAAABYktHRA5vvTBPAAAAB3RJTUUH5QUWFwQCpMS2fwAAATtJREFUGNNlkXlTwjAQxTeUYgHbJFjv+8pyKK2iQUWrLagconJ4AH7/z+HG8R/HN5nZzG/ey9uZALAUA4WIxUXLSlt2Zs6ygTngsJIqV3BpOZ2xbToWZBljcITH1SBcAbpmiYDjOCmHqZPTGq6uEcsCMMMh65TOque6vk4pZnAuP++6+Qu8vGrgtUOMTHCjI33r5tWd5+nQdXNgOuoqDpO42Wp5Xg2bpPh+Ax7wsd2JtNae1w1pBBp70E6evL+qJNBPnv/DF3ztd4IoCH7jgwhjCNWQioamqEFFvbhZ3qSV9OCECzWilepckKQAwUlbY3zrlvGdIC9IDjT4wvZH67MfFXc4FwXBJXDJBd9Vo8kUZ3viJ09Oybkc49ckCvd9KcknJBgmS2pawdkBmYRPFLiJmO8ID7nv++Yx/xtxgjEOKNE8yAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Режим "в самолете"</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAQAAADYWf5HAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXBy/KNrnJAAABDElEQVQoz7WRrU4DURBGz943aEKaVFKJQbTFYbHVPABUQiopGByCR1gwOAwYUmwNogshJJUthh+3chvUQWxpu7RNMMy4+518M98dRPasKcv6R0H2zeyuwIZ+WFOQoYMVkNRM7Sp01KZSNymMbtmzrMRmNiSZeCW+W3d+q8xYkcxYUq9z0XNzeTiBe44UGZgYSjwDJ0I7AihTJa8+6wC8USLkT7JYKTMtjKkCd0BLgGiKbfMJwBpfhFc2gadoxEHBt+EWLwBUGRAe2ADgjApNZ267jDkCji1xBZJ6P/cRHbV4h0QJcMkO8TRDVIjxaIVTIEA7uqA/FYqZbzjkNoKFKx7/Gpp34E/1z5hLsW9nweFO/3xNNQAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Мобильный хот-спот</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABDlBMVEUXFxgZGRoYGBkWFhcYGRkXGBgWFxf///8ZGhoYGRoXGBkaGxwWFxgZGhsZGRoXFxgZGhoYGRkWFheOjo8XGBgWFhcXFxgYGRkXFxgXGBgYGRoXGBkYGRkWFxcVFhYYGRoZGhoXGBgYGRqdnZ7V1dXu7u7////V1db29vaOjo+NjY6Oj4/MzMy4uLirq6xnZ2hmZ2esrKzMzc1mZmcWFhfCwsPCwsIXGBhnaGgXFxhnZ2dQUFFPUFAYGBnm5uYYGRnd3d3d3t7e3t6cnZ3W1tbd3d65ubm4ubmcnJ18fHydnZ17e3x7fHzV1tadnp6enp4WFxfl5uZOTk5OT0+Njo7Cw8MZGhqrrKyOjo6Pj5DviuW7AAAAI3RSTlMAAAAAAAAAAAAAAAAAABWpvz9U6X9/P0C/v8BAgICAgEDAQMTGFPMAAAABYktHRAcWYYjrAAAAB3RJTUUH5QUWFwkdnGLFxwAAATNJREFUGNNtkVtTwjAQhRdoKVS8gwiiqLBrhEYKKAXUNkFtBQFvqPj//4gJ4gwPnofdzDdzZs+cAMTiiY3NShWJ8KyytW0oQSwR39lFRuy8pgbWs6aZBIjlHOIX1LAsl5qcWtmUgjmHtS/xylLqoNdlTtaAvRq1e3261vCGup5L9TzsI7/tcd9ayOeBx7EAFfKFQCaFEFIyJgc+3cH9Q8g5G3ClMBSM80hWAR+VjYa/9iGpMUKgJw3HK3BI/8AxAY5W7OOlfSJ5FDIZRmpFgkWLQ9NlJCkXkQbCp2coYPTi8de/8F4QYhHydeoHfXrT7F09GzQ7ALPkMDfAjoYf+Omy1mEazGRJVfdFrmV1qRmRc2TbkDTN0lyXPJvrkr/L9loGDCNlHJ9MJ/o7qtPiqZ1ez/wA9Ag5pnseXRgAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Прокси-сервер</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Состояние</h1>
+	<h3>Состояние сети</h3>
+
+	<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="5.375in" height="0.875in">
+<image  x="0px" y="0px" width="387px" height="63px"  xlink:href="data:img/png;base64,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" />
+</svg>
+
+<p style="text-align: center;position: absolute;left: 130px;margin-top:-10px;">YOUR-WIFI-1<br>Общественная сеть</p><br><br><br>
+
+<h3>Вы подключены к Интернету</h3>
+<p>Если у вас лимитный тарифный план, вы можете настроить эту<br> сеть как лимитное подключение или изменить другие<br> свойства.</p>
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.472in" height="0.472in">
+<image  x="0px" y="0px" width="34px" height="34px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAAAAAAfLFQeAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXFTehrlFMAAABZElEQVQ4y62TLVLDQBiGHzoYEFygMywGC56ZSDSyB0Cz3CFHIEfICdanOjp2cU0NMwG32Bexu2k6TVD9TKaTZ96f70vhHHOx9MK8Pt5dra8XgaLulQYuZwD7+gDA988uzCpYL0lDY82SRScptJvl9FWQgjPLAK2krvgHML0UyslvWzl3QvSjx6bpU+ljoh0zDYe9HGZCRKB39rhYOxLGSxrqk9SV1KcQQQrVzMaCgsmsurnFdFI5EjMSYKUuukw3Uzb+0MgnGxOyGsaFaWkruYRmlzJIkm/cmCSKVNmPVpKfZCrySoZcqz0+FtTSJolUmeiPe/cakkh8lieEkZpUuE61ggGK2mUzK1mARioAXCxeBUk+qjnJRL94pSAfTyIlfboYwaTllDF0HT+XACu44gfgBbYAT/AG3MQU17CCNTuAe/gCuOUTIO1wD0AycOke2d9LkiysZu4e/6XP21/27x+caf4Ab2IVuoIciC0AAAAASUVORK5CYII=" />
+</svg>
+<p style="position: absolute;top:360px;left: 50px;">Беспроводная сеть</p>
+<p style="position: absolute;top:360px;left: 350px;">0 МБ</p>
+<p style="font-size: 14px; color:#aaaaaa; position: absolute;top:385px;left: 50px">За последние 30 дн.</p>
+<p style="background: #444444; font-size: 13px; width: 30%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer;margin-left: 15px; ">Свойства</p>
+<p style="background: #444444; font-size: 13px; width: 30%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer;position: absolute;top:431.5px; left: 210px">Использование данных</p>
+
+<br>
+
+
+
+
+<div class="one" style="cursor: pointer;">
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.431in" height="0.458in">
+<image  x="0px" y="0px" width="31px" height="33px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAhCAAAAAAEtS84AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXHwYKn7n8AAABQUlEQVQ4y62SsU7DMBRFD6hLWYuYKpkFJBY2pDJ0Yy5j/8Is8AOeWVA/AX4gzJlYUokpLEguA5HpAHLZkvUxuEnVNkYM3MVPPr7OzXuGP2uc2lKktOm4jWorjazepCoTcVbccOjEOpFcrWMn3uBFgxaP8eLUOs4VRiyAFYPK1w7kkgOZTAAmkjVbQUa8ArwoACUeUF4MwA7gey/vwKhKAbjYewQOTxf7tT0iE/zZYPoFnBzNXmFVHAym57D6bhLigZFklWMXeosigFlYfFiKRS9wvtvnEbbbgllCo1TwR9SlAES2Jrn0Swl0Wp0aOOMtxvt3ADzFeDWHbr+6jfH5MVjSgnj+5Ojjkji/H1XXLPuz/X8ul7J+xG1cxNe4A3arb1WqCxp/rP/Bf1VXN/2H52X52RbZiiampLl6k/wy33/RD5/E5WJhzreXAAAAAElFTkSuQmCC" />
+</svg>
+
+<p style="position: absolute;top:485px;left: 50px;">Показать доступные сети</p>
+<p style="font-size: 14px; color:#aaaaaa; position: absolute;top:510px;left: 50px">Просмотрите варианты подключения вокруг.</p>
+</div>
+
+<h3>Дополнительные сетевые параметры</h3>
+
+<div class="one" style="cursor: pointer;">
+<svg style="margin-left: -5px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.556in" height="0.444in">
+<image  x="0px" y="0px" width="40px" height="32px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAgCAAAAABFxmXcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXJh2Ofv2qAAAA+0lEQVQ4y92UL2/CQBiHHwiGSQSmBFRFJWIJpo4E18qFhM9QzOwUcmrjQxDkzU+S9DMcas3MSOArvAgu/Xe3jhDUfur63vM+d7nmDu6dVjEMx05CfVkVcSa5zHbK6PFk+bwHHOAutkDtV8HwGQICVcM+3/OhAccRgO/XhRYIx521bFDuy8GTvT9VBtvXHvi/AjuNs5Hc2/gR22A3sbC+0zh4u2rpn31R8sk/ssZekQZjkfUQFDF/RouIy1kxrmfgkR4iNGTT323K3E8REdFO49MKoEe6AcUSHheeBnjZVvnE3HZVL+S/wTwpoxhgPin1fr+C60Ep9miiuS1nzfhu/6d2yYEAAAAASUVORK5CYII=" />
+</svg>
+
+<p style="position: absolute;top:592px;left: 50px;">Настройка параметров адаптера</p>
+<p style="font-size: 14px; color:#aaaaaa; position: absolute;top:617px;left: 50px">Просмотр сетевых адаптеров и изменение параметров<br>подключения</p>
+</div>
+
+<br><br>
+<div class="one" style="cursor: pointer;">
+ <svg style="margin-left: -5px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.556in" height="0.514in">
+<image  x="0px" y="0px" width="40px" height="37px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAlCAAAAAAVC/RvAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXKhKydK83AAABDElEQVQ4y9WTIW7DQBBFf6sSFxQUhDTSotIWRQop6iFyizlCQNQT1EcoKtzi8GAXjkmloEhJmfEPWK+89trqoKodstrx81//P2vgD5QwrezxpVUnBeuLWD+AZsVfBq/C4l5uZrj1Xd+jWo/xyrzKHtEmQXwMXp0tPx9HFPNRCHXCjKs2BjMAlg9fBvMk4IJuQx61zI4efqNvLVflJBivmQCQfcxom4HyloBwXpuwXQ1BkgpAA9gNIm5b1zVQzAsBihBiBAss5PA+TDge7fb9WW77OR5qALi7Bl7np+9E4f55zL5SXMOnpDORk1I8d2nn2LfXgRuTIJRqEoSSJkEobYJQo2D+84gR3OEf1RmGzumeQJsMwwAAAABJRU5ErkJggg==" />
+</svg>
+
+<p style="position: absolute;top:676px;left: 50px;">Центр управления сетями и общим доступом</p>
+<p style="font-size: 14px; color:#aaaaaa; position: absolute;top:702px;left: 50px">Определите, к каким данным вы хотите предоставить доступ для<br> сетей, с которыми установлено соединение. </p>
+</div>
+
+
+<br><br>
+<div class="one" style="cursor: pointer;">
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.486in" height="0.444in">
+<image  x="0px" y="0px" width="35px" height="32px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACMAAAAgCAAAAAC9Jp4rAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYXLjrjrcLJAAAAqUlEQVQ4y7XQsRXCMAwE0CvYgAGomIVp8DJmkayjjt47XApLjgmyRIM6n87/+Rn405Sad6TlDJlCQmZQYZMMEtaSQIUNSCBh1WLMJJAuI2jsAkhYAZEI6hsygvqCDF6kORm8SOPe8SFLe8eHLNSOB41MOx40Iut8Q0ciggXkyGdoOm/b4t50tPecofl0OJ/Q4uft6gVAueMhXgnX+hzMcpo5L6zn9sZPswN8AqqiEhyTSAAAAABJRU5ErkJggg==" />
+</svg>
+
+<p style="position: absolute;top:766px;left: 50px;">Средство устранения сетевых неполадок </p>
+<p style="font-size: 14px; color:#aaaaaa; position: absolute;top:792px;left: 50px">Диагностика и устранение проблем с сетью. </p>
+</div>
+<p class="prosto">Просмотр свойств оборудования и подключения </p>
+<p class="prosto">Брандмауэр Windows</p>
+<p class="prosto">Сброс сети</p>
+
+
+<br><br><br><br><br>
+
+
+
+
+
+	
+
+</div>
+
+</body>
+</html>

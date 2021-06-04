@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Устройства</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYVLw7YhtNTAAABhUlEQVQoz4XSMUvVURgG8N859x9RS9zFkoZr3bIcIgmHpNmCAtdGo/BL5CQZjY3VoIn6BWzWuTUUMpquQxIE5he45234n65BQc9wOC+8532e5z2PT/F/bMZNKWLbnqzIQkhIop4Jj3TNpcy+pGfDXQdyvX0WejbNOnAMGpjQl/SN6enL+sZM6Cv6xhw5hxTx0gaVhlBkmSokEHISsRK7ERExGYPYiesx+U9DDcWqj8he+1FnfLAn6TqWcMt8q3HKLDbMGPfQMvbtWtfDwFPRNiZXXJXQN+68hLDurBXJM2u2WtfJMkgWKjH0vHBPWLUkofluyZJTDNxHt1btJrpoHpuTFKlStvJPHFq0ZmjRoZ9ovqWt0Q6LkBWCJ957jkML5tCcMURBRhY6CEceGHeko4A8RNKRKnkyrNMve+WtiwjkQDGUFcORCHhjyh3vqqWmDRhF0lFGrckFA1yqz/LphJCqvhY7pk3bUdp0XvsjorkK/xrb9a9PFNw2L90Yxek3afYl/IVfv7DD5aMgpSsAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Bluetooth и другие устройства</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg  style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYVMQYCHGS+AAABIklEQVQoz4WTq04DQRiFvzNZUYfAEExXsBawWOrLQ8BrYCiaFwCNL74JBk8aQtImJOAwJDggIXMQM91uuwucyeTP/PfbqEIYI+amhUqJisIIEALGTAFhhNljmCURUQQMJMMpp1p6G3kIRAKBSJHCRroRMAZMSM/lXUJAzIkoyb5RtmvCQMSElKMabP8SWgiNfJArHXDPW6PqTfaZ5BTu0Iff+Wx5UvaeaI8NsM9t/j5ntgPAjWcdU1lFAZELtrn+X1HcCmDS8ioO1VBcyAe88pWbJEyPrbpJEJrzuKKvvkqV6qvUZc2P61NbjR0aKUABx7zYQIlYN3u2MCdAManbWnbU+oSIBB5RVU9g7jEP9cbALkdUWiy1doBAJDDr/App2QI/YMFyODugdtkAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Принтеры и сканеры</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;margin-left: 2px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.248in" height="0.2in">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAQAAAD4zq+ZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYVMwDZSaMJAAAA+klEQVQoz4WQsUrDUBSGvxO7Cw5dRBSa1EEUn0DzFNLBwTeIL1ASah/AZ8hSxF0QdNAHMF2EbuJ0cVGyxEl+h2pzU0P97nI43/0Ph0NESKKZfCoVitOQiLUNzjSk5IpbSnYZ84jjgNP4hvKBOK1USAhxIf1UwulFPchVLVojTyeSBmmwyRu/GDWXBntZIK/l13MCP2NtuuaZ+4YUHX/kZCluzfRfVmr9m7aWfT2t1WlHt1UkghkMJI0Wl67fnT4UQT8r5HS89CFRpVwh9IgzJ9fQ56pUqE+IhYitbJKuM+WJd3bY55ApJ/ZFB4sQBgx1xDbwySvX5GYI4xsE1pXWcIoslAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Мышь</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg  style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAQCAQAAABezYzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYVNDHH1jX0AAAAmUlEQVQoz42SMQ7CMAxFnysGNiqxsHMBRsTxCsdA6kXKWWBsF0SXik6fIekQNSH5Wez42U4sW6MLaRkCWmzSyIz8hQsstlPNAFIj8e90eqoiKwMqyJFymMqq5aQyjLKmACb1zEnUgB0fNtDzRph/x54TjwA9wnq8V0nR8dqqTfQL8UCYapNGvt4RsOXAK4BqBuymc7LGsjN3fsfkUugK7B7PAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Сенсорная панель</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="12px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAMCAAAAAClu9leAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYVNTZAqZEWAAAAv0lEQVQI12XPMU7CYACG4ff76QUcWBg1egvCoIvoGboaNw6ADNILODERDD0BK9jJhFEHjSw0FBIjSd1dzP+543ODR51zWUYiBrBFzpcPLeVsCghFOWAzOglo8Mj8sj/R/Ko/iYuuSIhbU9Y7xbLeovIbBXiv0tvmapzeND/G6fIT8P2TfbopMp9tiqGdFZU8zAm/akSEQ0Sj4wTu2rqYtrD8/NLzA0qgasH6B8yuXmuP5dkbJlgGB8z1Ea//HvkfLAl5GSZqx7kAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Ввод</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg  style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAApVBMVEUkJSUjJCQmJyciIyMkJCQlJSUjIyMlJiYnJyciIiIhISEmJiYnJydAQEAmJiYmJiYkJCQmJiYjIyMkJCQlJSU+Pj7FxcX29va8vLzPz8/////GxsZubm6wsLCUlJQ/Pz9AQEBYWFgkJCTv7+/f398mJiaioqIlJSWCgoLX19dZWVkjIyMnJyejo6MiIiJaWlrg4OCDg4MhISHY2Njn5+dvb2+EhISS/1USAAAAFnRSTlMAAAAAAAAAAAAAAAB/f38/v7+/QH+AK1SDMAAAAAFiS0dEGnVn5DIAAAAHdElNRQflBRYVNzHs+2Y3AAABJElEQVQY0x2R2XaDMAxE5SCJUNqma7wkAUd2AoSS7v3/T6tATzpzrmZkGcCsDBQGiRjxdmvdHRKYEkoDhgmZ1j7srCNUyChZrPF+f2iCtaFhhLIsV6Upqk2rgo/b0ChZMUBRGn5wtglHcYmZgLgCMGYTrcv+1NqzRkJVITOYxwXsXOoQEZCwQjQL2Ckoh15JIqrQHIcmXNRR4hCcet4wMz6N2b9FO11FJguqsNo+9+FdwVG6bhZfzkPOzenDj1Edtddx9sE7Fz+XaDk653oGZ/fXq6jjSR1J98EaITnR6hdQ10PimiD0Il/y7cfWTvoYZKQa7CSjSHbjLqm0zBP41Eo3DjnpebiulcMa4k+afiWn3WWm5lNrEL56m8X+0fwhrCka9Q+Vwh7N0wqOkgAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Перо и Windows Ink</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.22in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAvVBMVEUjIyMlJSUnJyckJCQmJiYiIiJAQED///8/Pz8lJSUlJSUkJCQkJCQmJiY+Pj4/Pz8jIyMjIyMkJCRAQEBvb29AQEA/Pz8nJydAQEAlJSUnJycmJiYkJCQlJSVvb28mJiYnJydwcHAlJSWjo6PY2Njv7+/////X19eioqKUlJT29vbPz8+EhISTk5O8vLy9vb1vb2+VlZXf39+joqKDg4Pn5+ewsLDg4OD39/ekpKRwcHDQ0NDGxsaCgoJaWlqQjQEUAAAAI3RSTlMAAAAAAAAAAAA/v79/f4CAfz9AgL+/6lZ/qxa/wEB/QIB/gL3nG/4AAAABYktHRAcWYYjrAAAAB3RJTUUH5QUWFTonrYGtKwAAASRJREFUGNMdkNt6wiAQhHdgrY211Z7tuTVhq5BCkkajPb3/Y3WRC/iYXWZ+lggwxaSsnIh7X50UerdEoOna+VDWdRm8+5geRHsaJJ4BYGtnScJURcyDbxjWAqRb48N8ROdraVRiaEF7bCPtBU1cJDvCkc0Sa390E1r5S73a2F0VqjNh5ldUBc0gTiLhurDMMKEi92nAbGLXb/xWERilI+mhvIjDeLzduZrZ1kJSaxlInYretWzQC7k9DkFDfp7R8vMqGBg+BN3cGqOqBu39QjuRhubunq0xvNiV9OAiq/uxzeCKgeQe6amVZ01XTbkGsl/SvhC/Bv9mOGNz6rj3Yal/wfJb0iK7cdpECZxHpz465K0aQxF+fv9gyGY/lGs9EEVXBP4B0s4fdGPH3ucAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Автозапуск</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.24in" height="0.2in">
+<image  x="0px" y="0px" width="12px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAQAAAAT+RSaAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYWAAAvZHhgAAAAmUlEQVQY05XRu02DYRBE0bMrF+CMkKccOofEATlUQCVEPAqgFjpBBA6pANGA+YfATjD6kDwbXs1eade5hezlIwsz4NW7SZvEjTm6fONNnLqvS2uf2OhpW3HsDBeOBKVrB+7qqjiplyo0q3zlb9aZXZt7FnYrYOmWhyTxex6TtEF6RDoj4BCQEah/HTUCBzma7aOe9kRLxtf9AaCzZ0te1YPqAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>USB</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Bluetooth и другие устройства</h1>
+			<p style="padding: 7px;font-size: 20px;border: 2px solid #fff; width: 5%; text-align:center;">+</p>
+			<p style="margin-left: 10px; position: absolute; left: 50px; top:70px;">Добавление Bluetooth или другого устройства</p>
+
+<p>Bluetooth</p>
+	<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+<br><br><br>
+
+
+
+		<input type="checkbox" name="" checked style="transform: scale(2);">
+		<p style="position: absolute;top:220px;left: 40px">Показывать уведомления для подключения с помощью быстрой связи</p>
+		<p style="font-size: 14px; color:#aaaaaa; margin-top:20px;">Если этот флажок установлен, можно быстро подключаться к<br> поддерживаемым устройствам Bluetooth, когда они находятся<br> рядом и на них включен режим связывания.</p><br>
+
+
+		<input type="checkbox" name=""  style="transform: scale(2);">
+		<p style="position: absolute;top:340px;left: 40px">Скачивание через лимитные подключения</p>
+		<p style="font-size: 14px; color:#aaaaaa; margin-top:20px;">Чтобы избежать дополнительных расходов, не включайте этот<br> параметр. Драйверы, данные и приложения для новых устройств не<br> будут скачиваться через лимитные подключения к Интернету.</p>
+
+
+
+</div>
+
+</body>
+</html>

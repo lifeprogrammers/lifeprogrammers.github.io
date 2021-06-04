@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Поиск</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAQAAADx2TabAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBR8XExLB+G0HAAAA50lEQVQoz42Sq04DURBAzzQrEThw/QaQCAR8Bjg+gKCxW4si/AB/QJBbRQKO4sC1qMUBZhvUQeztpo+9hJncTDI5d95RGQBIvw0euQwojvngh1WR6N4OJqelkteZY0UG/FMGLEJnZBj3ABR55M4tak7iKhIYa8DIbfbZ45BvDvjymae+ZkpVZ94m79ha1Y1mBIhhnKZER7Ebozb1Ge9KW8JDdgzFeKlGmebntT7gc91YwI3zvl00XSMLnfjWB1Z+roAXatm/39rpEjr3RaEfbaxtozXpU/Zqahtf1UmK/ceBVdZedyX8Ap8v+Xk1/bvwAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Разрешения и журнал</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBR8XFC6h1odHAAAA3ElEQVQoz43RL1IDMRSA8a9rsD1CZ9AoUJ2h16CGIyyeW3CFbR2qnmokmXaGqVwQsLh1az8EUJpsoPtikpdfXv4hInODraqNa2d+ZQ/bSGDpNS9s2CJTLjjhlrsRcchCXUY1gp03SVXm6qK3VbBNYbDOnEi6ZHkxYUMuXjmLxsWYbRa+MY4hA6P4YJqdOOU9hs+cZ+GE+zhxaWdI7j2z6b0FUib0ykZd9aGUtnbufHBtre5c9b5h36l8srb20VK/P/aQ4p+tiug/UEQrB8HfAxyruKdH4Q8dAKWy8xPyuF3u30+H/QAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Поиск в Windows</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Разрешения и журнал</h1>
+<p>Для предоставления релевантных результатов служба Windows<br>
+	 Search будет выполнять поиск в Интернете, приложениях,<br>
+	 параметрах и файлах. Чтобы изменить список файлов на устройстве,<br>
+	 в которых выполняется поиск, перейдите к <p1 class="prosto">Поиск в Windows</p> </p><br>
+
+	 	<h3>Безопасный поиск</h3>
+	 	<p>При предварительном просмотре веб-страниц служба Windows<br>
+	 		 Search не загружает результаты из Интернета автоматически, если<br>
+	 		 они могут включать содержимое для взрослых. Если вы решите<br>
+	 		 использовать предварительный просмотр результатов из Интернета,<br>
+	 		 мы будем применять приведенный ниже параметр.</p>
+
+	 		 <input type="radio" name="" checked>
+	 		 <p style="position: absolute; margin-left:30px ;margin-top:-20px;">Строгий: удалять из результатов веб-поиска текст, изображения<br>и видео для взрослых</p>
+	 		 <br><br><br>
+	 		  <input type="radio" name="">
+	 		 <p style="position: absolute; margin-left:30px ;margin-top:-20px;">Умеренный: удалять из результатов веб-поиска изображения и <br> видео для взрослых, но не текст</p>
+ <br><br><br>
+	 		  <input type="radio" name="">
+	 		 <p style="position: absolute; margin-left:30px ;margin-top:-20px;">Выкл.: не удалять содержимое для взрослых из результатов веб-поиска</p>
+
+	 		 <br><br><br>
+	 		 <h3>Поиск содержимого в облаке</h3>
+	 		 <p>Служба Windows Search может персонализировать результаты<br>
+	 		 	поиска путем включения вашего содержимого из OneDrive, <br>
+	 		  SharePoint, Outlook, Bing и других служб</p><br>
+
+
+	 		  <p>Учетная запись Майкрософт</p>
+	 		  <p style="font-size: 14px; color:#aaaaaa;">Разрешить службе Windows Search предоставлять результаты из<br> приложений и служб, в которые вы вошли с помощью учетной<br>записи Майкрософт.</p>
+<label class="switch">
+  <input type="checkbox" checked="">
+  <span class="slider round"></span>
+</label><br>
+
+<p>Рабочая или учебная учетная запись</p>
+	 		  <p style="font-size: 14px; color:#aaaaaa;">Разрешить службе Windows Search предоставлять результаты из<br> приложений и служб, в которые вы вошли с помощью рабочей или <br>учебной учетной записи.</p>
+<label class="switch">
+  <input type="checkbox" checked="">
+  <span class="slider round"></span>
+</label>
+
+<p class="prosto">Управление учетными записями, которые используются другими<br>приложениями на этом устройстве</p>
+<br><br>
+
+<h3>Журнал</h3>
+<p>Журнал поиска на этом устройстве</p>
+<p>Что бы улучшить варианты поисковых запросов, разрешите службе<br> Windows Search хранить журнал поиска на этом устройстве</p>
+<label class="switch">
+  <input type="checkbox" checked="">
+  <span class="slider round"></span>
+</label><br>
+<p style="background: #444444; font-size: 13px; width: 50%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer; ">Отчистить журнал поиска на устройстве</p>
+<br>
+<p>Журнал поиска в облаке</p>
+<p>Просмотр и удаление журнала поиска в облаке </p>
+<p class="prosto">Панель мониторинга конфиденциальности</p><br>
+
+<p>Включение или невключение запросов интернет-поиска в варианты<br>
+запросов</p>
+<p class="prosto">Параметры журнала поиска Bing</p>
+
+
+
+
+
+
+
+	<br><br><br><br>
+
+
+</div>
+
+</body>
+</html>

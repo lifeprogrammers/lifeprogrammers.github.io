@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+
+
+.searcho{
+	border: 2.5px solid #7f7f7f; background: #000; width: 85%; color: #fff;
+}
+.searcho:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.searcho:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Игры </p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAASCAMAAACO0hVbAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAbFBMVEX///+VlZNaWlixsbDY2Nf///+DhILHx8bn5+fv7+/GxsW9vbxBQT+jo6L39/awsK+EhIJvb23Q0M+VlZRxcW+FhYOCg4Hg4N/Pz8/Pz868vLv29vaDg4Hf4N9bW1nY2Njv7+7f39+kpKNAQD7T1oBsAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBR8VGgYJZNZdAAAAoElEQVQY013Q6wKCIAwG0KV8iuAFLQI1K+v937GRShq/4MA2NqLDOh2PlKQC2EOWSxRKRysrUUM0CZFZrNX8oDsvt6tBppeYIVhpCdddVoNUwhGyn+QF1/FsZq3juU7PscP2TmH0fHtj05s5RSHCrGaDTUO0GDvpaOpr9+pRL2bRjfAEERp9BvMzavEqeTeHPlyvwt8Oo3KQTfs3O/veHT6wBAgBk7dHxgAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Xbox Game Bar</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAh1BMVEX///+9vby8vLv////n5+fv7+/29vbf4N/g4N/f39/39/aDhIK+vr2FhYOEhIKjo6LGxsWjo6GCg4GkpKNbW1hvb21wcG5aWlhZWliDg4GWlpTY2NfPz87Pz8+VlZNYWVdvcG6WlpVbW1nQ0M9BQT+io6Hg4OBycnCwsK+8vbyxsbDHx8akpKIN8OicAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBR8VHgCEa7ZsAAAAvklEQVQY012Q2RaCMAwFbw2FLhYQca0oirv+//fZ1A2dp5xJc25SiMhAvOEKlMg0U1oxWmtlZEIgO8zQQw0cS/yRB5kXZV+VI5a2Gvdl4eJ4PenLac3SCf0TJHjc/QfNTBh/Bc1LLRZL78dYhHRbRJlIIYlWDa0RXm5adluqAbcDOgUOihf5jpcMi8xoCnqyp+qTX8JZZ6s8P6SAyNTRn3CW7/YlQ2PCr3kzCcu/uMqViZc15ma+l5j2WXTp/QFUcwkw3mvqgwAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Клипы</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAATCAMAAABFjsb+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkFBMVEX///9bW1nGxsXn5+f////g4N+xsbBAQD1CQkDPz8+8vLuFhYOVlZTv7+/29va9vbxBQT9vb22kpKJaWlikpKPQ0M9AQD6UlZNxcW/Pz868vbz39/ajo6JZWliDhIKUlJOEhIJwcG6VlZOWlpSDg4GCgoHf39+wsbBYWVdZWVfHx8YmJiPX2Nc/QD1vcG7f4N+1ur+6AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBR8VIAW1xFmeAAAA4klEQVQY00WQ2XaDMAxEJ0hOWWrLJQEcQxJ3Sxu68P9/VzsBOi/WuZozlgQkbTJiZrV9wKK8YCqr6jHTRmZkiSo8baXeYW+aG2qJbKeZlDYtnDkkVpCt2dvUxcG5fgCOfDpzfU8p+gDRQEbQ2YzMM4LlF5APnEcQyoReDVQGDp4iemPi9/iyE5WYirVQrBILcgF3HzEVn4aT/cq78QI1Oj6mQZILe/1FguhS38uWrZYrO9i+dibMrCRbpHTfu3w9x099+ymO+ruyYVmpMf7u3DQ8rF3NSiTedTrhX92opknmjD/OOA25e0HFaQAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Игровой режим</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX///+VlZTPz87n5+f////Q0M+UlJOWlpTv7++9vbyEhIKCg4GFhYPGxsWVlZPHx8bg4N/39/b29vZYWVdcXFqkpKJBQT/o6Oc/QD2kpKPf39/Pz8+CgoHFxsWDhIKxsbBbW1m8vLvY2NjY2NdDQ0Cjo6JxcW+UlZO+vr1YTH1yAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBR8VIgD3mM+TAAAA10lEQVQY002Ra1vDIAyFs3HaHlirgrZecDddN///LzShsno+kPA+ORCCSNFm6wDXtLKqI30Iu96TdzyA/qHUe2JY2COfAETvkwbHQtv4LL3tVamXl2gmjrpMr8bcm6bv1EKWM5zBj5JyI9kvdxWV3DfigsZPBTnr0usmOIFBAvtSzkkhBAc1AEczHssBCs2e0CwtbxFPZs9nLfyqj/vWF/lsLTFdKpwSrSXhjHmdzYjZGu8S/g1MkDoLe1xXdq1jGuJY2RyHmt7InxAOuzPtkrvaxr4j/6FfaWsJbiEAP1QAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Сеть Xbox</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Xbox Game Bar</h1>
+	<p>Выбор способа, которым Xbox Game Bar открывает и распознает<br>игру</p><br>
+	<p>Включите Xbox Game Bar для создания игровых клипов, общения с<br>
+		 друзьями и получения приглашений в игры. (Для получения <br>
+		 приглашений в игру в некоторых играх требуется Xbox Game Bar.)</p>
+<label class="switch">
+  <input type="checkbox"checked>
+  <span class="slider round"></span>
+</label><br><br><br>
+
+
+<input type="checkbox" name=""  style="transform: scale(2);">
+<p style="position: absolute; left:30px;margin-top:-30px;">Открывайте Xbox Game Bar нажатием этой кнопки на геймпаде:</p>
+<svg style="position: absolute; margin-top:10px;margin-left: 90px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.25in" height="0.25in">
+<image  x="0px" y="0px" width="18px" height="18px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAAAAABzpdGLAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBR8VOBxTtGkHAAAAq0lEQVQY01WQq5EDMRBE3y0zP+gqRbKXhrJwEEphQtg0jG6B8FJTUVGZPgOVf41muqunpxoALrVrrwWABeDyO05wGmQmcgBsARAZIA/bOsXUHBloOgfyUBtLOfOFc6GqxlxDtdLVA4gADrWjjgRXvUIaKtNWp4VQ6XbYVHWDbqca8+yMCSvFtI4nNdZkgcrNF25Uflj5//j0j31h5/5m7uyzivb0tfwSy2eFD+MCl+dfisIKAAAAAElFTkSuQmCC" />
+</svg>
+
+<br><br><br>
+<h3>Сочетания клавиш</h3>
+
+
+<p>Открыть Xbox Game Bar</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+G</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Сделать снимок экрана</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+PrtScrn</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Записать этот фрагмент </p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+G</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Запуск или остановка записи</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+R</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Вкл/Выкл микрофона</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+M</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Запуск/остановка трансляции</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+B</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br>
+
+<p>Показывать камеру в трансляции</p>
+<p style="font-size: 14px; color:#aaaaaa;">Сочетания клавиш для Windows</p>
+<p style="font-size: 14px; color:#aaaaaa;">Ваша комбинация клавиш</p>
+<div style="position: absolute;margin-top:-80px;margin-left: 250px;">
+<p>Win+Alt+W</p>
+<input class="searcho" type="" name="" style="width: 130px;">
+</div>
+<br><br>
+
+<p class="prosto">Дополнительные сведения о Xbox Game Bar</p>
+
+<br><br><br><br>
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

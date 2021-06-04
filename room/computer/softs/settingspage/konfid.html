@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Конфиденциальность</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.252in" height="0.2in">
+<image  x="0px" y="0px" width="16px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAUCAQAAAAua3X8AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgEAASHo05NLAAAAt0lEQVQoz4WRMQrCQBBF3ywBT6KikNbWo9h4A0EPkRskBxFsjK1lBEHLVHoI/RbZxIBx908z8+fvH2YH0UaupyTpoVxf1kSDi1LOnIAlCy6k5huNrpC0695tJRW+8tRdVc9WVLr52jU+Yw70sWfiM9dSb4bhhmn7FfxRkqw1xbFhRqZmKwPmQCa4QqkQSjmjBhuOOjA6tkVPoGBbMQfDWcwhPIKYg5HAiEyOF4YhwLrDrVDsJ4/6AEwZludPO5ZRAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Общие</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ <svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgEAAySqjwVGAAABMklEQVQoz4WSP04CURjEf9BIR2IBsYFYewhrjRrOAHoE8c8JwHgB4QBIb+8abWhRCuigIsRECs3a/SyWhWWDOl/15puXN5l5yN9zYF0R/hM+GnquZGSFa7d5p5FhDSNzlDLLm7fOjTC3acT1FamqjVjWVnvWlKo9taXI1Eg6tB/JjgwNXPkKDBW5U0UenEeL7mKxmtBOxNhUGmoWoMhs3T8zdlJMFuCLXIre4hO4EeoZKPEdCV8ocJnI6coiz0CFCQB7TOLAR049XfisOXWoVP1YtBLaic0fOza0b2BfHXu4lsFco6fhhDw5CuxSAPJUlja67tMF4gYMrBl/g0AXUYvcx5/iydCLVI71VAXCmdpOyURaajXB03OyQSYytpfYZMu8shlvlJPNFBn8IhxQTJx+AMZaTnp4A6OaAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Голосовые функции </td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgEABgWbkeFdAAABEUlEQVQoz42SO04CURSGvyGUJhYWroBY4Bq0xmjiGjRugccSBHeg9rgAqbWlExMLrKAajMVoc8vPZma4AxPiOc15/Pc/j3sSKSUyt6UZOxM+EJCkfJsAbc7AtTpU6vRWbaz53pnvqu0/dBgzPvgl4qd9dzCO1Zkj710aHLjNiMiNOimTc7MaYBPgkh86xUZoJdj3myOkm1x4QrvY4x6/7FcaOqDDKXDuI4frHseGajGvlDs1NdhTLIbJnJXQNLeHarCbx/PkwGDmq1ODqcUIBVsEnKnBpQs1+KJIL4LlwJWr6J+fDFEjEXDhaiPcK1kj4NbEiIzU60qcudPa40p9rsQbLd5qb2DBccVvQFYLDBv+H6b6TwGpNx9nAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Диагностика и отзывы</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgEABxdxM6FUAAAA30lEQVQoz43RMU4CYRQE4O/fbGWznmATC69i8EAmHIF4Ey+ApegVVAqt2AZoTKykcixcCAqI85r//W+SmfdGcp3YrUlm/f9dZonKURRQM3CfIluDKM42/fek7jQa28Q1FlqwdKJV4n+o5FB1gWHes8pNSnJrKgo+e08FA4228JpzrNQ8uSq7UvdpwAdYqdbrH8LQoxcjNX+vMy4wUjl680m6HGdtJ3PhIbvyZ7/6utM43etznUwfYXtw6faH9NFkNtKMPfd5ZHPTuNT4RZzuTWaSn8Sq87bX4dKif83N8QXcm3Q7oOOk+AAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Журнал действий</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Общие</h1>
+	<h3>Изменение параметров конфиденциальности</h3>
+	<p>Разрешить приложениям использовать идентификатор рекламы,<br>
+		чтобы делать рекламу более интересной для вас на основе ваших<br> действий в приложениях (отключение этого параметра сбросит<br>ваш идентификатор)</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<p>Позволить веб-сайтам предоставлять местную информацию за счет <br> доступа к моему списку языков</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+<p>Разрешить Windows отслеживать запуски приложений для<br> улучшения меню "Пуск" и результатов поиска</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<p>Показывать рекомендуемое содержимое в приложении<br>"Параметры"</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+
+	<br><br><br><br><br>
+	
+
+
+
+
+</div>
+
+</body>
+</html>

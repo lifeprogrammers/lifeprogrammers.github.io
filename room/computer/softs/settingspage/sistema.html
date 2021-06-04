@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Система</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.208in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPCAQAAACsTTynAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYTOheP1eE1AAAAqUlEQVQoz5XPMUpDURCF4W+uAUuxshPcgtlMFpJduAF34RbiHixsTRUbIWXA3GPhIyQGXp5nimGGw39mahUHFY7GYRcblXzaGbPe2JI8JcZqlY80E1Ta+TXnigm0Qvtt46z/2C7dNoRO+jV583WErxN6iQfUOqeh1+6s/xg3ao5S9ppgkaV5RVzBsK/HIabpXnJ/oLxaVtfNdMyarqErz26VKPFuj+Zbww/mtkpCSdpypAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Дисплей</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.268in" height="0.20in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAQAAADx2TabAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUAwQAoDvUAAABhklEQVQoz32RP0hVcRzFP+fXHd72mhSCxKWoJXzqS1DoTdHSUsMrgpasQNeH/1raRInWCIwmQa7gXujwChqU4kkNpS15B4k3qLn4hrin4fLo3gLPb/jB9/fhyznnJ3OaZn2bSaUEoqsYEGAe+5iGiugVnruhlGAMpKRM+RHVfzYuaJka120CQACmXadTgDpe8iAv9Z0JlIG/mXadmDZ5x5vcpxfzmj4GTeLEe7Zjmz03bcysn3iICkduusIAP/3O0Xm+cMA647kQ9+jlDeIDY8AZdugnwFtq6mLZNUcPdw1rlKnY7NJD6D7mta+EEaAluAQcUsrC/JVze9PCLFBImiHn6GMLGDZ8I3CWDgFu8N6vCj857zYrCtziFy2Zi7SJEsqUuUbsO+q6XQGEGGUbAZf5ClWqVIltx+72mJ2mT3zTFWZsP3BkBDwTrtPhR87ACMvsC8ZJaCmIFDALWqVUCFbSQ31i0hd4AUQpQoBY1LEPqRXqmvNTmmwoEH3Mz//r3nymIQF/AAjwoRXuQalAAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Звук</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUBgENvTseAAAAtElEQVQoz8XSwU3DUBCE4W8dV4PkS2gCiQLCzfWg9ADi5jSA6COiG+zhYAeRCzYSEvtOb9+vmdmnrcSmann1rjEpTHaYvgFRbtyTHBM/n8ckDdu8m20J/w2sGay/U8wMbv6eddH6peL6MEvGaRUsyFUNXwsyXD+kjrEsGHc6g4filIOzt8W2ULciGlEmL+mccHDWF43xYr9XC1pGO0/pcNZXIz60MivuUctl1Irn0Jelz6SUT/2vamjpYODrAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Уведомления и действия</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.20in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUCRYJ9qIWAAABlklEQVQoz22SMWtUQRSFv3s3YAphO2FB7LbSLXxv0T8QQRIhhaC9NpY2UazePBsloK2IliK7hYUgElLYW9hkC9FUxsZNoSwIz0DeHIuZdVnimWaG+809lzNjBUbEAAMiAGP9YYfX1smVFoeIYzgR4YDxiQFbvNUVicgxhgtDgDCMdHpVw0uOeMQDOU4HT52SJXn/I8zo0bcxN7gnQ7iIiEiLIyJgRGacBm7aeza5WEWcPL4jjBVaQMy1bofcDcKh889QtIADXX5ncFwPKCs3Yr6dwhAtvarL5zphW2HG9WBlLjrHOIYQ97XJqs2NJwK3PEvKDCLGVfZY6CddPObE5rjzUKd4XrMkGyIsBwGwpsAH1m2BTETKLQXiGGsK7C9BcI7vi8eK9Konesw+gyVou+rypmZIyUa1rY9q1OiFxPL6pj0VMFHSgcYnEPFOjW6FEjbCVM1/ACFGkkYqGMIlroWpmhO9bldfM1RSYAWGeKrLHPGFCb8Q5+nT54Bn7FoK3oaAiJwNd6oLnGEVmHLIDiNT/g4r/AWoE9m+DLM8fwAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Фокусировка внимания</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.25in" height="0.20in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAQAAAAqnqXBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUDAn5iVumAAABh0lEQVQoz2XQPWtUURDG8d+cTRMLt9TGiMWSQhJCkg8gNtpahGiVUqJYBrRx90YLkdSCjSRNQgrFSiRoEb9AwHYtJIJGu2AV8N6x2OtL2GnOYWaeZ/4zkU7HYYYLcTpXjEWOZcaaYlxlYlFohOVcduRuvMSCx3nZru0IhBJS8SzXHHtdNa1237E1z3PkPUF4kT0bsSvb6el9vLOc92zlStRKuJ0z1qsdjaaFDjW2ozLjToZSW7Jvb5CKjhwx6GiEvfhgSSir2bURlLaB1Gja39PoWs0ya+ioJcn2AA1SEY4MzZo47zOKX0Jo3IhQpGK06VeXFFIthfhvu3+uUE5MtqpEtsgj9KIx6UT5ZLrVjNBrgUataIRpQ50zsXTlp4/7xN8BoSOFdCuvelLFvM0853oU2kKRQiOFN/nDSpRwP87ayj+4o7cGm9n1IELhu/Wq51XO90vbRJrrv86e9eobYgHMDR72pwwd+KJ20byeQ4/iYHSMxfbG4ebgWn9KF8cOva12BtG6/gZG2Zw6xF21gAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Питание и спящий режим</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.238in" height="0.20in">
+<image  x="0px" y="0px" width="16px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAQAAAAeXLZtAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUDTJRmYPDAAAAcklEQVQY043QsQ3CQAyF4c+nkyhTMgObpKVikEhMkSkoGIGeKdLTMQKVU4QCUeTOpfXeb+uPTM15OUflYbGlU5F+myGNBqmymGKP98xBKO3DHFyy0H7y6NpHhEo0Q2+3PuLHPSonc+ZXBSH+FI3btlf4CnROHYz+wQSGAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Батарея</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.238in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="10px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAQAAABTlBdmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUESU0PVtZAAAAeElEQVQY042PoRHCUBBE30ahEZnB0AE9YGkDeiASnd8CxVAEFYBAxICNegiiMkmGO7U773b20nhihSxNz5V87HgNRmDiJGyoQYsytYdLqzQeLeoC2Kry8GZRK6hmmp1DYJt9ZJ4atYTonTeS0Rs/LQHW7MhT/wnlC2YQSHOMDfX+AAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Память</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.248in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUFQOCXBugAAABKElEQVQoz42SIU8DURCEv32cOIOto8WAoKqBEFTxFaUKEhwJP4JgmiBbAwZVLIHisVQSEkJoJaoVkCAIJ0hA9AbB3dG7HqTz3L4v2ZndtWuVATCEAWJaF5ybSQPesAgwyMDGIlA3pJbEf6+noSo4ZtQf4KECfeoy8SC8fHCPV57Z4hd0cYC0fF64w0+3zhuIJqoCbJYwFrfOqqNAxdiQ0CYFDjQVpt7s0qeE6CEcAtZpgNRODbwlSQzVU7rmwQpt/XgxRDk3GnhP1KhNfX3xkal4uwZhcgyiojP2mx1bmoCKBNgqMWhACNzokWpqCyMFOAhxGI4wmtYVVboTW+irwDGeopNVFMZxavPaYaBb3imxwTJH3JutJVhsYMwc22qwgE/AiBMebMw31sOQ04iB1TIAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Планшет</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.238in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRYUGDsf8N1zAAABDklEQVQoz5XSP05bQRAG8N8sr0ga8AXyJEdKSQlHgHCgNNwgipQT5AAJB4DaXIE/DZ2RItMg0ZnCb1J4n21eMBKz0o403ze73+y3kfnDWYSFZRQLgZ851gZMcqyNQkFIscoBde9zw5GDJF+A6XOt9EgzNTJa0XoQZtqaP2rFJvRWFLltTRNO8ynn+Tsj88K1gk7RrQSc2NUGd/kFcw3XvsX/V01yD8zBs2Y96TCW6vfjKj/49Raxj/3gu7INXrdPcpoUXn+gYbXh2GUOoTAenN3cGxnZtLBv6J2pFn7aOkv7Pmc2NJ67lUJWf0LofLU3HObGn+js6KrKlHYc5ktiufdY4VK/bMHCg1ml/DXDP+yecR1Po0h2AAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Много задачность</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td><svg  style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.25in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAVCAMAAAB8FU7dAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAclBMVEUzMzM1NTUyMjIwMDAxMTEyMjEvLy80NDRMTEz///8uLi4yMjIzMzJLS0vS0tL////w8PCbm5vBwcHJycn39/eoqKjAwMC/v79iYmLh4eHp6eni4uKnp6eJiYmMjIyLi4uKiop3d3dkZGTR0dHo6OiIiIj4/i1eAAAADnRSTlMAAAAAAAAAAAAAAAYPcpf2HjoAAAABYktHRAnx2aXsAAAAB3RJTUUH5QUWFBop3n/OuQAAALdJREFUGNOVkN0SwUAMhWM3WuunWauyosJS3v8VbVvFDC6cydWZ75xkAjABmJjF0qKxdmrQFlAiIK4q8mtjINtowZiyxODXm3pmM5cHtoE5enaOKo7Mu0yJ31MjB+dEfC2kRQHCR3KDWBwpIkg40ahspdwlwWnS1M85WzjPwT504a48UhUPHdUpkQzyAs1oPXZEeVHPtWPXn9SP4CfVfAkKBw6hfQtuhqOvpKrppqkVsN1v0ejrHXcGyBYae82RugAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Буфер обмена</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Дисплей</h1>
+	<h3>Яркость и цвет</h3>
+	<p>Изменение яркости встроенного дисплея</p>
+	<input type="range">
+	<p>Ночной свет</p>
+	<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+<p class="prosto">Параметры ночного света</p>
+<br>
+
+
+<h3>Windows HD Color</h3>
+<p style="font-size: 14px; color:#aaaaaa;">Изображение в видео, играх и приложениях, поддерживающих<br> HDR, можно сделать более ярким и динамичным.</p>
+<p class="prosto">Настройки Windows HD Color</p>
+<br>
+
+<h3>Масштаб и разметка</h3>
+<p>Изменение размера текста, приложений и других элементов</p>
+<select class="legko">
+	<option>100%</option>
+	<option>125%</option>
+	<option>150%</option>
+	<option>175%</option>
+</select>
+<p class="prosto">Дополнительные параметры масштабирования</p><br>
+<p>Разрешение экрана</p>
+<select class="legko">
+	<option>1920 × 1080 (рекомендуется)</option>
+	<option>1680 × 1050</option>
+	<option>1600 × 900</option>
+	<option>1440 × 900</option>
+	<option>1400 × 1050</option>
+	<option>1366 × 768</option>
+	<option>1360 × 768</option>
+	<option>1280 × 1024</option>
+	<option>1280 × 960</option>
+	<option>1280 × 800</option>
+	<option>1280 × 768</option>
+	<option>1280 × 720</option>
+	<option>1280 × 600</option>
+	<option>1152 × 864</option>
+	<option>1024 × 768</option>
+	<option>800 × 600</option>
+</select>
+
+<p>Ориентация дисплея</p>
+<select class="legko">
+	<option>Альбомная</option>
+	<option>Книжная</option>
+	<option>Альбомная (перевернутая)</option>
+	<option>Книжная (перевернутая)</option>
+</select>
+<br>
+
+<h3>Несколько дисплеев</h3>
+<p class="prosto">Подключится к беспроводному дисплею</p>
+<p>Старые дисплеи могут не всегда подключатся автоматически.<br> Чтобы  попытаться подключить их, нажмите кнопку "Обнаружить".</p>
+<p style="background: #444444; font-size: 13px; width: 17%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer; ">Обнаружить</p>
+
+<p class="prosto">Дополнительные параметры дисплея</p>
+<p class="prosto">Настройки графики</p>
+<br><br><br><br><br><br><br>
+
+
+
+
+</div>
+
+</body>
+</html>

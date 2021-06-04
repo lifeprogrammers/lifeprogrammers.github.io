@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Обновление и безопасность</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAolBMVEX///9BQUKkpKTY2Njv7+/////39/dAQEGwsLD29vfPz8+jo6SEhISEhYWjpKTPz9CxsrL29vaxsbG9vb3Q0NBBQkJbW1vn5+dvcHFxcnLg4OD29/daW1twcHHf4OBYWVqVlpaVlZbf39+UlJS9vr68vLzf3+CVlZVaWltvb29cXFyCgoNvb3BxcXFYWVm8vL1AQECwsLGjo6ODg4Q/P0BBQUH55FiyAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBgETBC9sfFcgAAAAq0lEQVQY07WRyRKCMAxAIyXFFgRLUbSuoOK+Ff3/X7M4IMvdd0peJpk0BSjoWcRGpMRy4EefMu56Az+gbFgqJxBhVZY0Go2lCUg8qZumVHloirM5NFiwJcIK19AiQYQobSmllJH+piWl3EoJ/2AnZWdy4gJilna2iozcd5c/AGbi2HQnaobhmbBL7a4xKZ5wM6e7Vy6k/FGGT0G5znPNRX1ZgJcuvsMm+v1NP95BCjaQBXU/AAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Центр обновления Windows</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAMAAABsDg4iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEX///+ioqLPz8/GxsajoqL////g39+9vLxAQED29vbn5+fv7++EhITg4OC8vLxBQUG9vb1APz/f39+Dg4Nvb29xcHCEg4NxcXHY2NhBQEDQz8+CgoKFhISFhYXQ0NCxsbErUlU+AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBgETEhm/XnduAAAApklEQVQY01WQiRKCMAxEFzQtxCaUoCiK8v9/abmU7kw609cc2wCrihI4nZGpICrhfMaqmi91EM0zm+hauPgHSmRQwVwuROuLcneFd4BE3Hpee8xJCd6NHzLsPaItR8VET+TQoeXEflCOPjazmkHbpluWuVt6dWF892EM4xh4gU2aehS36dvMVbaG+S7c5GsY2IHKqKrR++jjIv0QJkkySyHmRFyK6Qsg7wi9lWw2HgAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Оптимизация доставки</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAMAAABYi/ZGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAYFBMVEX///+EhITX19fY2Njv7+/Pz89aWlpvb2/g4OD///9ZWVm8vLy9vb3n5+ejo6Pf39/g39/g4N/GxsaUlJRbW1v29vakpKT39/ZxcXHFxcWWlpWkpKP39/dwcG9AQECVlZUaB8d2AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBgETEyj3m0YVAAAAiklEQVQY032PjQ7CIAyEq4C2E+yG+9HN6fu/pRWyDZHsAsnxUdoDIOhwVKDNCTadkQiBiEwVzhertJwiI3LGXqMT8erq1WGB7dc1xVtG/i72gIxYy/ZQkv97e4M2Z1oKMZtrhbXdD3OhY5+mGu5xzCP5x5jODmyYtkBT7Pec05SzE6ZeWfYR3ov9AHntCry9FjEGAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Безопасность Windows</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.227in" height="0.2in">
+<image  x="0px" y="0px" width="12px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAUCAMAAACOLiwjAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAP1BMVEX///+EhIT///9BQUGFhYWDg4OEhIODg4KFhYTQ0NCjo6PPz8/29vawsLCioqJvb2+CgoKkpKS8vLz39/dxcXHjDZqKAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBgETFjJ3jksqAAAAVklEQVQY07WNSw6AIBBD26KIiICf+59ViERZuLWLTl86SUG9ghlG0nJydMSHbJdn+S7roSWsiootpyx4bfUnJFBALLQfCShNJZiz3NoUbzPqdvgf5BsuPdsB+5gimPYAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Служба архивации</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETGRuypM+JAAAA2ElEQVQoz4XSu3HCQBQF0IsrcB+OXA0UYXANqAUqgMjjFiAllUI5owRlmx4HAgxoB+9G++bM+81Garfxo2BwNEaqbIfORqPnTKvZ2BLZoiVHVTjYu+RtSYvjlM0x95etRW/wkofzluRrlsySzNJ5zy7feZ2W3mBxLT12u1Ee2aeidXlt7Yh0+nu2UnRqy2qesTlZOGB3u577ouO0MGhuF/4xYcVGY36NRWRZYauHXiu9tYrlZKQJ66pMctL/m20sbe1/JinnL1Uf4QbuFVtr/VMmkYOC01Mmv9aD4WVelTzuAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Устранение неполадок</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAQAAADx2TabAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETGjrV4IwUAAABAUlEQVQoz4WRMU7DQBBF31o0tFDSINGkTQ0RBRegg4oTEPkMcU7AEaClCB2FQ4OUns4USKZAcgV0bh9F7JXtROR/aWd3ZnZm/w7S5dSVpaUr5/Yjjbly6ZmFWro0t1QLtyTO1crK2xhMrazcSMzU2smgXW0ePQkR+7zyIh08chr3e2uTIwEpuOgkPnND6l0AwP/pzI3W5722ANfCT3to7/5677Deg7UD1ZJ3nNtUs7BsqJVpDEytNMaeDPrGNxKAI0Z88kHghGPe+QICcsiYji6RWZx1ZjvciZmK0bWdhQszNYGNX+lhFC4DQAKBXRBoxLRHmueHRt56PWBMKN1ZEIA/X4Mjuv9+IP0AAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Восстановление </td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAQAAAAngNWGAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETHSUXqRcmAAABBklEQVQoz42TsVHDQBBFn0lIoQLIHMEMBQCNuAQs12BlxHYDOoYq7BrshBlBpgqs7AaiR6CTLdnWwG129+bf/n97yKGCpbWqtaWF3bORNGvphEs++aACbrljzA9vTEcJaPituu4piKzVbdpNWDQ7wZqKCUUW6nQAk6m6VJDa1SAmsrJWKIw+nwUzo3Ob6wsp3QxirZGNpdRHebWdxY5AcOfFFVUKKm8jZeYrXzy0CVJxDZorkmvSnvXUROYqO0PaLNTC7ASTYC3lvmUJegZLZoLRxw66PWMtWviPwNdN4M0TDmOZuvDPoTjk2RuzpyN4pXtrA4N7wz1jvnnnpT+4bZLdrxB6+r8mzMJNKce7pAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Активация</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETHxkK8AkjAAAA9klEQVQoz4WRPU7DQBCFv12lAInCt+Cn4AKAuEYuQbgBEs4NiDgANEBFejqkSEADXaCipDSVRfdROA5rOzFvtNLsm9l5M7NIahML9dMTm3zjkqsP5s4tPXZt2tzXRbDwvpEWSbBBufB+2KKB9M2VpefKVB2uF5WZqqXXfSOIXKhHttlICwXwGNrsoHZyq9g+MFYgIGehMULVUxcTG70VTv1bcXePEWBkxi1dvLCd7m3m17JCWk1q2QiwxxOr8cEBABFOzbhJfiXFMzs1nUquMCdK7JMEeOcQiCMz7nrSqmkHQ77ZZSxIWJ6qnUAgY5NLQ2HGf3jjF3w0D72h1Z3qAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Поиск устройства</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg style="margin-top:10px; margin-left: 4px"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.234in" height="0.2in">
+<image  x="0px" y="0px" width="14px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAUCAQAAAAXDMSnAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETICgD8CMlAAAA6ElEQVQoz32QLU7EUBSFv9eMQWMgGYHCsINOgmETbAKGDdTQHbCD8QjwdUiS8mNQZFDDkBBa1an7EG3oS2fCMffnvHvuuQ+RUm0sFFnaA0ngw0NqvkgpBHjing7J3COuqHnnlhkAP7z05GQfWPHAI8fsAStSTlhzACCVpaee+2mpyJuVIoJcqNcWf63CZZ8lcBM6hZoxki4YtRyTISLDmNyNyagWzvqYDzs7sZw1z9wBOVlIohEgCy3fvAJZiAztsrTjlC238dzWJ/AfaSQ85AnAhhlTWgBapqRshncLGyvnilxa2bhQ5BcdG31ZrIlD0gAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Для разработчиков</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Центр обновления Windows</h1>
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1.111in" height="1.042in">
+<image  x="0px" y="0px" width="80px" height="75px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABLCAMAAADQ3vDHAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAjVBMVEUAAABXV1dubm6xsbGCgoLHx8fa2trs7Oz////19fUfHx+Tk5PR0dE9PT2jo6Pj4+O8vLwHMxkFKRQEHw8LUSgPdjoSi0QObjYJQyGcrKMCEgkMXy8ajUp1u5IRhEE2nWGp1bzd7uQQfT3L5tZjs4SLxqMLWCtLp3Hl8uq33MYvmVvB4c7X594cj0xMmWyzsn50AAAAAWJLR0QIht6VegAAAAd0SU1FB+UGARMkMpr+H1sAAAJCSURBVFjD7ddtl6IgGAZgfFACSdMsbZ0dp5l2mnb25f//vIV8Q8NE6cyHPd5f8hReBwMeAaElS5Z8VRzAD5LAxR5ZUZGHSIy2mQv5wPGaUDVkjckMMICwJzEhcfDlj3gKKCWy6UoedkFtYwaKoYu60opEGEDTdAQEKa1UaUMwBmf4jrsg60khBKMPcxdshq76w00yAnrmkhk4fRktoBkoFoyYQuU1x9wSDKJqejJPzkpCiR0YqrMd24OenOlcdC3gst54viUovE1TEkCUC88ODIWnLB3/WoAswIB1vEq0ACNKeyUQ7ECm3Azti2Q26FDKHwr6ELYFNsB1bFfKSP4vkDRpvwsIdmaDut0Lp9QO7PeQUFZdxXG8nQGG3RZQNkl2+/Sa7PBtIsg6D+gzynyUP6Vtvj9PAUlXdERtcFFcpJ28JOYg5rJM1wVHFu8IHdJ+iq05KEdVvEw4gHt9tYQoTm9T5Obg9TGbPR2gvNCAaTYBRMhdl9xaVoWnVJuDEQjNbs6BaouY9KXj61F+vBmBmux63kn0/Ie8iGeC+1uPvsur80xQ473eGZZRsJwzHxf6s/EunyVuA/4SzqnnDYEjW+ISPErp1PWGwJFN+7a8+VLP9NYrtO3HjxXl3Z+Xvje4VsYOPpkqKl66u//nDx7N6lIjRdVLE2SS28Pj7z/NmjuaVIdhtz7ePuuLQzwJrFIewF903nmOVyXRFMS9hSfm4o24z61AlGdd768dJ3N4U8Z31njcJD7LbhbZzmz+LVkymH8s0Ei1YWaAKgAAAABJRU5ErkJggg==" />
+</svg>
+<h4 style="position: absolute;left: 80px;top:75px;">У вас установлены все последние обновления</h4>
+<p style="position: absolute;left: 80px;top:105px;">Время последний проверки: сегодня, 11.08</p>
+<p style="background: #444444; font-size: 13px; width: 45%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer; margin-top:-20px;">Проверить наличие обновлений</p><br>
+<p class="prosto">Просмотреть необязательные обновления</p>
+
+<hr style="Color:#d3d3d3;margin-top: 20px;" width="800px">
+
+<h3>Обновление функции до Windows 10, версия 21Р1</h3>
+<p>Доступна версия Windows c новыми функциями и улучшениями системы безопасности. Когда вы будете готовы<br> установить обновление, выберите пункт "Загрузить и установить".</p><br>
+<p class="prosto">Загрузить и установить</p>
+<p class="prosto" style="position:absolute;margin-top: -28px;margin-left: 180px;">Ознакомьтесь с содержимым этого обновления</p>
+
+<hr style="Color:#d3d3d3;margin-top: 20px;" width="800px">
+<br>
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.514in" height="0.472in">
+<image  x="0px" y="0px" width="37px" height="34px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAiCAAAAAD98E9nAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETNAuPOYUCAAAA30lEQVQ4y7WUsQ2DMBBFvzJIqNiAKpLXgC08hFdgi3T0dEi4YQLTwQxX/zQxhGArJyX5lc9+Pn3r7gz8S64PJBl6l0WKTrhJuiKdR0jfGgAwrScllc+T3uyh8aRPQGKPO1ZOmOd68lGsb5ijJMwWQncMLRKyh8tdwujTSLcHwvi6PjRAE/r4UsqLqy1VoAUsw57MAcAFwA1Trh4TbpG64p6j7rhGqsSQowaUkfqsX1MzTO7YYI7UgjpH1VgiNaLKURXGba2qkLLaus7RdaGyo5XToZw05dQqfwBA9Zt8rQfwaapNW6TuCQAAAABJRU5ErkJggg==" />
+</svg>
+<div style="margin-top: -65px;margin-left: 50px;">
+<p>Приостановить обновления на 7 дн.</p>
+<p style="font-size: 14px; color:#aaaaaa;margin-top:-10px;">Для изменения периода приостановки перейдите в раздел дополнительных параметров</p>
+</div><br>
+
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.528in" height="0.514in">
+<image  x="0px" y="0px" width="38px" height="37px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAlCAAAAAALwsTcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETOgiIs/k2AAABnElEQVQ4y+WUMYvUQBiGH8XK0hVsDqdaxEawEpW5vzHLYm3n/AQL/QemO8tUV8ZOiHC4x2XB4kgjOFfd5sq0U79XbLKZrJsDa98mzDfP+2X43mTgH2XLRlLIzV2QqdQpFtOUaxRzC7hSqqcamka1wXq7dVQTWKUaKFQAmFbZ4dMrmgHDqz2IlcpJMGp92iPuAzzjZFT8yZtD2BGrUfGKp4ewnd6GEBxcfvu+hz0YrWYzeAKr1R7FPYAwX5wC9iVAcQ1u+Rw2Fx/HbK4yXfrQ5dZmo27m98PF6WB6x83ZL5gfv2C9uE78hRoztI5537ZVPXptrdZ3W4oOvAKAaTT6Xkwl1Zm3EJSzw3DbGAdlraQCp4YE63Pcjtd49+Hx5x9XG5acjdxfeZWMoDcT5McF6e+wJjWJPTJTmAM2zAG+rGfnBsByM2CXACyD4YJjAF6vj84N8J4/SaOoEEKr6GnVzbnKABNl06nFbdiNydQmp6r3/zLnfaXKQKXG9dnUSdY75Vm3p9IBNo+DIw22exaxvyiquy+UPEhqSsv/p1si/OHTDAJhvQAAAABJRU5ErkJggg==" />
+</svg>
+<div style="margin-top: -65px;margin-left: 50px;">
+<p>Изменить период активности</p>
+<p style="font-size: 14px; color:#aaaaaa;margin-top:-10px;">С 8:00 до 17:00</p>
+</div><br>
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.514in" height="0.5in">
+<image  x="0px" y="0px" width="37px" height="36px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAkCAAAAAArqax6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgETOjpAZKi2AAAA9UlEQVQ4y8WUsW0EIRBFvyz3QQcuwBIt4R5oYSsh38gJ4WlT0q2B+Dm4vfPAsjoieyKE3gxf82eQ/jviWgDKGi8RlyrPqMmN61TYFi9JftmgdvVCkJQh+987nyE3FEiZGrrc2mKgzH7S4fYGg0gdiHWVaKnK87mUzKM2GSsUTLVMstReSlnOlKdaCjjSGkobUXqXJH3db26DVn9/fA4taGt5ygQlkN40E0PKTSR2XnUCxphVH8IVtrA+jpHtqtpm/K74MWYdUurGUvmgrNtyZnJsN0I7djNTeO7SHdp7IRPbcWAvNu3Q9mJrHzpmfgBp6jf5k/gBrSbUDG47vokAAAAASUVORK5CYII=" />
+</svg>
+<div style="margin-top: -65px;margin-left: 50px;">
+<p>Просмотр журнала обновлений</p>
+<p style="font-size: 14px; color:#aaaaaa;margin-top:-10px;">Просмотр обновлений, установленных на устройстве</p>
+</div><br>
+
+
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.528in" height="0.528in">
+<image  x="0px" y="0px" width="38px" height="38px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACYAAAAmCAAAAACNVrZyAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBgEUABss63AUAAABPUlEQVQ4y+WUMU4DMRBFf5ELAG3ENKHmBMs1lhwCN+EEW6fCR8gJXCI2DSlcIremYyjTWpSfZkM8ilMjwa9W1puZv94/C/y6xMdMknkczkNdLPxRCdKmAlniIADQ+UiWTWtetg0kkEkA5wyl1M4W9koVkJaKJ15EqRaL1JYR5VhjjqX5XlJYY8oz9+RrzDG3kJxznrAZACzx3MCub47PMwC4f1w3sPUW/0IbFXR6uPUZAExZedtV2GL+tF3Ob+vKKbChPhtIkqYbgHcAH8eJi5cVPr8ur1YXd68PVTdvjOl0EkmmeqgNkoQpf/u6nhyphjtkJlNqDGq4LnIPAFJYrREJUWpvvEVArDfnAEk8Vg5hKNznQu1Hs4AANoWM/rCFniTZ41QSpp9DApDoJXBsf8lhzCSLB3wCJDn8GX0DDRTfL0YA2lIAAAAASUVORK5CYII=" />
+</svg>
+<div style="margin-top: -65px;margin-left: 50px;">
+<p>Дополнительные параметры</p>
+<p style="font-size: 14px; color:#aaaaaa;margin-top:-10px;">Дополнительные параметры и элементы управления обновлениями</p>
+</div><br>
+
+
+
+
+	<br><br><br><br><br><br><br>
+	
+
+
+
+
+</div>
+
+</body>
+</html>

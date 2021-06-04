@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+.searcho{
+	border: 2.5px solid #7f7f7f; background: #000; width: 280px; margin-top:50px; color: #fff;
+}
+.searcho:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.searcho:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+.legkoo{
+	background: #000;
+	color: #fff;
+	border:none;
+	cursor: pointer;
+}
+.legkoo:hover{
+color: #aaaaaa
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Приложения</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAQAAAA6heU+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRcJIwre3mU3AAABLUlEQVQoz1XSwXEUMRCF4a81E8D6uL6YizMxVWRhiMXEAVQRATFAGsbey5IBvuyqOahHu8xBo5K61f3+fpEJBw/RkEJq9U8B0mLlhzs3Et9yD0LWOgJJK3d2UmR69iZdvpi7FC8JfzyGKstJk5puQY737zOiciq3a1oFjCZSE0PMqw8xjghdaBJNr/VKTPMlb2fwqJDCT5/DJgbZPfv7X8ho5aCLISYcfboqfdYsTqJSbGJy0rsQVOCbk7Xw4eB9BPqkF7pFlrTYxOwQvub+CjI8hEK18s4OLU0xppyluKZ4zcTRY7RpiXPJ6MKij+7vU4SoPHU9HAPnOr+aTK/hnStw1XWrDpfJdOF77q8gbch+edomcwOZfnubgM3JvIzSw2ZHH2OzwHRgWW0A+ge4tZjO9Has6AAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Приложения и возможности</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAMAAADqmnyMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAkFBMVEUnJyclJSUkJCQmJiYjIyMoKCgjIyQlJSYkJCUnJygiIiMlJiYmJiY/Pz/f39/g4ODGxsb////Pz8+ioqK9vb28vLyEhISwsLAlJSUmJibFxcWjo6OkpKTn5+fv7+9wcHCCgoKDg4OFhYVAQECDg4SCgoPY2Nj29vY/Pz9vb2/f3+AjIyQlJSZvcHC8vL2ioqN+1w0yAAAADnRSTlMAAAAAAAAAAAAAAAB/f8L1Z8MAAAABYktHRBHitT26AAAAB3RJTUUH5QUXCSUZDDqDbwAAAORJREFUGNM9j41WwyAMhW/I1uFUMJWis+La1W7O3/d/Oy/r0XCAkHCTLwgx3kHEORV1gCgEsDZG6H2idV3HnRm1hzY87p5ipCQEHj0FZhaYU3GUqgjc8lJ1XFINKyYUjDJe37KuLn2ApZ//dZe7NiovQWSfh3E8jHnAdMOs5RRUgi3WT6WtnGaRilqL9FMxaxWv87xnfTjRld6WUo6nFs3Gey91yAqT3kI695jn4dx4YE28ChgTlomazQXF1bFCR1B2f7/a/nU3DUkXzo/PL2IOecyHXUz82X2nH++vyVOLqmIL/AJMVg8Tu1iUhQAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Приложения по умолчанию</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAMAAADqmnyMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAe1BMVEX///9YWVmwsLDn5+f///9vb2/Fxcbv7+/GxsbPz8/FxcX29ve8vL2EhIRZWVnY2Nijo6NCQkLg4OC9vb2Dg4Pf39+8vLzf3+CkpKRxcXH29vaUlJSjo6TPz9DX19dAQED39/dvb3DQ0NBwcHFbW1tBQUKCgoKEhIWDg4T9qdUFAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBRcJJjkcefBkAAAAoElEQVQY022OjQ6CMAyECxTHHNM5GOoQFf/m+z+hpeoUwiW75L7eJQOAJM0wSxNg5YuUnIgoUDLPlwJVSRBlTqZhRVdcm42tBlgDQ5JryGbhtvpmvoAbcrGLkJu8ZL3nv+bs/A/qCN20WcZmvS8EetlSbsAfbNk5QI9Hc2qlV52owKA6qx6s+XyjvShaGvRXGOlGz/Qw0V0/gg5hDJ/IegGp4glyXFV4tAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Автономные карты</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+<svg  style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.236in" height="0.2in">
+<image  x="0px" y="0px" width="17px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAQAAABj5D8/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRcJKA46R3jlAAAAsklEQVQY04XQsU0DYRQD4O/9YgGk9JSUDMEYsERqoCK0IHYIC9BfdqAiHUnDFpwpLgmXIIjdWZaf/WqaiSi9Quk1vWgglnzkf3RpLKi/uEYrx9AOhVmOWN5yaz4yZSiekeEC1152Uikttm26nHvF3JWH/ORYpUsMnOY+Scx2yipd2rjdYw2JN3szfy3aR0Qr45zDL9WQcmlzOIuNe72tkjOcPDtFU3pLn77ceTJRhq3vvgEyhm4c1kAiJAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Приложения для веб-сайтов</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.278in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKBAMAAABGe2PVAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAJ1BMVEX///////+jo6Pv7++xsbGEhISDg4PQ0NCkpKTPz89bW1uFhYWGhoUD42dpAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBRcJLAsuQUluAAAAQUlEQVQI12MQhAABBmUGkdDQsNDQEAFlQQYxBhBgFRZvZBCFMCUXBMKYAgwwJjeCiaSAR1hcEWTY1tDQFJBhCCsARwMK5mNaJwAAAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Воспроизведение видео</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px; margin-left: 3px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.236in" height="0.2in">
+<image  x="0px" y="0px" width="17px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAUCAMAAABcfiZ7AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAVFBMVEX////g4OD///+9vr7Q0NCFhYWEhISGhoaEhYXn5+e9vb3f4OC+vr68vb2DhITn6OhDRERBQkJAQUH39/fP0NDn5+iUlJVwcHFAQEGDg4RCQkKDg4PJ0672AAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAHdElNRQflBRcJLgJlq5NIAAAAZklEQVQY033OSQ6AIAwF0FKgAs7i7P3vKeqGAvGHdPHSARDII0EoTZreV5E21oFwEKcO0mTCe0Rbmkp6ivJdJ+rMU/sgyQ/5CMsgExgtKgaT9ejnWNyy4uYppv1AOPmiC9NbudCP3HDoA1MDuT51AAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Автозагрузка</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Приложение и возможности </h1>
+	<h3>Выбор расположения для получения<br>приложений</h3>
+	<p>Установка приложений исключительно из Microsoft Store поможет<br> защитить ваше устройство.</p>
+<select class="legko">
+	<option>Из любого места</option>
+	<option>Из любого места, но уведомлять, если есть сопоставимое приложение в Microsoft Store</option>
+	<option>Из любого места, но предупреждать перед установкой приложения, которое получено не из Microsoft Store</option>
+	<option>Только из Microsoft Store (рекомендуется)</option>
+</select>
+
+
+<br><br>
+
+<h3>Приложения и возможности</h3>
+<p class="prosto">Дополнительные компоненты</p>
+<p class="prosto">Псевдонимы выполнения приложения</p>
+<p>Поиск, сортировка и фильтрация по дискам. Чтобы удалить или <br>переместить приложение, выберите его в списке.</p>
+<input style="margin-top:-30px;" class="searcho" type="" name="" placeholder="Искать в этом списке"><br><br>
+	<p style="color: #aaaaaa">Сортировать по:</p>
+<select class="legkoo" style="position: absolute;top:477.5px;left: 130px;">
+	<option>Имя</option>
+</select>
+
+	<p style="position: absolute;top:460px;left: 230px;color: #aaaaaa">Фильтровать по:</p>
+<select class="legkoo" style="position: absolute;top:477.5px;left: 330px;">
+	<option>Все диски</option>
+</select>
+
+<p>Найдено приложений: 12 <!-- 18 --></p>
+<div style="cursor: pointer;">
+<img src="../../images/Adobe Audiction.ico" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:530px;left: 50px;">Audiction 2020</p> <p style="position: absolute;top:530px;left: 400px;">854 МБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:550px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/cmd.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:580px;left: 50px;">Cmd</p>  <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:605px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/excel.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:625px;left: 50px;">Excel</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:655px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/github.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:675px;left: 50px;">Github</p><p style="position: absolute;top:680px;left: 400px;">621 МБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:700px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/google.ico" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:725px;left: 50px;">Google</p><p style="position: absolute;top:725px;left: 400px;">485 МБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:745px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/ms.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:775px;left: 50px;">Microsoft Store</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:795px;">01.06.2021</p>
+</div>
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/obs.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:825px;left: 50px;">OBS Studio</p><p style="position: absolute;top:825px;left: 400px;">246 МБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:845px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/paint.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:870px;left: 50px;">Paint</p><p style="position: absolute;top:870px;left: 400px;"></p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:890px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/Adobe Premiere Pro.ico" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:920px;left: 50px;">Premiere Pro 2020</p><p style="position: absolute;top:920px;left: 400px;">3.13 ГБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:940px;">01.06.2021</p>
+</div>
+
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/sublime.ico" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:970px;left: 50px;">Sublime Text 3</p><p style="position: absolute;top:970px;left: 400px;">65.9 МБ</p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:991px;">01.06.2021</p>
+</div>
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/блокнот.png" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:1017px;left: 50px;">Блокнот</p><p style="position: absolute;top:1017px;left: 400px;"></p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:1040px;">01.06.2021</p>
+</div>
+
+<div style="cursor: pointer;margin-top:10px;">
+<img src="../../images/file.ico" width="35px" height="35px" style="background: #0078d7;"> <p style="position: absolute;top:1065px;left: 50px;">Проводник</p><p style="position: absolute;top:970px;left: 400px;"></p> <p style="color: #aaaaaa; font-size: 14px; position: absolute; left: 390px; top:1093px;">01.06.2021</p>
+</div>
+
+
+
+
+<br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+	
+
+
+
+</div>
+
+</body>
+</html>

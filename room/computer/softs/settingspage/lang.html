@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	<link rel="shortcut icon" type="icon/x-icon" href="icon.png">
+	<title>Настройки</title>
+	<style>
+		*{
+			outline: none;
+		}
+		body{
+			background: #000;
+			color: #fff;
+			font-family: 'Roboto', sans-serif;
+			margin: 0;
+		
+		}
+		.left{
+			position: fixed;
+			width: 20%;
+			height: 100%;
+			background: #222222;
+			top:0;
+		}
+		.right{
+			position: absolute;
+			left: 21%;
+		}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.search{
+	border: 2.5px solid #7f7f7f; background: #181819; width: 85%; margin-top:50px; color: #fff;
+}
+.search:hover{
+	background: #000;
+	border:2.5px solid #fff;
+}
+.search:focus{
+	border:2.5px solid #0078d7;
+	background: #fff;
+	color: #000;
+}
+tr:hover{
+	background: #454545;
+	cursor: pointer;
+}
+.prosto{
+	font-size: 13px; color: #0078d7; font-weight: bold; cursor: pointer;
+}
+.prosto:hover{
+	color: #aaaaaa;
+}
+.legko{
+	width: 280px;
+	height: 25px;
+	background: #000;
+	color: #fff;
+	border:2.5px solid #7f7f7f ;
+}
+option{
+	background: #222222;
+}
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+
+<!-- лево -->
+<div class="left">
+	
+	<svg style="position: absolute; left:10px;top:10px; cursor: pointer;" class="back"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.181in"><a href="../settings.html">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAANCAMAAABBwMRzAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAArlBMVEUqOEApNz8nNT0oNT4pNj8qN0ApNj4qNz8oNT0lNDwoNz8nNT4oNj4nNj4oNj8mND0pOEAlMzwmNDwpN0AnND0qOUEnNj8mNT4lND0mNT0mNj8oN0AoOEEkMzwpOEElMz0mNT8lNT4nNkAoN0EnN0BPW2HZ29xBTFTm5uemq69OW2Hl5uelq65NWWBOWmCmq67y8vJOW2Lm5+emrK9OW2NOWmFOWmJMWWBNWmH///8m+BqGAAAAJXRSTlMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA27Ki9wAAAAFiS0dEOdcAlUAAAAAHdElNRQflBRYTDAn8xk0jAAAAqElEQVQI11WKSRaCMBAFOwQjmnQAwW5AUZxQiPN8/5OJ7vzvb6peAQjPE5t6K/2e6gcKhOhw18hex4FSMBgOWrfX0pdSBcIA4sE1NtRah54xAHh0J6ujKNahGQkf2l1j7RBjnSTGMynU57/B5XobIxFnlJNIBRQXd2OeMHVHzGFa3F3DTCXP5jlqKCp+/ARzhqGFihbLp9vzNyG2UGTVil7X97oLJ2X5ASlkEgF4HJo2AAAAAElFTkSuQmCC" />
+</a></svg>
+<p style="position: absolute; left: 40px; top:-8px; font-weight: bold; color: #fff;">Параметры</p>
+<center>
+<input class="search" type="" name="" placeholder="Найти параметр">
+</center>
+<p style="margin-left: 15px;font-weight: bold; font-size: 13px">Время и язык</p>
+
+<table style="font-size: 14px; width: 100%;">
+
+	<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.264in" height="0.2in">
+<image  x="0px" y="0px" width="19px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAUCAQAAADFXM7/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRoIDzNLQjR7AAABwUlEQVQoz3XRPYhVdxAF8N//vts8rBL03XtZCOzDLVLYWGxANGhltyJESSrRKFukio2ENUQwKS2t1lenC66k2DQhEbZIWKvEJssaCJgU+epeGr3H4l0NCk4xDMPMOTPnlInK5dzUFaKIShQfDj1ipNzPkrHOIy/HWOdX8Z2NEvUSftfZe2XsoM4vVi2Bmj1fuebCQMgTlTjrDRftIKjgnmMKit4TlcrIlmMiFhfXnPaH18eeWq/mgbsDUhkoigz1R/+T/uWOOzZNxc9OmJniJ8fN/KfoFy8812oFf1rx1GEsO+2dASvqRdErziliy8jc+8a4i8cqYT/buZ6kzX62s5FkN/PMcjRdzuSbJLN0n9nPdo5mI13Ws5bVPMw862mznkeZZJJZkuupCt7yLlYd8ZtlX9rCQctGKp944ANVcMhhsWJqzdjtQRQuuaJy37IavnZP5Twu4zF68Dk2/W2s7Gf6iu5n/CBqvV6t94WzypU0g2+LfNWPLgwLRa+y418mWq1Go9Np3UoyS5M2bdo02c08axkdeIG1sGWnvHnyklOWvO09N019/P23F7UarcZEM2A2Nz7Nw8yT/JPdrN1odJ4B67jDlu6Sjy4AAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Дата и время </td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.25in" height="0.2in">
+<image  x="0px" y="0px" width="18px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAUCAQAAAAqnqXBAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRoIERw00jb9AAABy0lEQVQozy2QMWtTUQCFv/fqok0FQXLfFX9BHYQmKLjUWSTpj9DU1dloIs71F7QKDi4tKE7pVI0ggq8gSLq91sXn9rpdF83nkJzlwDkcDuesRFq89mw859KnNS5xmVXWaLHKGqu0aNGCSEFtbcfghvvOrKycuGUcBQoiAQq6NCZr900mSydOVZ0aRm0KIoTN6VFjz8YFaoeWJndNlhajQAEddc+h+tnCnqWq2xYOTB7aHkXYs7GwUie2LSxNJms7RmcmuwYondlVKxuDpcmBt6ytLE3qjgEqJw7Vvsna5LZtoz01ObDy0EgOIPCV30Te8p6MjGf84SLZ0svPucoP4AuRM+5xHfnAOo855SGRX8zhwMbCxuTAjrWNs2Xpjqo9A/mbkys84B0ANfeBdU44Bs6BY749B4pRab3ctW1p8sBksrJRexYECOsbJkvD8sapQ1/aqLW1td2juEkk3h18TJZ2feLMpGrlnm0P1doNiUQKHo0bGw/csm0w2PGVlcl9aw8kEAm06Y4nNmpjZa0mj+17bVaM2zeygpx/AGRI39vcpMNTdrOF9pcL5DAnJ2PB3znlJyB9QeasAFkgZ07OnIw5A1+wwCl3Mpbh/2KEgkRXboGiAAAAAElFTkSuQmCC" />
+</svg></td>
+					<td>Регион</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.25in" height="0.2in">
+<image  x="0px" y="0px" width="18px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAQAAAD8x0bcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRoIEjVdTf1SAAABcklEQVQoz2XRL2iVYRTH8c95tuCSzOD7buOKaPK9mCZbc0HwDwYxXLsmFYtgEBREEIPBItpmEgSTSZxhYUUcaplb0yZbsq7oewz32RD8pQfOl3PO8z3RoOgFehNIvElGQSpStAi9ojeXj42zgPX6fiEaezxyx7Zd/+aY+yZVIKTAa79qORzyxDYm6aUQwqwVXKvQtGkHrdgYj6vDZI7XD4uW3PDOLaRoRP1ZMZvna5fL5n2whrAhWkk32Dxnw0mP/J8VWo32wcvM/JytxoxG631+z0ar1TisJPrRol2dvqrsxxtWOZQiuiPDzpopd1PHnI+5gMmKTSgpRjdxz7bTYsRPX6277Y+oWMzIb6vDdMYzFx3fymHVoYwBqfTdYHjCJ+mVKXe67PaQvhoMJUbXcdWOt1gSV2K/GLVftJur3QHLCGedcnRrYpj724xvaD4zl7PRalzKzKfZas1oqrNGo1zww/MYn2b94ReDaqoIvxWh+AsfgYRFodgWtAAAAABJRU5ErkJggg==" />
+</svg></td>
+					<td>Язык</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+		<tr>
+		<td>
+			<table>
+				<th>
+					<td>
+ <svg style="margin-top:10px;"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="0.208in" height="0.2in">
+<image  x="0px" y="0px" width="15px" height="13px"  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAUCAQAAAD4zq+ZAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflBRoIFBBAE46TAAABCklEQVQoz3WSMUsEMRSEv5fdQgvb271WsLKwOEsL8Q8oWCkIFh7+iSsi/o4r/AFWVteJHAeKnZ2w7dltI6yCkLHI3spqnAeBNyEz85IwoKBgqkY/qDXWkIISKwGj0gNzhCGME4wDC0AeqXXmXBstZtoCcgLOAR3fQ0DkIgCgX5uGyMjBsISCEMJZ1/6FcCnaMBxAXNPCxGj/CRvgbrRQerA3XcgZEJIGnbdLxiNeKgQ+2GPSmohTPlcKUzVKvdilpEMx8o2eJfo10lKVhp4BY9+oUdUraaldX5Jt8Hp/a2v7X9Q4tnmipuaOs6t3D1a0n+BIBTscMwFeeLQY00oCGYGFNruhZpxbPPQNGM2byIz0i60AAAAASUVORK5CYII=" />
+</svg></td>
+					<td>Распознавание голоса</td>
+				</th>
+			</table>
+		</td>
+	</tr>
+
+	
+
+</table>
+</div>
+
+
+<!-- право -->
+<div class="right">
+	<h1>Дата и время </h1>
+	<h3>Текущие дата и время</h3>
+	<p>8.12, 01.06.2021</p>
+	<p>Установить время автоматически</p>
+<label class="switch">
+  <input type="checkbox" checked>
+  <span class="slider round"></span>
+</label>
+
+<p>Автоматически устанавливать часовой пояс</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<p>Установка даты и времени вручную</p>
+<p style="background: #444444; font-size: 13px; width: 17%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer;font-weight: bold; color: #aaaaaa; ">Изменить</p>
+
+<p>Синхронизация часов</p>
+<p style="font-size: 14px; color:#aaaaaa;">Последняя успешная синхронизация времени:01.06.2021 19.09.39<br>Сервер времени:time.windows.com</p>
+<p style="background: #444444; font-size: 13px; width: 27%; text-align:center; padding: 7px 7px 7px 7px; cursor: pointer; ">Синхронизировать</p>
+
+
+<p>Часовой пояс</p>
+<select class="legko">
+	<option>(UTC+05:00) Екатеринбург</option>
+</select>
+<p style="font-size: 14px; color:#aaaaaa;">Автоматически переходить на летнее время и обратно</p>
+<label class="switch">
+  <input type="checkbox">
+  <span class="slider round"></span>
+</label>
+
+<p>Показывать дополнительные календари на панели задач </p>
+<select class="legko">
+	<option>Не показывать дополнительные календари</option>
+</select>
+
+
+
+
+<br><br><br><br><br><br>
+	
+
+</div>
+
+</body>
+</html>
