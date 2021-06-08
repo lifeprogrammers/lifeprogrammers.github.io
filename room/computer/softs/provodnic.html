@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<link rel="shortcut icon" type="icon/x-icon" href="images/icon.png">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+	 <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto+Slab'>
+	<meta charset="utf-8">
+	<title>Проводник</title>
+	<style>
+	*{
+		margin: 0;
+	}
+		body{
+			background: #202020;
+			font-family: "Roboto Slab", serif;
+ 			color: #FFF;
+		}
+		.left{
+			position: absolute;
+			width: 15%;
+			height: 100%;
+			background: #191919;
+		}
+
+.container {
+  margin: auto;
+  position: relative;
+  min-height: 350px;
+  border-radius: 3px;
+  -webkit-animation: drop 0.51s ease-out;
+          animation: drop 0.51s ease-out;
+}
+.container * {
+  transform: translateZ(0px);
+  box-sizing: border-box;
+}
+.container input {
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+}
+.container .page {
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  padding: 0px 0px 0px 0px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.75s;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+.container .page .header {
+  position: absolute;
+  top: -5px;
+  left: 0px;
+  transform: translateY(-100%);
+  display: flex;
+  flex-direction: row-reverse;
+}
+.container .page .header label {
+  flex: 1;
+  margin-right: 3px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 16px;
+}
+.container .page .header label:before {
+  content: "/ ";
+}
+.container .page .header label:after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 8px;
+  right: 0px;
+  height: 1px;
+  opacity: 0;
+  transition: all 0.25s;
+}
+.container .page .header label:hover:after {
+  opacity: 1;
+}
+.container .page .boxes {
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+.container .page .boxes hr {
+  border: none;
+  height: 2px;
+  position: relative;
+  margin: 10px 10px;
+}
+.container .page .boxes hr:after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #AAFFA9, #11FFBD);
+  -webkit-animation: border 0.25s infinite alternate;
+          animation: border 0.25s infinite alternate;
+  position: absolute;
+  top: 10px;
+  left: 0%;
+}
+.container .page .boxes .box {
+  display: inline-block;
+  border: 2px solid #FFF;
+  height: 80px;
+  margin: 20px;
+  min-width: 80px;
+  margin: 20px 0px 0px 20px;
+  transition: all 0.25s ease-out;
+  position: relative;
+  padding: 5px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bolder;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: transform 1s linear 0s, opacity 1s ease-in 0s;
+  outline: none;
+}
+.container .page .boxes .box * {
+  pointer-events: none;
+}
+.container .page .boxes .box:hover {
+  border: 2px solid #AAFFA9;
+}
+.container .page .boxes .box:focus {
+  border: 2px solid #AAFFA9;
+  transform: scale(0.85) !important;
+}
+.container .page .boxes .box:focus[type=exe] {
+  pointer-events: none;
+}
+.container .page .boxes .box:focus[type=exe]:after {
+  content: "autorenew";
+  font-family: "Material Icons";
+  -webkit-font-feature-settings: "liga";
+  color: #AAFFA9;
+  font-size: 35px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-animation: 1s spin infinite;
+          animation: 1s spin infinite;
+}
+.container .page .boxes .box i {
+  position: absolute;
+  font-size: 20px;
+  right: 5px;
+  bottom: 5px;
+}
+.container .page .boxes .box .title {
+  pointer-events: none;
+}
+.container .switchpage:checked + .page {
+  opacity: 1;
+  pointer-events: initial;
+}
+.container .switchpage:checked + .page .box {
+  transition: opacity 0.75s ease-out 1s, transform 1s ease-out 0s;
+  opacity: 1;
+  transform: scale(1);
+}
+#hover:hover{
+	background: #4f4f4f;
+}
+.actions{
+	
+ 
+  right:  0;
+  top:0;
+}
+
+a{
+  color: #fff;
+  padding: 10px;
+}
+a:hover{
+  color: #a3a3a3;
+}
+
+	</style>
+</head>
+<body>
+
+	<div class="left">
+				<div class="actions">
+     
+       <a href="../index.html"><i class="fa fa-times"></i></a>
+      <a href="../index.html"><i class="fa fa-clone"></i></a>
+      <a href="../index.html"><i class="fa fa-minus"></i></a>
+    </div>
+    <hr style="margin-top:5px;">
+    <br>
+<div id="hover">
+<label class="box" type="folder" for="folder5" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Рабочий стол</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+<div id="hover">
+<label class="box" type="folder" for="folder5" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Загрузки</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+
+		<div id="hover">
+		 <label class="box" type="folder" for="folder2" tabindex="1"> 
+		 	<table id="hover">
+		 		<th>
+		 			<td><i style="margin-top:5px;" class="material-icons">folder_open</i></td>
+		 			<td>  <div class="title" style="font-size: 10px;">Документы</div></td>
+		 		</th>
+		 	</table>
+      </label>
+</div>
+
+
+<div id="hover">
+<label class="box" type="folder" for="folder3" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title" style="font-size: 10px;">Изображения</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+
+
+<div id="hover">
+<label class="box" type="folder" for="folder5" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Видео</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+<div id="hover">
+<label class="box" type="folder" for="folder5" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Музыка</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+
+<div id="hover">
+<label class="box" type="folder" for="folder4" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Файлы</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+
+<div id="hover">
+<label class="box" type="folder" for="folder1" tabindex="1"> 
+	<table>
+		<th>
+			<td><i class="material-icons">folder_open</i></td>
+			<td><div class="title"style="font-size: 10px;">Приложения</div></td>
+			
+		</th>
+	</table>
+  
+      </label>
+</div>
+
+
+	</div>
+	<div class="right">
+		
+		<div class="container" style="margin-left:17%;">
+  <input class="switchpage" type="radio" name="page" id="folder1" checked="checked"/>
+  <div class="page">
+    <div class="boxes">
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+        <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+        <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+        <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+        <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+        <label class="box" type="exe" tabindex="1"> 
+        <div class="title">exe</div><i class="material-icons">launch</i>
+      </label>
+    </div>
+  </div>
+  <input class="switchpage" type="radio" name="page" id="folder2"/>
+  <div class="page">
+    <div class="boxes">
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Doc</div><i class="material-icons">description</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Doc</div><i class="material-icons">description</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Doc</div><i class="material-icons">description</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Doc</div><i class="material-icons">description</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Doc</div><i class="material-icons">description</i>
+      </label>
+    </div>
+  </div>
+  <input class="switchpage" type="radio" name="page" id="folder3"/>
+  <div class="page">
+    <div class="boxes">
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">img</div><i class="material-icons">wallpaper</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">img</div><i class="material-icons">wallpaper</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">img</div><i class="material-icons">wallpaper</i>
+      </label>
+    </div>
+  </div>
+  <input class="switchpage" type="radio" name="page" id="folder4"/>
+  <div class="page">
+    <div class="boxes">
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Html</div><i class="material-icons">description</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Css</div><i class="material-icons">edit_note</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">Js</div><i class="material-icons">book</i>
+      </label>
+      <label class="box" type="exe" tabindex="1"> 
+        <div class="title">PHP</div><i class="material-icons">bookmarks</i>
+      </label>
+    </div>
+  </div>
+
+  <input class="switchpage" type="radio" name="page" id="folder5"/>
+  <div class="page">
+    <center>
+    	<p style="margin-top:27%;">Эта папка пуста</p>
+    </center>
+    </div>
+  </div>
+
+</div> 
+
+
+	</div>
+</body>
+</html>

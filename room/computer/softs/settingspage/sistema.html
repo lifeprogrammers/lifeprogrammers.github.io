@@ -116,14 +116,25 @@ option{
 	background: #222222;
 }
 
-
-
+.child {
+  position: absolute;
+  top: 50%;
+  right: -100px;
+  transform: rotate(90deg);
+}
+.child2 {
+  width: 300px;
+  height: 25px;
+  background: #000;
+  padding: 0 20px;
+  border-radius: 50px;
+}
 
 
 
 	</style>
 </head>
-<body>
+<body class="parent">
 
 <!-- лево -->
 <div class="left">
@@ -311,7 +322,7 @@ option{
 	<h1>Дисплей</h1>
 	<h3>Яркость и цвет</h3>
 	<p>Изменение яркости встроенного дисплея</p>
-	<input type="range">
+	<input type="range" id="animate" value="100">
 	<p>Ночной свет</p>
 	<label class="switch">
   <input type="checkbox">
@@ -377,6 +388,12 @@ option{
 
 
 </div>
-
+  <script id="rendered-js" >
+var opac = document.getElementById("animate");
+var morel = document.getElementsByClassName("parent")[0];
+opac.addEventListener("change", function () {
+  morel.style.filter = "brightness(" + opac.value + "%)";
+});
+    </script>
 </body>
 </html>

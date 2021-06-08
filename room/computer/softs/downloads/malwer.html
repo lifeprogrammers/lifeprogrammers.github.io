@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+		<link rel="shortcut icon" type="image/x-icon" href="images/icon.png" />
+	<meta charset="utf-8">
+	<title>Malwarebytes</title>
+	<style>
+		body{
+			font-family: 'Roboto', sans-serif;
+			margin: 0; /* Убираем отступы */
+    height: 100%; /* Высота страницы */
+    background: url(images/back.png) fixed; /* Параметры фона */
+    background-size: cover; /* Фон занимает всю доступную площадь */
+		}
+				.actions{
+  position: absolute;
+  right:  0;
+  top:0;
+  font-size: 20px;
+  padding: 
+}
+
+a{
+  color: #000;
+  padding: 10px;
+}
+a:hover{
+  color: #a3a3a3;
+}
+td{
+	padding-left: 20px;
+}
+		.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 18px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 10px;
+  width: 10px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
+}
+
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+	</style>
+</head>
+<body>
+	<div class="actions">
+      <a href="../../index.html"><i class="fa fa-minus"></i></a>
+      <a href="../../index.html"><i class="fa fa-clone"></i></a>
+      <a href="../../index.html"><i class="fa fa-times"></i></a>
+    </div><br>
+
+<center style="margin-top:100px;">
+	<h3>Устраняйте угрозы сразу, а не потом</h3>
+	<p style="color: #6a707b;">Установите premium-версию, что бы<br>блокировать вредоносное ПО до того, как<br>оно сможет навредить Вам</p>
+	<button style="color:#fff;background: #f47b02;border: none; padding: 5px 40px 5px 40px;border-radius: 3px;cursor: pointer;">Купить</button>
+	<button style="color: #0d3ecc;font-weight: bold; padding: 3px;border: 2px solid #0d3ecc;border-radius: 3px;cursor: pointer;">Получите бесплатную ознакомительную версию на 14 дней</button><br><br><br>
+	<table>
+		<th>
+			<td>
+				<div style="background: #fff; padding: 60px 30px 60px 30px;width: 300px; height: 200px; border-radius: 10px;">
+					<center>
+						<h4>История обнаружений</h4>
+						<table>
+							<tr>
+								<td><p style="color: #6a707b;">Объекты, Перемещенные в карантин<br>при последней проверке</p></td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td><p style="color: #6a707b;">Всего объектов карантине</p></td>
+								<td><p>0</p></td>
+							</tr>
+						</table>
+					</center>
+				</div>
+			</td>
+
+
+			<td>
+				<div style="background: #fff; padding: 60px 30px 60px 30px;width: 300px;height: 200px; border-radius: 10px;">
+					<center>
+						<h4>Средство проверки</h4><br>
+						<table>
+							<th>
+								<td><p>Запланированные проверки</p></td>
+								<td><p style="color:#0d3ed5;">Premium-версия</p></td>
+							</th>
+						</table><br><br>
+						<button style="background: #0d3ecc;border: none;color: #fff;font-weight: bold;padding: 5px 70px 5px 70px;border-radius: 3px;cursor: pointer;">Проверка</button>
+					</center>
+				</div>
+			</td>
+
+
+
+			<td>
+				<div style="background: #fff; padding: 60px 30px 60px 30px;width: 300px; height: 200px;border-radius: 10px;">
+					<center>
+						<h4>Защита в реальном времени</h4>
+						<p style="color:#f47b02;">Premium-версия</p>
+
+						<table>
+							<tr>
+								<td><p>Защита в сети Интернет</p></td>
+								<td><label class="switch">  <input type="checkbox">  <span class="slider round"></span></label></td>
+							</tr>
+							<tr>
+								<td><p>Защита от эксплойтов</p></td>
+								<td><label class="switch">  <input type="checkbox">  <span class="slider round"></span></label></td>
+							</tr>
+						</table>
+
+						
+					</center>
+				</div>
+			</td>
+		</th>
+	</table>
+</center>
+</body>
+</html>
